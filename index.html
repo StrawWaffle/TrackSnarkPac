@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TrackSnarkPac: who donates across channels</title>
 <meta name="description" content="Superchats on four political YouTube channels, and the people who donate on more than one of them.">
+<script>try { const t = localStorage.getItem("ts-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -36,6 +37,11 @@
 body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 "IBM Plex Sans", system-ui, sans-serif; }
 main { max-width: 1120px; margin: 0 auto; padding: 32px 16px 64px; }
 h1 { font-size: 26px; font-weight: 600; margin: 0 0 8px; }
+.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; flex-wrap: wrap; }
+.theme { display: inline-flex; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; flex: none; }
+.theme button { border: 0; border-radius: 0; background: transparent; font-size: 13px; padding: 4px 10px; color: var(--text-2); }
+.theme button + button { border-left: 1px solid var(--border); }
+.theme button[aria-pressed=true] { background: var(--surface); color: var(--text); font-weight: 500; }
 h2 { font-size: 19px; font-weight: 600; margin: 40px 0 6px; }
 p { margin: 0 0 12px; max-width: 72ch; }
 a { color: var(--link); }
@@ -145,7 +151,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border
 </head>
 <body>
 <main>
-<h1>Who donates across channels</h1>
+<div class="top"><h1>Who donates across channels</h1><div class="theme" role="group" aria-label="Color theme"><button type="button" data-t="system">System</button><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div></div>
 <p class="lede" id="lede"></p>
 <p class="dim" id="scope"></p>
 
@@ -521,6 +527,14 @@ function syncInputs() { $('fmsg').value = F.msg; $('ftitle').value = F.title; $(
 $('fxdate').textContent = D.fx;
 $('prices').textContent = CH.map(c => `${c.name} $${c.price.toFixed(2)}`).join(', ');
 $('foot').textContent = `Built 2026-11-12 from ${D.streams.length} streams and ${D.sc.length.toLocaleString()} superchats.`;
+// theme: system (no attribute), light or dark; remembered per browser
+function setTheme(t) {
+  if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
+  store.set('ts-theme', t);
+  document.querySelectorAll('.theme button').forEach(b => b.setAttribute('aria-pressed', b.dataset.t === t));
+}
+document.querySelector('.theme').onclick = ev => { const b = ev.target.closest('button[data-t]'); if (b) setTheme(b.dataset.t); };
+setTheme(document.documentElement.dataset.theme || 'system');
 readHash(); syncInputs(); buildColMenu(); renderAll();
 </script>
 </body>
