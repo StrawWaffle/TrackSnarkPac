@@ -46,16 +46,37 @@ function banner(v: Version) {
 function reloadFresh(v: Version) {
   // a new query string makes GitHub's cache fetch the page again; the #filters stay
   const u = new URL(location.href);
-  u.searchParams.set('v', (v.code + v.data).slice(0, 10));
+  u.searchParams.set('v', idOf(v));
   location.replace(u.toString());
 }
 
 const changed = (v: Version | null): v is Version => !!v && (v.data !== mine.data || v.code !== mine.code);
 
+// The newest build seen so far; links within the site carry it so the next page
+// is fetched fresh instead of from a cached copy of an older build.
+let latestId: string | null = null;
+// both fingerprints, so a data-only update also changes the address
+const idOf = (v: Version) => v.code.slice(0, 6) + v.data.slice(0, 6);
+
+function carryVersion(ev: MouseEvent) {
+  const a = (ev.target as Element).closest?.('a[href]') as HTMLAnchorElement | null;
+  if (!a || !latestId) return;
+  const u = new URL(a.href, location.href);
+  if (u.origin !== location.origin || !u.pathname.startsWith(BASE)) return;
+  if (u.pathname === location.pathname && u.search === location.search && u.hash) return; // a jump within this page
+  if (/\.(csv|json|png|ico)$/.test(u.pathname)) return;
+  u.searchParams.set('v', latestId);
+  a.href = u.toString();
+}
+document.addEventListener('click', carryVersion, true);
+document.addEventListener('auxclick', carryVersion, true);
+
 async function check(onLoad: boolean) {
   const v = await latest();
+  if (v) latestId = idOf(v);
   if (!changed(v)) return;
-  const key = `ts-reloaded-${v.code}-${v.data}`;
+  // one silent reload per page and version; a stale page elsewhere gets its own
+  const key = `ts-reloaded-${location.pathname}-${v.code}-${v.data}`;
   let tried = false;
   try { tried = !!sessionStorage.getItem(key); sessionStorage.setItem(key, '1'); } catch { tried = true; }
   if (onLoad && !tried) reloadFresh(v); // stale copy at load: fetch the fresh one once, silently
