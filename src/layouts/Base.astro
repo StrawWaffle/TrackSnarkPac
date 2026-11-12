@@ -2,6 +2,7 @@
 import '../styles/site.css';
 import { paletteCss } from '../lib/palette';
 import { base, payload } from '../lib/site';
+import { VERSION } from '../lib/version';
 
 interface Props {
   title: string;
@@ -32,7 +33,7 @@ const channels = payload.channels;
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style is:inline set:html={paletteCss(channels.length)}></style>
 </head>
-<body data-scope={scope} data-base={base} data-channel={channel} data-donor={donor}>
+<body data-scope={scope} data-base={base} data-channel={channel} data-donor={donor} data-vdata={VERSION.data} data-vcode={VERSION.code} data-vstreams={VERSION.streams} data-vsc={VERSION.superchats}>
 <main>
 <div class="topbar">
   <nav class="nav" aria-label="Pages">
@@ -74,6 +75,7 @@ const channels = payload.channels;
 })();
 </script>
 <script>
+import '../scripts/version.ts';
 import '../scripts/app.ts';
 </script>
 </body>

@@ -45,7 +45,7 @@ document.addEventListener('mousemove', (ev) => {
 });
 
 async function main() {
-  const D: Payload = await (await fetch(BASE + 'data/site.json')).json();
+  const D: Payload = await (await fetch(`${BASE}data/site.json?v=${body.dataset.vdata}`)).json();
   const ctx = makeContext(D);
   const { NC, MONTHS, LAST, YEAR_FROM, GCH, NCROSS, akey, AIDX } = ctx;
   const CH = D.channels;

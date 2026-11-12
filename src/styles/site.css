@@ -208,3 +208,10 @@ h1 .mark { margin-right: 10px; flex: none; }
 @media (max-width: 900px) { .multiples { grid-template-columns: 1fr; } }
 html, body { overflow-x: clip; }
 .clamp2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* ---- "a newer version is out" notice ---- */
+.newver { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 20; width: min(640px, calc(100% - 32px));
+  display: flex; flex-wrap: wrap; gap: 8px 10px; align-items: center; padding: 10px 12px; font-size: 14px;
+  background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
+.newver span { flex: 1 1 260px; }
+.newver button[data-a=reload] { border-color: var(--text-3); font-weight: 500; }
