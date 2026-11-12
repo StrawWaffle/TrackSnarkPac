@@ -26,7 +26,7 @@ jobs:
           echo "| request | result | detail |" >> "$GITHUB_STEP_SUMMARY"
           echo "|---|---|---|" >> "$GITHUB_STEP_SUMMARY"
           n=$(yt-dlp --flat-playlist --print id "https://www.youtube.com/@LibAndLearn/streams" 2> err.txt | wc -l)
-          if [ "$n" -gt 0 ]; then ok=$((ok+1)); report "streams tab listing" "ok" "$n videos"; else fail=$((fail+1)); report "streams tab listing" "blocked" "$(tail -c 200 err.txt | tr '\n|' '  ')"; fi
+          if [ "$n" -gt 0 ]; then ok=$((ok+1)); report "streams tab listing" "ok" "$n videos"; else fail=$((fail+1)); echo "LISTING FAILED:"; cat err.txt; report "streams tab listing" "blocked" "$(tail -c 200 err.txt | tr '\n|' '  ')"; fi
           for v in 1Q029nWXeV8 jjVuJn_Um80; do
             sleep 20
             rm -f ./*.live_chat.json*
@@ -34,7 +34,7 @@ jobs:
             if [ -s "$v.live_chat.json" ]; then
               ok=$((ok+1)); report "chat replay $v" "ok" "$(wc -l < "$v.live_chat.json") lines, $(grep -o liveChatPaidMessageRenderer "$v.live_chat.json" | wc -l) paid messages"
             else
-              fail=$((fail+1)); report "chat replay $v" "blocked" "$(tail -c 200 err.txt | tr '\n|' '  ')"
+              fail=$((fail+1)); echo "CHAT $v FAILED:"; tail -5 err.txt; tail -3 out.txt; report "chat replay $v" "blocked" "$(tail -c 200 err.txt | tr '\n|' '  ')"
             fi
           done
           echo "" >> "$GITHUB_STEP_SUMMARY"; echo "**$ok ok, $fail blocked**" >> "$GITHUB_STEP_SUMMARY"
