@@ -3,6 +3,6 @@ interface Props { where?: string }
 const { where = '' } = Astro.props;
 ---
 <h2 id="s-regulars" data-toc="Regulars">Regulars</h2>
-<p class="dim">How often people give{where} and how much each superchat is, for cross-channel donors and for people who give on one channel only. Each group is shown as a share of itself, since there are far more one-channel donors. Follows the filters above, but not a selection of people.</p>
+<p class="dim">How often people give{where}, and how big each superchat is, for cross-channel donors and for people who give on one channel only. Each bar is a share of its own group, because one-channel donors far outnumber the others. The charts follow the filters above but ignore any selected people.</p>
 <div class="hkey" id="hkey"></div>
 <div class="multiples" id="hists"></div>

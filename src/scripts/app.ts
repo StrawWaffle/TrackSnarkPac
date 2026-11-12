@@ -134,8 +134,8 @@ async function main() {
     const sp = Math.round((cp / payers) * 100), sd = Math.round((crossUsd / tot) * 100);
     const where = SCOPE === 'channel' ? ` on ${esc(CH[SCOPE_CH!].name)}` : '';
     $('arrays').innerHTML =
-      `<div class="arr"><h3>Out of every 100 people who paid${where}</h3><div aria-label="${sp} of 100 people">${iconArray(sp, 'person')}</div><p><strong>${sp}</strong> gave on more than one channel (${cp} of ${payers.toLocaleString()}).</p></div>`
-      + `<div class="arr"><h3>Out of every 100 superchat dollars${where}</h3><div aria-label="${sd} of 100 dollars">${iconArray(sd, 'square')}</div><p><strong>${sd}</strong> came from them (${usd(crossUsd)} of ${usd(tot)}).</p></div>`;
+      `<div class="arr"><h3>Out of every 100 people who paid${where}</h3><div aria-label="${sp} of 100 people">${iconArray(sp, 'person')}</div><p><strong>${sp}</strong> gave on more than one channel, ${cp} of ${payers.toLocaleString()} people.</p></div>`
+      + `<div class="arr"><h3>Out of every 100 superchat dollars${where}</h3><div aria-label="${sd} of 100 dollars">${iconArray(sd, 'square')}</div><p><strong>${sd}</strong> came from them, ${usd(crossUsd)} of ${usd(tot)}.</p></div>`;
   }
 
   // ---- filter summary ----
@@ -145,31 +145,31 @@ async function main() {
       const f = focus(), t = f ? AD.chan[c].usd : A.chan[c].usd; if (!t) return null;
       const cr = f ? A.chan[c].usd : A.cross.reduce((x, p) => x + pv(p, c), 0);
       if (f && !cr) return null;
-      return `<strong>${pct(cr / t)}</strong> of ${possessive(esc(ch.name))} (${usd(cr)} of ${usd(t)})`;
+      return `<strong>${pct(cr / t)}</strong> of ${possessive(esc(ch.name))} ${usd(t)}`;
     }).filter(Boolean) as string[];
-    return parts.length > 1 ? ` By channel: ${listJoin(parts)}.` : '';
+    return parts.length > 1 ? ` By channel, ${focus() ? 'they' : 'cross-channel donors'} gave ${listJoin(parts)}.` : '';
   }
   function renderSummary() {
     if (!has('fsummary')) return;
     const parts: string[] = [];
-    if (F.msg) parts.push(`messages containing “${esc(F.msg)}”`);
-    if (F.title) parts.push(`streams titled with “${esc(F.title)}”`);
+    if (F.msg) parts.push(`messages containing "${esc(F.msg)}"`);
+    if (F.title) parts.push(`streams with "${esc(F.title)}" in the title`);
     if (SCOPE !== 'donor' && who().size && F.whoMode === 'hide') parts.unshift(`without ${selName()}`);
     if (F.gifts) parts.push('gifted memberships counted at their estimated price');
     if (has('whobox')) {
       $('whobox').hidden = !who().size; $('clearwho').textContent = `Clear selection (${who().size})`;
       document.querySelectorAll('#whomode button').forEach((b: any) => b.setAttribute('aria-pressed', b.dataset.m === F.whoMode));
     }
-    parts.push(F.from === YEAR_FROM && F.to === LAST ? `the past year (${mlabel(F.from)} to ${mlabel(F.to)})` : F.from === MONTHS[0] && F.to === LAST ? 'all time' : `${mlabel(F.from)} to ${mlabel(F.to)}`);
-    const lead = `Below: ${parts.join(', ')}.`;
+    parts.push(F.from === YEAR_FROM && F.to === LAST ? `the past year, ${mlabel(F.from)} to ${mlabel(F.to)}` : F.from === MONTHS[0] && F.to === LAST ? 'all time' : `${mlabel(F.from)} to ${mlabel(F.to)}`);
+    const lead = `Showing ${parts.join(', ')}.`;
     if (has('ftoggle')) $('ftoggle').textContent = `Filters: ${parts.join(', ').replace(/<[^>]+>/g, '')}`;
     if (SCOPE === 'donor') {
-      $('fsummary').innerHTML = `${lead} ${selName()} sent <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, <strong>${pct(AD.total ? A.total / AD.total : 0)}</strong> of the ${usd(AD.total)} in superchats on these streams.${perChannel()}`;
+      $('fsummary').innerHTML = `${lead} ${selName()} sent <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, which is <strong>${pct(AD.total ? A.total / AD.total : 0)}</strong> of the ${usd(AD.total)} in superchats on these streams.${perChannel()}`;
     } else if (focus()) {
       const n = selName();
-      $('fsummary').innerHTML = `${lead} ${n.charAt(0).toUpperCase() + n.slice(1)} sent <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, <strong>${pct(AD.total ? A.total / AD.total : 0)}</strong> of the ${usd(AD.total)} in this filter.${perChannel()}`;
+      $('fsummary').innerHTML = `${lead} ${n.charAt(0).toUpperCase() + n.slice(1)} sent <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, which is <strong>${pct(AD.total ? A.total / AD.total : 0)}</strong> of the ${usd(AD.total)} in this filter.${perChannel()}`;
     } else {
-      $('fsummary').innerHTML = `${lead} <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, of which <strong>${pct(A.total ? A.crossUsd / A.total : 0)}</strong> (${usd(A.crossUsd)}) came from ${A.cross.length} cross-channel donors.${perChannel()}`;
+      $('fsummary').innerHTML = `${lead} That's <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, and <strong>${pct(A.total ? A.crossUsd / A.total : 0)}</strong> of it, ${usd(A.crossUsd)}, came from ${A.cross.length} cross-channel donors.${perChannel()}`;
     }
   }
 
@@ -198,8 +198,8 @@ async function main() {
   function missText(c: number, m: string) {
     const x = MISS[c].get(m); if (!x) return '';
     const why = Object.entries(x.r).sort((a, b) => b[1] - a[1]).map(([k, v]) => `${v} ${k}`).join(', ');
-    const eg = x.t.slice(0, 2).map((t) => '“' + (t.length > 48 ? t.slice(0, 47) + '…' : t) + '”').join(', ');
-    return `${x.n} stream${x.n > 1 ? 's' : ''} without readable chat: ${why}.\ne.g. ${eg}${x.n > 2 ? ` and ${x.n - 2} more` : ''}`;
+    const eg = x.t.slice(0, 2).map((t) => '"' + (t.length > 48 ? t.slice(0, 47) + '…' : t) + '"').join(', ');
+    return `${x.n} stream${x.n > 1 ? 's' : ''} without readable chat: ${why}.\nFor example ${eg}${x.n > 2 ? ` and ${x.n - 2} more` : ''}.`;
   }
   function monthTip(c: number, m: string, b: { cross: number; other: number; n: number }, t: number) {
     const miss = missText(c, m), cov = COVER[c].has(m);
@@ -279,7 +279,7 @@ async function main() {
     const rows = CH.map((ch, o) => ({ o, usd: people.reduce((x, p) => x + pv(p, o), 0), n: people.filter((p) => p.usd[o] > 0 || p.gifts[o] > 0).length }));
     const mx = Math.max(1, ...rows.map((r) => r.usd));
     $('also').innerHTML = rows.map((r) => `<div class="srow" data-tip="${r.n} of them gave ${usd(r.usd)} on ${esc(CH[r.o].name)}"><div>${r.o === c ? `${esc(CH[r.o].name)} <span class="dim">(this channel)</span>` : `<a class="inlink" href="${chanHref(r.o)}">${esc(CH[r.o].name)}</a>`}</div><div class="strack"><div class="sbar c${r.o}" style="width:${((r.usd / mx) * 100).toFixed(1)}%"></div></div><div class="num">${usd(r.usd)} <span class="dim">· ${r.n} people</span></div></div>`).join('');
-    if (has('alsonote')) $('alsonote').textContent = `What the ${ids.size} cross-channel donors who gave on ${CH[c].name} in this filter sent on each channel over the same months. Bars share one scale.`;
+    if (has('alsonote')) $('alsonote').textContent = `What the ${ids.size} cross-channel donors who gave on ${CH[c].name} in this filter sent on every channel over the same months, on one shared scale.`;
   }
 
   // ---- regulars histograms ----
@@ -379,7 +379,7 @@ async function main() {
       rank: (_, i) => `<td class="rank">${i + 1}</td>`,
       who: (p) => `<td class="who">${nameLink(p.a)}</td>`,
       chs: (p) => `<td class="chips">${p.chs.map((c) => `<span class="mark c${c}" title="${esc(CH[c].name)}"></span>`).join('')}</td>`,
-      active: (p) => `<td class="strip" data-tip="First: ${p.first}\nLast: ${p.last}\n${p.streams.size} streams"><div class="when">${p.first.slice(0, 7)} – ${p.last.slice(0, 7)}</div>${strip(p)}</td>`,
+      active: (p) => `<td class="strip" data-tip="First: ${p.first}\nLast: ${p.last}\n${p.streams.size} streams"><div class="when">${p.first.slice(0, 7)} to ${p.last.slice(0, 7)}</div>${strip(p)}</td>`,
       span: (p) => `<td class="num">${Math.round((Date.parse(p.last) - Date.parse(p.first)) / 864e5)}</td>`,
       bar: (p) => `<td class="stack" data-tip="${esc(p.chs.map((c) => `${CH[c].name}: ${usd(p.usd[c], true)} in ${p.paid[c]} superchats${p.gifts[c] ? `, ${p.gifts[c]} gifted memberships (≈${usd(p.gifts[c] * CH[c].price)})` : ''}`).join('\n'))}"><div class="stackbar">${p.chs.flatMap((c) => [p.usd[c] > 0 ? `<div class="seg c${c}" style="width:${((p.usd[c] / mx) * 100).toFixed(2)}%"></div>` : '', p.gifts[c] ? `<div class="seg gift g${c}" style="width:${(((p.gifts[c] * CH[c].price) / mx) * 100).toFixed(2)}%"></div>` : '']).join('')}</div></td>`,
       total: (p) => `<td class="num">${usd(p.total)}${F.gifts && p.giftEst ? '<span class="dim">*</span>' : ''}</td>`,
@@ -436,7 +436,7 @@ async function main() {
           : `<td class="num">${usd(r.usd)}</td><td class="num">${r.n}</td><td class="num">${r.usd ? pct(r.cross / r.usd) : ''}</td><td class="num">${r.gifts || ''}</td>`) + '</tr>';
     }, renderStreams);
     if (has('streamsnote')) $('streamsnote').textContent = SCOPE === 'donor'
-      ? `${rows.length} streams in this filter where they sent superchats.`
+      ? `They sent superchats on ${rows.length} streams in this filter.`
       : `${rows.length} of ${A.chan[SCOPE_CH!].streams} streams in this filter had superchats or gifted memberships.`;
   }
 
@@ -582,8 +582,8 @@ async function main() {
   window.addEventListener('hashchange', () => { readHash(); syncInputs(); renderAll(); });
 
   if (has('fxdate')) $('fxdate').textContent = D.fx;
-  if (has('prices')) $('prices').textContent = CH.map((c) => `${c.name} $${c.price.toFixed(2)}`).join(', ');
-  if (has('scope')) $('scope').textContent = `Livestreams from ${D.since} to ${D.until}, read from each stream's public chat replay. Amounts are what viewers paid in US dollars, before YouTube's cut. ${D.missing.length} listed streams have no readable chat (members-only, no chat replay or age-restricted); hatched months in the charts show where, and hovering one says why.`;
+  if (has('prices')) $('prices').textContent = listJoin(CH.map((c) => `$${c.price.toFixed(2)} for ${c.name}`));
+  if (has('scope')) $('scope').textContent = `Livestreams from ${D.since} to ${D.until}, read from each stream's public chat replay. Amounts are what viewers paid, in US dollars, before YouTube's cut. ${D.missing.length} of the listed streams have no readable chat because they're members-only, age-restricted or have no chat replay. Hatched months in the charts show where they fall.`;
   if (has('foot')) $('foot').textContent = `Built ${D.built} from ${D.streams.length} streams and ${D.sc.length.toLocaleString()} superchats.`;
   readHash(); syncInputs(); buildColMenu(); renderArrays(); renderAll();
   document.querySelectorAll('.loading').forEach((el) => el.remove());

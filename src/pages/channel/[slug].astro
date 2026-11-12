@@ -25,15 +25,15 @@ const L = ledeChannel(ctx, base, i, ALL);
   <p class="dim"><a href={ch.url} target="_blank" rel="noopener">{ch.name} on YouTube</a> · gifted memberships valued at ${ch.price.toFixed(2)} each · {ch.missing} listed streams without readable chat</p>
   <div class="arrays" id="arrays"></div>
   <Filters />
-  <Monthly intro={`Superchat dollars per month on ${ch.name}. The colored part came from people who also donate on another of these channels; grey is everyone else. Hover a month for the numbers.`} several={false} />
+  <Monthly intro={`Superchat dollars per month on ${ch.name}. The colored part is money from people who also give on another of these channels, and the grey part is everyone else. Hover a month for the numbers.`} several={false} />
   <h2 id="s-also" data-toc="Where they also give">Where {possessive(ch.name)} shared donors also give</h2>
   <p class="dim" id="alsonote"></p>
   <div class="share" id="also"></div>
   <Regulars where={` on ${ch.name}`} />
-  <Combos intro={`Each row is one combination of channels that includes ${ch.name}: how many people gave on exactly those channels, and what they sent on ${ch.name}.`} />
+  <Combos intro={`Each row is a combination of channels that includes ${ch.name}, with how many people gave on exactly those channels and what they sent on ${ch.name}.`} />
   <DonorTable everyone />
   <h2 id="s-superchats" data-toc="Every superchat">Every superchat</h2>
-  <p class="dim">Every superchat on {ch.name} in this filter, from everyone. Colored squares after a name mark people who also give on other channels here; their names link to their own page. Amounts in other currencies show their US$ value.</p>
+  <p class="dim">Every superchat on {ch.name} in this filter, from everyone. Colored squares after a name mark people who also give on other channels here, and their names link to their own page. Amounts in other currencies also show the US$ value.</p>
   <div class="tools"><button id="sccross" type="button" class="toggle" aria-pressed="false">Cross-channel donors only</button><span id="sccount" class="small"></span><button id="sccsv" type="button" title="Download every superchat in this filter">Download CSV</button></div>
   <div class="scroll"><table id="scT"><thead></thead><tbody></tbody></table></div>
   <p><button id="scmore" type="button" hidden></button></p>
