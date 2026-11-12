@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>TrackSnark: who donates across channels</title>
-<meta name="description" content="Superchats on four political YouTube channels over a year, and the people who donate on more than one of them.">
+<title>TrackSnarkPac: who donates across channels</title>
+<meta name="description" content="Superchats on four political YouTube channels, and the people who donate on more than one of them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -155,6 +155,8 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border
     <div class="field"><label for="ftitle">Stream title contains</label><input id="ftitle" type="search" placeholder="debate"></div>
     <div class="field"><label for="ffrom">From</label><select id="ffrom"></select></div>
     <div class="field"><label for="fto">To</label><select id="fto"></select></div>
+    <button id="fyear" type="button" title="The 12 months up to the last stream">Past year</button>
+    <button id="fall" type="button">All time</button>
     <button id="freset" type="button">Reset</button>
   </div>
   <div id="fsummary" aria-live="polite"></div>
@@ -192,7 +194,7 @@ footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border
 <div class="scroll"><table id="chans"><thead></thead><tbody></tbody></table></div>
 
 <h2>How this was made</h2>
-<p>Every livestream from the past year was taken from each channel's streams tab and stream playlists (including unlisted VODs). Their chat replays were downloaded and every superchat, super sticker and gifted membership read out. Some streams have no chat data: YouTube keeps no chat replay for them (usually because the VOD was edited after the stream, or chat was off), or they are members-only or age-restricted.</p>
+<p>Every livestream the channels still list was taken from each channel's streams tab and stream playlists (including unlisted VODs). Their chat replays were downloaded and every superchat, super sticker and gifted membership read out. Some streams have no chat data: YouTube keeps no chat replay for them (usually because the VOD was edited after the stream, or chat was off), or they are members-only or age-restricted.</p>
 <p>People are matched by YouTube channel ID, so someone who renamed their account still counts once. A cross-channel donor is someone who paid on two or more of the channels at any point in the period; the filters only change which of their superchats are counted. Superchats sent in other currencies were converted to US dollars at the exchange rates of <span id="fxdate"></span>, not the rate on the day they were sent.</p>
 <p>Gifted memberships have no price in the chat. A gift is always the channel's cheapest membership level, so they are valued at that level's US price (<span id="prices"></span>). That makes them an estimate, so they are kept out of the dollar totals. They have no message, so a message filter leaves them out. Memberships a channel gifted from its own account are not counted, and regular memberships aren't counted at all.</p>
 <p>The figures are what viewers paid; YouTube keeps about 30%. Only public chat is used. Dates are the day the stream started.</p>
@@ -326,7 +328,7 @@ function renderHead() {
   $('lede').innerHTML = filt
     ? `<strong>${usd(A.total)}</strong> in superchats matches this filter. <strong>${pct(A.total ? A.crossUsd / A.total : 0)}</strong> of it (${usd(A.crossUsd)}) came from ${nc} of the ${NCROSS} people who donate on more than one of the four channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn.`
     : nc
-    ? `Over the past year, <strong>${nc} people</strong> paid on more than one of four political YouTube channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn. They are ${pct(nc / n)} of everyone who paid, but they sent <strong>${pct(A.total ? A.crossUsd / A.total : 0)} of the money</strong>: ${usd(A.crossUsd)} of ${usd(A.total)}.`
+    ? `Since ${mlabel(MONTHS[0])}, <strong>${nc} people</strong> paid on more than one of four political YouTube channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn. They are ${pct(nc / n)} of everyone who paid, but they sent <strong>${pct(A.total ? A.crossUsd / A.total : 0)} of the money</strong>: ${usd(A.crossUsd)} of ${usd(A.total)}.`
     : `No one in this filter paid on more than one channel. ${n} people sent ${usd(A.total)}.`;
   $('scope').textContent = `Livestreams from ${D.since} to ${D.until}, read from each stream's public chat replay. Amounts are what viewers paid in US dollars, before YouTube's cut.`;
   const parts = [];
@@ -362,7 +364,8 @@ function renderMonthly() {
       if (b.cross > 0) g += `<path class="f${c}" d="${rp(x, base, yc, w, !(b.other > 0))}"/>`;
       if (b.other > 0) { const y0 = b.cross > 0 ? yc - 2 : base; if (y0 - yt > 0.5) g += `<path class="fn" d="${rp(x, y0, yt, w, true)}"/>`; }
       const m = MONTHS[i];
-      if (i % 2 === 0 || n <= 8) g += `<text x="${x + w / 2}" y="${H - 6}" text-anchor="middle">${MON[+m.slice(5) - 1]}${m.endsWith('-01') || i === 0 ? ' ' + m.slice(2, 4) : ''}</text>`;
+      const every = n <= 8 ? 1 : n <= 16 ? 2 : n <= 30 ? 3 : 6;
+      if ((+m.slice(5) - 1) % every === 0) g += `<text x="${x + w / 2}" y="${H - 6}" text-anchor="middle">${n > 16 ? (m.endsWith('-01') ? m.slice(0, 4) : MON[+m.slice(5) - 1]) : MON[+m.slice(5) - 1] + (m.endsWith('-01') || i === 0 ? ' ' + m.slice(2, 4) : '')}</text>`;
       const t = tot(b);
       g += `<rect class="hit" x="${L + i * bw}" y="${T}" width="${bw}" height="${ih}" data-tip="${esc(ch.name)}, ${mlabel(m)}${partial(m) ? ' (part of the month)' : ''}\n${usd(t)} in ${b.n} superchats\n${usd(b.cross)} from cross-channel donors${t ? ' (' + pct(b.cross / t) + ')' : ''}\n${usd(b.other)} from everyone else"/>`;
     });
@@ -468,7 +471,7 @@ function renderChans() {
       shared: A.cross.filter(p => p.chs.includes(c)).length, share: x.usd ? cr / x.usd : 0, gifts: x.gifts, giftEst: x.gifts * ch.price, per: x.streams ? x.usd / x.streams : 0 }; });
   const cols = [
     { label: 'Channel', k: 'name', v: r => r.name }, { label: 'Streams', k: 'streams', num: 1, v: r => r.streams },
-    { label: 'No chat data', k: 'missing', num: 1, v: r => r.missing, title: 'Streams in the past year without a usable chat replay (not filtered)' },
+    { label: 'No chat data', k: 'missing', num: 1, v: r => r.missing, title: 'Streams without a usable chat replay (not filtered)' },
     { label: 'Hours', k: 'hours', num: 1, v: r => r.hours }, { label: 'Superchats', k: 'usd', num: 1, v: r => r.usd },
     { label: 'Per stream', k: 'per', num: 1, v: r => r.per }, { label: 'Msgs', k: 'paid', num: 1, v: r => r.paid },
     { label: 'Payers', k: 'payers', num: 1, v: r => r.payers }, { label: 'Shared payers', k: 'shared', num: 1, v: r => r.shared },
@@ -502,6 +505,9 @@ const onFilter = () => { F.msg = $('fmsg').value.trim(); F.title = $('ftitle').v
   writeHash(); clearTimeout(timer); timer = setTimeout(renderAll, 150); };
 ['fmsg', 'ftitle'].forEach(id => $(id).addEventListener('input', onFilter));
 ['ffrom', 'fto'].forEach(id => $(id).addEventListener('change', onFilter));
+$('fyear').onclick = () => { const last = MONTHS[MONTHS.length - 1]; const y = +last.slice(0, 4) - 1, m = last.slice(5);
+  const from = MONTHS.find(x => x > y + '-' + m) || MONTHS[0]; $('ffrom').value = from; $('fto').value = last; onFilter(); };
+$('fall').onclick = () => { $('ffrom').value = MONTHS[0]; $('fto').value = MONTHS[MONTHS.length - 1]; onFilter(); };
 $('freset').onclick = () => { $('fmsg').value = ''; $('ftitle').value = ''; $('ffrom').value = MONTHS[0]; $('fto').value = MONTHS[MONTHS.length - 1]; onFilter(); };
 window.addEventListener('hashchange', () => { readHash(); syncInputs(); renderAll(); });
 function syncInputs() { $('fmsg').value = F.msg; $('ftitle').value = F.title; $('ffrom').value = F.from; $('fto').value = F.to; }

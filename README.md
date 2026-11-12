@@ -1,4 +1,4 @@
-# TrackSnark
+# TrackSnarkPac
 
 Superchats on four political YouTube channels (Pisco, Counterpoints, The Soy Pill, Lib & Learn) from 2025-11-12 to 2026-11-11, and the people who donate on more than one of them.
 
