@@ -14,13 +14,17 @@ The site is built with [Astro](https://astro.build) and published to GitHub Page
 |---|---|
 | `site.json` | everything the pages compute from: channels, streams, people, superchats, gifted memberships, streams without chat data |
 | `cross-channel-donors.csv` | people who sent superchats or gifted memberships on two or more of the channels, with US$ per channel |
-| `donors.csv` | everyone who paid, matched by YouTube channel ID |
-| `superchats.csv` | every superchat and super sticker: stream, time in the stream, original amount and currency, US$ value, message, link |
-| `gifts.csv` | gifted memberships: who, how many, which stream |
-| `streams.csv` | every stream counted, with totals |
+| `donors.csv` | everyone who paid, matched by YouTube channel ID, with US$ per channel |
+| `superchats.csv` | every superchat and super sticker: channel, stream, time in the stream, original amount and currency, US$ value, message, link |
+| `gifts.csv` | gifted memberships: who, how many, which stream, estimated US$ value |
+| `streams.csv` | every stream with readable chat, with its superchat total and gifts |
 
 Amounts are what viewers paid, before YouTube's roughly 30% cut. Other currencies were converted to US dollars at the rates of 2026-11-12. Gifted memberships are valued at each channel's cheapest membership level (Pisco $4.99, Counterpoints $2.99, The Soy Pill $2.99, Lib & Learn $1.99) and kept apart as an estimate.
 
 All data comes from the public chat replays of the channels' livestreams.
+
+## Data updates
+
+`pipeline/` fetches new VODs and rebuilds `public/data`; `pipeline/update.py` runs once a day and pushes when there is new data, and the push publishes the site. `pipeline/state/` keeps what has been fetched (superchats and gifts per stream, streams without readable chat, exchange rates), so only new streams are requested. `pipeline/channels.json` is the list of channels. Setup and operation: [`pipeline/SERVER.md`](pipeline/SERVER.md).
 
 Local preview: `npm install`, then `npm run dev`.

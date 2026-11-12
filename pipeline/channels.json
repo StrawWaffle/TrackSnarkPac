@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Pisco",
+    "slug": "pisco",
+    "url": "https://www.youtube.com/@PiscoLitty",
+    "own_account": "@piscolitty",
+    "gift_price": 4.99,
+    "lowest_tier": "Piscojito (NOK 49)",
+    "sources": [
+      "https://www.youtube.com/playlist?list=PLNHSDDtTzWMbmgGpIdiAu4mJ1-AMU-7ey",
+      "https://www.youtube.com/@PiscoLitty/streams"
+    ]
+  },
+  {
+    "name": "Counterpoints",
+    "slug": "counterpoints",
+    "url": "https://www.youtube.com/@counterpointspol",
+    "own_account": "@counterpointspol",
+    "gift_price": 2.99,
+    "lowest_tier": "Recruit (Tier 1) (NOK 29)",
+    "sources": [
+      "https://www.youtube.com/playlist?list=PLptaQl_wteHUTL-goyICMpuo9L3LoBPhh",
+      "https://www.youtube.com/playlist?list=PLptaQl_wteHVDAOnId66MOF2RgkuO4IZq",
+      "https://www.youtube.com/@counterpointspol/streams"
+    ]
+  },
+  {
+    "name": "The Soy Pill",
+    "slug": "the-soy-pill",
+    "url": "https://www.youtube.com/@TheSoyPill",
+    "own_account": "@thesoypill",
+    "gift_price": 2.99,
+    "lowest_tier": "Basic Bean (NOK 29)",
+    "sources": [
+      "https://www.youtube.com/playlist?list=PLVVCgm7nq1QD8OGIzOZ2IrV51pqziY-xr",
+      "https://www.youtube.com/@TheSoyPill/streams"
+    ]
+  },
+  {
+    "name": "Lib & Learn",
+    "slug": "lib-and-learn",
+    "url": "https://www.youtube.com/@LibAndLearn",
+    "own_account": "@libandlearn",
+    "gift_price": 1.99,
+    "lowest_tier": "Libbed-up (NOK 19)",
+    "sources": [
+      "https://www.youtube.com/playlist?list=PLLHFuD_1fnZ9h3KqPK_p0Apg2vqgCdCf7",
+      "https://www.youtube.com/@LibAndLearn/streams"
+    ]
+  }
+]
