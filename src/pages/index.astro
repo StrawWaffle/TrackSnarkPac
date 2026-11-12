@@ -6,25 +6,27 @@ import Regulars from '../components/Regulars.astro';
 import Combos from '../components/Combos.astro';
 import DonorTable from '../components/DonorTable.astro';
 import Method from '../components/Method.astro';
-import { base, payload } from '../lib/site';
+import { ALL, base, ctx, payload } from '../lib/site';
+import { ledeAll } from '../lib/text';
 const n = payload.channels.length;
+const L = ledeAll(ctx, base, ALL);
 ---
 <Base title="TrackSnarkPac: who donates across channels" description={`Superchats on ${n} political YouTube channels, and the people who donate on more than one of them.`} scope="all">
   <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt="">Who donates across channels</h1>
-  <p class="lede" id="lede"><span class="loading">Loading…</span></p>
-  <p id="context"></p>
+  <p class="lede" id="lede" set:html={L.lede}></p>
+  <p id="context" set:html={L.context}></p>
   <div class="arrays" id="arrays"></div>
   <p class="dim" id="scope"></p>
   <Filters />
   <Monthly intro="Superchat dollars per month on each channel. The colored part of each bar came from people who also donated on another of these channels; grey is everyone else. Hover a month for the numbers." />
-  <h2 id="sharetitle">How much of each channel's money comes from shared donors</h2>
+  <h2 id="sharetitle" data-toc="Shared donors">How much of each channel's money comes from shared donors</h2>
   <p class="dim" id="sharenote">Share of the channel's superchat dollars sent by people who also donated on at least one of the other channels.</p>
   <div class="share" id="share"></div>
   <div class="axis"><div></div><div><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div><div></div></div>
   <Regulars />
   <Combos />
   <DonorTable />
-  <h2>The {n} channels</h2>
+  <h2 id="s-channels" data-toc="Channels">The {n} channels</h2>
   <div class="scroll"><table id="chans"><thead></thead><tbody></tbody></table></div>
   <Method />
 </Base>

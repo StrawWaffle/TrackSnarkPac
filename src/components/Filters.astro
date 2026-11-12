@@ -2,8 +2,10 @@
 interface Props { selection?: boolean }
 const { selection = true } = Astro.props;
 ---
+<nav class="toc" id="toc" aria-label="On this page"></nav>
 <div class="filters" role="search">
-  <div class="frow">
+  <button type="button" id="ftoggle" class="ftoggle" aria-expanded="false" aria-controls="frow">Filters</button>
+  <div class="frow" id="frow">
     <div class="field"><label for="fmsg">Message contains</label><input id="fmsg" type="search" placeholder="destiny, dgg"></div>
     <div class="field"><label for="ftitle">Stream title contains</label><input id="ftitle" type="search" placeholder="debate"></div>
     <div class="field"><label for="ffrom">From</label><select id="ffrom"></select></div>

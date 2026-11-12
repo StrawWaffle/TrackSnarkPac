@@ -45,7 +45,23 @@ const channels = payload.channels;
 </div>
 <slot />
 </main>
+<a href="#" class="totop" id="totop" aria-label="Back to top" hidden>↑ Top</a>
 <div id="tip" role="tooltip"></div>
+<script is:inline>
+(function () {
+  var toc = document.getElementById('toc'); if (!toc) return;
+  var hs = Array.prototype.slice.call(document.querySelectorAll('main h2[data-toc]'));
+  toc.innerHTML = '<a href="#" class="toc-top">Top</a>' + hs.map(function (h) { return '<a href="#' + h.id + '">' + h.dataset.toc + '</a>'; }).join('');
+  var top = document.getElementById('totop');
+  function onScroll() {
+    var cur = null;
+    hs.forEach(function (h) { if (h.getBoundingClientRect().top < 140) cur = h.id; });
+    toc.querySelectorAll('a').forEach(function (a) { a.classList.toggle('cur', !!cur && a.getAttribute('href') === '#' + cur); });
+    top.hidden = scrollY < 900;
+  }
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+</script>
 <script is:inline>
 (function () {
   function setTheme(t) {

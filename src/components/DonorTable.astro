@@ -2,7 +2,7 @@
 interface Props { everyone?: boolean }
 const { everyone = false } = Astro.props;
 ---
-<h2 id="dtitle">Cross-channel donors</h2>
+<h2 id="dtitle" data-toc="Donors">Cross-channel donors</h2>
 <p class="dim">{everyone ? "Everyone who paid on this channel, ranked by what they sent; colored squares mark people who also give on other channels, and their names link to their own page. " : ""}Superchat dollars per person, split by channel on one shared scale, with gifted memberships as hatched segments at their estimated price. "Active" shows when they gave across the period, one tick per stream they donated on. Click a name for that person's page. Tick people to compare them with everyone else, or switch to hiding them; shift-click ticks a range. The selection is part of the link.</p>
 <div class="tools">
   {everyone && <button id="dcross" type="button" class="toggle" aria-pressed="false">Cross-channel donors only</button>}
@@ -12,5 +12,6 @@ const { everyone = false } = Astro.props;
   <button id="onlysel" type="button" class="toggle" aria-pressed="false" hidden>Selected only</button>
   <button id="clearcombo" type="button" hidden></button>
   <span id="count"></span>
+  <button id="dcsv" type="button" title="Download the donors listed here, with the current filters">Download CSV</button>
 </div>
 <div class="scroll"><table id="donors"><thead></thead><tbody></tbody></table></div>

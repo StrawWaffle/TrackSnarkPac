@@ -2,7 +2,7 @@
 // (data-scope = all | channel | donor, plus data-channel or data-donor) and
 // includes the section containers it wants; each render step skips sections
 // that aren't on the page.
-import { aggregate, allTime, makeContext, median } from '../lib/core';
+import { aggregate, allTime, makeContext } from '../lib/core';
 import type { Aggregate, Filter, Payload, Person } from '../lib/types';
 import { esc, hms, listJoin, mlabel, MON, pct, possessive, usd } from '../lib/format';
 
@@ -19,7 +19,23 @@ const store = {
 
 // ---- tooltip (works before data loads) ----
 const tip = $('tip');
+let touchTip = false;
+function placeTip(t: HTMLElement, cx: number, cy: number) {
+  tip.textContent = t.dataset.tip!; tip.style.display = 'block';
+  const x = Math.max(8, Math.min(cx + 14, innerWidth - tip.offsetWidth - 8));
+  const y = cy + 16 + tip.offsetHeight > innerHeight ? cy - tip.offsetHeight - 12 : cy + 16;
+  tip.style.left = x + 'px'; tip.style.top = y + 'px';
+}
+// touch screens have no hover: a tap shows the tooltip, a tap elsewhere hides it
+document.addEventListener('pointerdown', (ev) => {
+  if (ev.pointerType !== 'touch') { touchTip = false; return; }
+  const t = (ev.target as Element).closest?.('[data-tip]') as HTMLElement | null;
+  touchTip = !!t;
+  if (t) placeTip(t, ev.clientX, ev.clientY); else tip.style.display = 'none';
+});
+addEventListener('scroll', () => { if (touchTip) { tip.style.display = 'none'; touchTip = false; } }, { passive: true });
 document.addEventListener('mousemove', (ev) => {
+  if (touchTip) return;
   const t = (ev.target as Element).closest?.('[data-tip]') as HTMLElement | null;
   if (!t) { tip.style.display = 'none'; return; }
   tip.textContent = t.dataset.tip!; tip.style.display = 'block';
@@ -99,32 +115,6 @@ async function main() {
     };
   }
 
-  // ---- headline per page ----
-  function renderLede() {
-    if (!has('lede')) return;
-    if (SCOPE === 'all') {
-      const gifts = ALL.cross.reduce((x, p) => x + p.giftEst, 0), allGifts = ALL.all.reduce((x, p) => x + p.giftEst, 0);
-      $('lede').innerHTML = `Since ${mlabel(MONTHS[0])}, <strong>${ALL.cross.length} people</strong> have paid for superchats on more than one of ${NC} political YouTube channels: ${listJoin(CH.map((c, i) => `<a class="inlink" href="${chanHref(i)}">${esc(c.name)}</a>`))}. Together they sent <strong>${usd(ALL.crossUsd)}</strong>, ${pct(ALL.crossUsd / ALL.total)} of the ${usd(ALL.total)} in superchats on these streams. Gifted memberships add about ${usd(gifts)} more; counted at their estimated price, cross-channel donors gave ${usd(ALL.crossUsd + gifts)} of ${usd(ALL.total + allGifts)} (${pct((ALL.crossUsd + gifts) / (ALL.total + allGifts))}).`;
-      const payers = ALL.all.filter((p) => p.npaid > 0), cross = payers.filter((p) => p.chs.length > 1), single = payers.filter((p) => p.chs.length === 1);
-      const heavy = payers.filter((p) => p.npaid >= 20), hc = heavy.filter((p) => p.chs.length > 1).length;
-      $('context').innerHTML = `Most of them are regulars. A typical cross-channel donor sent ${median(cross.map((p) => p.npaid))} superchats with a median of ${usd(median(cross.flatMap((p) => p.msgs.map((r) => r[2]))), true)}; someone who gives on one channel only typically sent ${median(single.map((p) => p.npaid))}, of ${usd(median(single.flatMap((p) => p.msgs.map((r) => r[2]))), true)}. Of the ${heavy.length} people who sent 20 or more superchats, ${hc} (${pct(hc / heavy.length)}) gave on more than one channel.`;
-    } else if (SCOPE === 'channel' && SCOPE_CH !== undefined) {
-      const c = SCOPE_CH, ch = CH[c], first = D.streams.find((s) => s[1] === c)?.[2] ?? D.since;
-      const cr = ALLC.cross, crUsd = cr.reduce((x, p) => x + p.usd[c], 0);
-      const elsewhere = CH.map((_, o) => (o === c ? 0 : cr.reduce((x, p) => x + (ALL.all.find((q) => q.a === p.a)?.usd[o] ?? 0), 0)));
-      $('lede').innerHTML = `Since ${mlabel(first.slice(0, 7))}, <strong>${ALLC.all.length.toLocaleString()} people</strong> have paid ${usd(ALLC.chan[c].usd)} in superchats on ${esc(ch.name)}. <strong>${cr.length}</strong> of them also donate on at least one of the other channels here, and they sent <strong>${usd(crUsd)}</strong>, ${pct(ALLC.chan[c].usd ? crUsd / ALLC.chan[c].usd : 0)} of ${possessive(esc(ch.name))} superchat money.`;
-      const parts = CH.map((o, i) => (i !== c && elsewhere[i] ? `${usd(elsewhere[i])} on <a class="inlink" href="${chanHref(i)}">${esc(o.name)}</a>` : '')).filter(Boolean);
-      $('context').innerHTML = parts.length ? `Those ${cr.length} people also sent ${listJoin(parts)}.` : '';
-    } else if (SCOPE === 'donor' && ALLP) {
-      const p = ALLP.all[0];
-      if (!p) { $('lede').textContent = 'No donations found for this person.'; return; }
-      const parts = p.chs.map((c) => `${usd(p.usd[c])} on <a class="inlink" href="${chanHref(c)}">${esc(CH[c].name)}</a> (${p.paid[c]} superchat${p.paid[c] === 1 ? '' : 's'}${p.gifts[c] ? `, ${p.gifts[c]} gifted memberships ≈${usd(p.gifts[c] * CH[c].price)}` : ''})`);
-      const rank = [...ALL.cross].sort((x, y) => y.total - x.total).findIndex((q) => q.a === p.a) + 1;
-      $('lede').innerHTML = `<strong>${esc(D.authors[p.a][0])}</strong> sent <strong>${usd(p.total)}</strong> in ${p.npaid} superchats across ${p.chs.length} channels between ${p.first} and ${p.last}: ${listJoin(parts)}.`;
-      $('context').innerHTML = `That ranks them ${rank} of the ${NCROSS} people who donate on more than one of these channels, by superchat dollars.`;
-    }
-  }
-
   // ---- icon arrays (overview and channel pages, all-time) ----
   const PERSON = 'M5 0.6a2.1 2.1 0 1 1 0 4.2a2.1 2.1 0 1 1 0-4.2zM1.2 10.4v-2.6q0-2.4 2.4-2.4h2.8q2.4 0 2.4 2.4v2.6z';
   function iconArray(on: number, kind: 'person' | 'square') {
@@ -172,6 +162,7 @@ async function main() {
     }
     parts.push(F.from === YEAR_FROM && F.to === LAST ? `the past year (${mlabel(F.from)} to ${mlabel(F.to)})` : F.from === MONTHS[0] && F.to === LAST ? 'all time' : `${mlabel(F.from)} to ${mlabel(F.to)}`);
     const lead = `Below: ${parts.join(', ')}.`;
+    if (has('ftoggle')) $('ftoggle').textContent = `Filters: ${parts.join(', ').replace(/<[^>]+>/g, '')}`;
     if (SCOPE === 'donor') {
       $('fsummary').innerHTML = `${lead} ${selName()} sent <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, <strong>${pct(AD.total ? A.total / AD.total : 0)}</strong> of the ${usd(AD.total)} in superchats on these streams.${perChannel()}`;
     } else if (focus()) {
@@ -181,6 +172,20 @@ async function main() {
       $('fsummary').innerHTML = `${lead} <strong>${usd(A.total)}</strong> in ${A.nsel.toLocaleString()} superchats, of which <strong>${pct(A.total ? A.crossUsd / A.total : 0)}</strong> (${usd(A.crossUsd)}) came from ${A.cross.length} cross-channel donors.${perChannel()}`;
     }
   }
+
+  // ---- download what a table currently shows ----
+  function downloadCsv(name: string, header: string[], rows: (string | number)[][]) {
+    const cell = (v: string | number) => { const t = String(v ?? ''); return /[",\n]/.test(t) ? '"' + t.replace(/"/g, '""') + '"' : t; };
+    const text = [header, ...rows].map((r) => r.map(cell).join(',')).join('\n');
+    const a = document.createElement('a');
+    // the byte-order mark makes Excel read the file as UTF-8
+    a.href = URL.createObjectURL(new Blob(['\ufeff' + text], { type: 'text/csv' }));
+    a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  }
+  const fileTag = () => [SCOPE === 'channel' ? CH[SCOPE_CH!].slug : SCOPE === 'donor' ? D.authors[SCOPE_A!][0].replace(/[^\w-]+/g, '') : 'all', F.from, F.to].join('_');
+  const scRow = (r: (typeof D.sc)[number]) => { const s = D.streams[r[0]]; return [s[2], CH[s[1]].name, r[3], r[2], D.authors[r[1]][0], D.authors[r[1]][1], r[5], s[3], `https://youtu.be/${s[0]}?t=${r[4]}`]; };
+  const scHeader = ['date', 'channel', 'amount', 'usd', 'author', 'author_channel_id', 'message', 'stream', 'link'];
+  let donorRowsShown: Person[] = [], scRowsShown: (typeof D.sc)[number][] = [];
 
   // ---- missing chat data, per channel and month ----
   const MISS = CH.map(() => new Map<string, { n: number; r: Record<string, number>; t: string[] }>()), UNDATED = CH.map(() => 0);
@@ -273,7 +278,7 @@ async function main() {
     const people = AX.all.filter((p) => ids.has(p.a));
     const rows = CH.map((ch, o) => ({ o, usd: people.reduce((x, p) => x + pv(p, o), 0), n: people.filter((p) => p.usd[o] > 0 || p.gifts[o] > 0).length }));
     const mx = Math.max(1, ...rows.map((r) => r.usd));
-    $('also').innerHTML = rows.map((r) => `<div class="srow" data-tip="${r.n} of them gave ${usd(r.usd)} on ${esc(CH[r.o].name)}"><div>${r.o === c ? esc(CH[r.o].name) : `<a class="inlink" href="${chanHref(r.o)}">${esc(CH[r.o].name)}</a>`}</div><div class="strack"><div class="sbar c${r.o}" style="width:${((r.usd / mx) * 100).toFixed(1)}%"></div></div><div class="num">${usd(r.usd)} <span class="dim">· ${r.n} people</span></div></div>`).join('');
+    $('also').innerHTML = rows.map((r) => `<div class="srow" data-tip="${r.n} of them gave ${usd(r.usd)} on ${esc(CH[r.o].name)}"><div>${r.o === c ? `${esc(CH[r.o].name)} <span class="dim">(this channel)</span>` : `<a class="inlink" href="${chanHref(r.o)}">${esc(CH[r.o].name)}</a>`}</div><div class="strack"><div class="sbar c${r.o}" style="width:${((r.usd / mx) * 100).toFixed(1)}%"></div></div><div class="num">${usd(r.usd)} <span class="dim">· ${r.n} people</span></div></div>`).join('');
     if (has('alsonote')) $('alsonote').textContent = `What the ${ids.size} cross-channel donors who gave on ${CH[c].name} in this filter sent on each channel over the same months. Bars share one scale.`;
   }
 
@@ -343,7 +348,8 @@ async function main() {
     { id: 'gifts', label: 'Gifts (est.)', k: 'gift', num: 1, v: (p) => p.giftEst },
     { id: 'open', label: '', fixed: 1 },
   ];
-  const hiddenCols = new Set<string>(JSON.parse(store.get('ts-hidden') || 'null') || DCOLS.filter((c) => c.off).map((c) => c.id!));
+  // narrow screens start without the wide timeline and bar columns; any choice in the Columns menu is remembered
+  const hiddenCols = new Set<string>(JSON.parse(store.get('ts-hidden') || 'null') || DCOLS.filter((c) => c.off || (innerWidth < 700 && (c.id === 'active' || c.id === 'bar'))).map((c) => c.id!));
   function buildColMenu() {
     if (!has('colmenu')) return;
     $('colmenu').innerHTML = DCOLS.filter((c) => !c.fixed).map((c) => `<label><input type="checkbox" data-col="${c.id}"${hiddenCols.has(c.id!) ? '' : ' checked'}> ${c.label}</label>`).join('');
@@ -383,6 +389,7 @@ async function main() {
       gifts: (p) => `<td class="num dim">${p.giftN ? `${p.giftN} ≈${usd(p.giftEst)}` : ''}</td>`,
       open: () => `<td><button class="more" aria-expanded="false">Messages</button></td>`,
     };
+    donorRowsShown = rows;
     sortable($('donors'), cols, rows, dState, (p, vis, i) => `<tr class="donor" data-a="${p.a}">${vis.map((c) => cell[c.id!](p, i)).join('')}</tr>`, renderDonors);
     $('donors').dataset.ncol = cols.filter((c) => !c.hidden).length;
     $('count').textContent = rows.length === pool.length ? '' : `Showing ${rows.length} of ${pool.length}`;
@@ -422,7 +429,7 @@ async function main() {
     ];
     sortable($('streamsT'), cols, rows, sState, (r) => {
       const s = D.streams[r.i];
-      const link = `<a href="https://youtu.be/${s[0]}" target="_blank" rel="noopener">${esc(r.title)}</a>`;
+      const link = `<a class="clamp2" href="https://youtu.be/${s[0]}" target="_blank" rel="noopener" title="${esc(r.title)}">${esc(r.title)}</a>`;
       return `<tr><td class="when">${r.date}</td>${SCOPE === 'donor' ? `<td class="cname"><span class="mark c${r.c}"></span> ${esc(CH[r.c].name)}</td>` : ''}<td>${link}</td>`
         + (SCOPE === 'donor'
           ? `<td class="num">${usd(r.mine, true)}</td><td class="num">${r.mineN}</td><td class="num">${r.usd ? pct(r.mine / r.usd) : ''}</td>`
@@ -441,6 +448,7 @@ async function main() {
     let rows: R[] = A.all.flatMap((p) => p.msgs.map((r) => ({ r, date: D.streams[r[0]][2], cross: p.chs.length > 1 })));
     if (scCrossOnly) rows = rows.filter((x) => x.cross);
     const total = rows.length;
+    scRowsShown = rows.map((x) => x.r);
     const cols: Col<R>[] = [
       { label: 'Date', k: 'date', v: (x) => x.date + String(x.r[4]).padStart(6, '0') },
       { label: 'Amount', k: 'usd', num: 1, v: (x) => x.r[2], title: 'Sorted by US$ value' },
@@ -513,6 +521,11 @@ async function main() {
   });
   if (has('clearcombo')) $('clearcombo').onclick = () => { comboSel.clear(); renderCombos(); renderDonors(); };
   if (has('q')) $('q').addEventListener('input', renderDonors);
+  if (has('dcsv')) $('dcsv').onclick = () => downloadCsv(`donors_${fileTag()}.csv`,
+    ['name', 'channel_id', 'channels', 'superchat_usd', 'superchats', 'gifted_memberships', 'gift_usd_estimate', 'first', 'last', ...CH.map((c) => 'usd_' + c.slug)],
+    donorRowsShown.map((p) => [D.authors[p.a][0], D.authors[p.a][1], p.chs.map((c) => CH[c].name).join('; '), p.usd.reduce((x, y) => x + y, 0).toFixed(2), p.npaid, p.giftN, p.giftEst.toFixed(2), p.first, p.last, ...p.usd.map((v) => v.toFixed(2))]));
+  if (has('sccsv')) $('sccsv').onclick = () => downloadCsv(`superchats_${fileTag()}.csv`, scHeader, scRowsShown.map(scRow));
+  if (has('msgcsv')) $('msgcsv').onclick = () => downloadCsv(`superchats_${fileTag()}.csv`, scHeader, A.all.flatMap((p) => p.msgs).sort(byNewest).map(scRow));
   if (has('dcross')) $('dcross').onclick = () => { dCrossOnly = !dCrossOnly; renderDonors(); };
   if (has('scT')) {
     $('scmore').onclick = () => { scShown += 200; renderSuperchats(); };
@@ -565,13 +578,14 @@ async function main() {
     if (SCOPE !== 'donor') { who().clear(); onlySel = false; }
     $('fmsg').value = ''; $('ftitle').value = ''; $('ffrom').value = YEAR_FROM; $('fto').value = LAST; onFilter();
   };
+  if (has('ftoggle')) $('ftoggle').onclick = () => { const f = document.querySelector('.filters')!; const open = f.classList.toggle('open'); $('ftoggle').setAttribute('aria-expanded', open); };
   window.addEventListener('hashchange', () => { readHash(); syncInputs(); renderAll(); });
 
   if (has('fxdate')) $('fxdate').textContent = D.fx;
   if (has('prices')) $('prices').textContent = CH.map((c) => `${c.name} $${c.price.toFixed(2)}`).join(', ');
   if (has('scope')) $('scope').textContent = `Livestreams from ${D.since} to ${D.until}, read from each stream's public chat replay. Amounts are what viewers paid in US dollars, before YouTube's cut. ${D.missing.length} listed streams have no readable chat (members-only, no chat replay or age-restricted); hatched months in the charts show where, and hovering one says why.`;
   if (has('foot')) $('foot').textContent = `Built ${D.built} from ${D.streams.length} streams and ${D.sc.length.toLocaleString()} superchats.`;
-  readHash(); syncInputs(); buildColMenu(); renderLede(); renderArrays(); renderAll();
+  readHash(); syncInputs(); buildColMenu(); renderArrays(); renderAll();
   document.querySelectorAll('.loading').forEach((el) => el.remove());
 }
 

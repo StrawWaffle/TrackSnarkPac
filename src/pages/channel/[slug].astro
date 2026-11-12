@@ -7,7 +7,8 @@ import Regulars from '../../components/Regulars.astro';
 import Combos from '../../components/Combos.astro';
 import DonorTable from '../../components/DonorTable.astro';
 import Method from '../../components/Method.astro';
-import { base, payload } from '../../lib/site';
+import { ALL, base, ctx, payload } from '../../lib/site';
+import { ledeChannel } from '../../lib/text';
 import { possessive } from '../../lib/format';
 
 export function getStaticPaths() {
@@ -15,27 +16,28 @@ export function getStaticPaths() {
 }
 const { i } = Astro.props as { i: number };
 const ch = payload.channels[i];
+const L = ledeChannel(ctx, base, i, ALL);
 ---
 <Base title={`${ch.name} · TrackSnarkPac`} description={`Superchats on ${ch.name}'s livestreams, and how many come from people who also donate on other channels.`} scope="channel" channel={ch.slug}>
   <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt=""><span class={`mark c${i}`} style="width:14px;height:14px"></span>{ch.name}</h1>
-  <p class="lede" id="lede"><span class="loading">Loading…</span></p>
-  <p id="context"></p>
+  <p class="lede" id="lede" set:html={L.lede}></p>
+  <p id="context" set:html={L.context}></p>
   <p class="dim"><a href={ch.url} target="_blank" rel="noopener">{ch.name} on YouTube</a> · gifted memberships valued at ${ch.price.toFixed(2)} each · {ch.missing} listed streams without readable chat</p>
   <div class="arrays" id="arrays"></div>
   <Filters />
   <Monthly intro={`Superchat dollars per month on ${ch.name}. The colored part came from people who also donate on another of these channels; grey is everyone else. Hover a month for the numbers.`} several={false} />
-  <h2>Where {possessive(ch.name)} shared donors also give</h2>
+  <h2 id="s-also" data-toc="Where they also give">Where {possessive(ch.name)} shared donors also give</h2>
   <p class="dim" id="alsonote"></p>
   <div class="share" id="also"></div>
   <Regulars where={` on ${ch.name}`} />
   <Combos intro={`Each row is one combination of channels that includes ${ch.name}: how many people gave on exactly those channels, and what they sent on ${ch.name}.`} />
   <DonorTable everyone />
-  <h2>Every superchat</h2>
+  <h2 id="s-superchats" data-toc="Every superchat">Every superchat</h2>
   <p class="dim">Every superchat on {ch.name} in this filter, from everyone. Colored squares after a name mark people who also give on other channels here; their names link to their own page. Amounts in other currencies show their US$ value.</p>
-  <div class="tools"><button id="sccross" type="button" class="toggle" aria-pressed="false">Cross-channel donors only</button><span id="sccount" class="small"></span></div>
+  <div class="tools"><button id="sccross" type="button" class="toggle" aria-pressed="false">Cross-channel donors only</button><span id="sccount" class="small"></span><button id="sccsv" type="button" title="Download every superchat in this filter">Download CSV</button></div>
   <div class="scroll"><table id="scT"><thead></thead><tbody></tbody></table></div>
   <p><button id="scmore" type="button" hidden></button></p>
-  <h2>Streams</h2>
+  <h2 id="s-streams" data-toc="Streams">Streams</h2>
   <p class="dim" id="streamsnote"></p>
   <div class="scroll"><table id="streamsT"><thead></thead><tbody></tbody></table></div>
   <Method />

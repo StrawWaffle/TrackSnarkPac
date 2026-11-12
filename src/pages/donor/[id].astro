@@ -4,31 +4,34 @@ import Base from '../../layouts/Base.astro';
 import Filters from '../../components/Filters.astro';
 import Monthly from '../../components/Monthly.astro';
 import Method from '../../components/Method.astro';
-import { base, ctx } from '../../lib/site';
+import { ALL, base, ctx } from '../../lib/site';
+import { ledeDonor } from '../../lib/text';
 import { crossDonors } from '../../lib/core';
 
 export function getStaticPaths() {
-  return crossDonors(ctx).map((d) => ({ params: { id: d.id }, props: { name: d.name } }));
+  return crossDonors(ctx).map((d) => ({ params: { id: d.id }, props: { name: d.name, a: d.a } }));
 }
 const { id } = Astro.params;
-const { name } = Astro.props as { name: string };
+const { name, a } = Astro.props as { name: string; a: number };
+const L = ledeDonor(ctx, base, a, ALL);
 ---
 <Base title={`${name} · TrackSnarkPac`} description={`Superchats ${name} sent across channels.`} scope="donor" donor={id}>
   <p class="crumb"><a href={`${base}#dtitle`}>Cross-channel donors</a></p>
   <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt="">{name}</h1>
-  <p class="lede" id="lede"><span class="loading">Loading…</span></p>
-  <p id="context"></p>
+  <p class="lede" id="lede" set:html={L.lede}></p>
+  <p id="context" set:html={L.context}></p>
   <p class="dim"><a href={`https://www.youtube.com/channel/${id}`} target="_blank" rel="noopener">Their YouTube channel</a></p>
   <Filters selection={false} />
   <Monthly intro="Superchat dollars per month on each channel they gave on. The colored part is theirs; grey is everyone else's. Hover a month for the numbers." />
-  <h2 id="sharetitle">How much of each channel's money comes from them</h2>
+  <h2 id="sharetitle" data-toc="Share of each channel">How much of each channel's money comes from them</h2>
   <p class="dim" id="sharenote"></p>
   <div class="share" id="share"></div>
   <div class="axis"><div></div><div><span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span></div><div></div></div>
-  <h2>Streams they gave on</h2>
+  <h2 id="s-streams" data-toc="Streams">Streams they gave on</h2>
   <p class="dim" id="streamsnote"></p>
   <div class="scroll"><table id="streamsT"><thead></thead><tbody></tbody></table></div>
-  <h2>Every superchat <span class="small" id="msgcount"></span></h2>
+  <h2 id="s-msgs" data-toc="Every superchat">Every superchat <span class="small" id="msgcount"></span></h2>
+  <p><button id="msgcsv" type="button">Download CSV</button></p>
   <div class="msglist tall" id="msglist"></div>
   <Method />
 </Base>
