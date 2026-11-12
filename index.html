@@ -91,6 +91,8 @@ th, td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: l
 th { font-weight: 500; color: var(--text-2); font-size: 13px; white-space: nowrap; }
 th.num { text-align: right; }
 th[data-k] { cursor: pointer; user-select: none; }
+.cname { white-space: nowrap; }
+#chans th { white-space: normal; vertical-align: bottom; line-height: 1.3; }
 th[data-k]:hover { color: var(--text); }
 th[aria-sort=descending]::after { content: " \2193"; }
 th[aria-sort=ascending]::after { content: " \2191"; }
@@ -491,7 +493,7 @@ function renderChans() {
     { label: 'From cross-channel', k: 'crossUsd', num: 1, v: r => r.crossUsd, title: 'Superchat dollars from people who also donate on another of these channels' }, { label: 'Cross-channel share', k: 'share', num: 1, v: r => r.share }, { label: 'Gifts', k: 'gifts', num: 1, v: r => r.gifts },
     { label: 'Gifts (est.)', k: 'giftEst', num: 1, v: r => r.giftEst },
   ];
-  sortable($('chans'), cols, rows, chState, r => `<tr><td><span class="mark c${r.c}"></span> <a href="${r.url}" target="_blank" rel="noopener">${esc(r.name)}</a></td><td class="num">${r.streams}</td><td class="num">${r.missing}</td><td class="num">${Math.round(r.hours).toLocaleString()}</td><td class="num">${usd(r.usd)}</td><td class="num">${usd(r.per)}</td><td class="num">${r.paid.toLocaleString()}</td><td class="num">${r.payers.toLocaleString()}</td><td class="num">${r.shared}</td><td class="num">${usd(r.crossUsd)}</td><td class="num">${pct(r.share)}</td><td class="num">${r.gifts}</td><td class="num">${usd(r.giftEst)}</td></tr>`, renderChans);
+  sortable($('chans'), cols, rows, chState, r => `<tr><td class="cname"><span class="mark c${r.c}"></span> <a href="${r.url}" target="_blank" rel="noopener">${esc(r.name)}</a></td><td class="num">${r.streams}</td><td class="num">${r.missing}</td><td class="num">${Math.round(r.hours).toLocaleString()}</td><td class="num">${usd(r.usd)}</td><td class="num">${usd(r.per)}</td><td class="num">${r.paid.toLocaleString()}</td><td class="num">${r.payers.toLocaleString()}</td><td class="num">${r.shared}</td><td class="num">${usd(r.crossUsd)}</td><td class="num">${pct(r.share)}</td><td class="num">${r.gifts}</td><td class="num">${usd(r.giftEst)}</td></tr>`, renderChans);
 }
 
 function renderAll() {
