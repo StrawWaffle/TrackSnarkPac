@@ -1,6 +1,6 @@
 # TrackSnarkPac
 
-Superchats on 4 political YouTube channels (Pisco, Counterpoints, The Soy Pill and Lib & Learn) from 2024-05-17 to 2026-11-11, and the people who donate on more than one of them.
+Superchats on 4 political YouTube channels (Pisco, Counterpoints, The Soy Pill and Lib & Learn) from 2024-05-17 to 2026-11-12, and the people who donate on more than one of them.
 
 The site is built with [Astro](https://astro.build) and published to GitHub Pages by the workflow in `.github/workflows/deploy.yml` on every push to `main`.
 

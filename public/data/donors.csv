@@ -1,6 +1,6 @@
 name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_est,usd_incl_gifts_est,streams,usd_Pisco,usd_Counterpoints,usd_The Soy Pill,usd_Lib & Learn
-@dooby7437,UC6Cxa2eWiEzL_pQw2r5HaKA,3,Pisco; Counterpoints; The Soy Pill,5426.0,,460,0,0,5426.0,94,3506.0,1770.0,150.0,0.0
-@Grassroots_Hegemon,UC1Wu-nX764K3U4d10NZ9OWg,2,Pisco; Counterpoints,3903.0,,208,45,134.55,4037.55,53,505.0,3398.0,0.0,0.0
+@dooby7437,UC6Cxa2eWiEzL_pQw2r5HaKA,3,Pisco; Counterpoints; The Soy Pill,5626.0,,480,0,0,5626.0,95,3506.0,1970.0,150.0,0.0
+@Grassroots_Hegemon,UC1Wu-nX764K3U4d10NZ9OWg,2,Pisco; Counterpoints,3983.0,,212,45,134.55,4117.55,54,505.0,3478.0,0.0,0.0
 @ponderingpolitics,UCbU6Rve0XMNZ2a2yaYgjlTA,4,Pisco; Counterpoints; The Soy Pill; Lib & Learn,3144.08,,322,0,0,3144.08,159,2657.23,49.97,396.88,40.0
 @vazaraka,UCROjpw5Ay6whPfj_ku5EjyQ,2,Pisco; Counterpoints,284.0,,27,212,1019.88,1303.88,102,279.0,5.0,0.0,0.0
 @Benjamin_Gilbert-Lif,UCueJoyiqcVuNOuO0xPcWXjA,2,Pisco; The Soy Pill,1299.95,,5,0,0,1299.95,5,599.98,0.0,699.97,0.0
@@ -24,9 +24,9 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @RegularDude112,UCdSsCCwxNmZKuYeNzWIQQiQ,1,Pisco,229.93,,8,0,0,229.93,7,229.93,0.0,0.0,0.0
 @ZoniaTV,UC0sUfNQY5TxmbUIop5w_Dow,1,Counterpoints,200.0,,2,10,29.9,229.9,2,0.0,200.0,0.0,0.0
 @Fhelrunner,UClAg1UWZD6gRrmhUxYryv2Q,1,Counterpoints,218.01,,31,0,0,218.01,24,0.0,218.01,0.0,0.0
-@fashionforty,UC-jTZdLlaApYxG5WxLT8duQ,1,Counterpoints,210.0,,36,1,2.99,212.99,21,0.0,210.0,0.0,0.0
+@fashionforty,UC-jTZdLlaApYxG5WxLT8duQ,1,Counterpoints,215.0,,37,1,2.99,217.99,22,0.0,215.0,0.0,0.0
+@DiminishedDarknut,UCTLLA8js4LfNY6OB950Bp3w,1,Counterpoints,175.0,,11,10,29.9,204.9,10,0.0,175.0,0.0,0.0
 @sapientgreen,UCwrIyi0siDC-6nlCFwEPDLQ,1,Counterpoints,199.83,"DKK1,350.00",11,0,0,199.83,10,0.0,199.83,0.0,0.0
-@DiminishedDarknut,UCTLLA8js4LfNY6OB950Bp3w,1,Counterpoints,165.0,,10,10,29.9,194.9,9,0.0,165.0,0.0,0.0
 @valerie.mccaffrey,UCd2RLGWb9-U-2Yl3G4lxNOA,1,Pisco,157.96,,12,7,34.93,192.89,15,157.96,0.0,0.0,0.0
 @DeathAwaitsUwU,UCAAaYSC31tCPga4412CH_Hw,1,The Soy Pill,177.93,,39,0,0,177.93,17,0.0,0.0,177.93,0.0
 @MichaelHatchTube,UCQYH9vbx8yx5vxah1IGMLcQ,3,Pisco; Counterpoints; Lib & Learn,163.76,,26,0,0,163.76,11,9.98,118.81,0.0,34.97
@@ -37,12 +37,12 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @LukeBeasley,UCM05jgFNwoeXvWfO9GuExzA,1,Pisco,149.98,,2,0,0,149.98,1,149.98,0.0,0.0,0.0
 @snark4lyfe,UCRUa7JiWDnsz3HSxv18c0eQ,2,Pisco; Counterpoints,5.0,,1,30,139.7,144.7,3,5.0,0.0,0.0,0.0
 @dunkpacino4347,UCQSkuemoVlEUoVeLGsImJtA,1,Pisco,144.0,,41,0,0,144.0,36,144.0,0.0,0.0,0.0
+@AKABattousai,UC1tYtCNU5AdwHHy_ilR1JSg,1,Counterpoints,85.0,,8,19,56.81,141.81,9,0.0,85.0,0.0,0.0
 @JRey-N7,UCTqe6kz_NR0OMMByEl_CbpA,1,Pisco,140.0,,24,0,0,140.0,19,140.0,0.0,0.0,0.0
 @jimberley6341,UCAFxN_i-p-rFqQmP0gRwv5Q,2,Pisco; Counterpoints,135.0,,10,0,0,135.0,6,125.0,10.0,0.0,0.0
 @SCALLYWAG.1,UCYhGEix6hP4I7rRJATYlx8w,2,Pisco; Counterpoints,78.92,A$115.93,28,11,54.89,133.81,26,75.51,3.4,0.0,0.0
 @kilotonics,UCF3MUAyOVU_5dsuUA1C3oBg,2,Pisco; The Soy Pill,131.0,,21,0,0,131.0,13,101.0,0.0,30.0,0.0
 @hell-sweet-hell,UC2l4Y-WQdGJUMZk9xFZx_Hw,3,Counterpoints; The Soy Pill; Lib & Learn,129.98,,3,0,0,129.98,3,0.0,99.99,20.0,9.99
-@AKABattousai,UC1tYtCNU5AdwHHy_ilR1JSg,1,Counterpoints,85.0,,8,14,41.86,126.86,8,0.0,85.0,0.0,0.0
 @toasttojoe3426,UCYqiGeS2jSdXxZvv5N_gK7g,1,The Soy Pill,125.0,,17,0,0,125.0,2,0.0,0.0,125.0,0.0
 @Brett83,UCqajHQYRnk_HFIp9UCRZQiw,1,The Soy Pill,120.0,,14,0,0,120.0,10,0.0,0.0,120.0,0.0
 @FaithAdams577,UCPavNTEILa9WCaCqwz1_3bQ,1,Pisco,39.98,,2,16,79.84,119.82,6,39.98,0.0,0.0,0.0
@@ -71,6 +71,7 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @DragonFireLT0523,UCtXuNSqB8Clr4lv-bOOmK8A,1,The Soy Pill,50.0,,1,10,29.9,79.9,1,0.0,0.0,50.0,0.0
 @adamsandler8885,UCDkHZLJVnEDJWDhNum4Dnaw,1,Pisco,79.87,,15,0,0,79.87,14,79.87,0.0,0.0,0.0
 @Tak1ngN0tes,UCITS2AVNF1yc083qrdhtUhg,2,The Soy Pill; Lib & Learn,77.0,,14,0,0,77.0,7,0.0,0.0,35.0,42.0
+@NamelessHenchman4,UCYcm-NChuWCy1UriBb8Cy-A,1,Counterpoints,76.0,,13,0,0,76.0,10,0.0,76.0,0.0,0.0
 @GripPilled,UCtEmtqIjgAk_jPZMGHsMlBQ,1,Pisco,0.0,,0,15,74.85,74.85,3,0.0,0.0,0.0,0.0
 @cylomirus4287,UCtvn8pakyG7nurCzKrHAvUw,1,The Soy Pill,74.0,,13,0,0,74.0,10,0.0,0.0,74.0,0.0
 @PhilMaher-b1m,UCx6dTFVsdIHLOf5J_0NNW4w,1,The Soy Pill,71.0,,20,0,0,71.0,1,0.0,0.0,71.0,0.0
@@ -84,7 +85,6 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @DeeeTee,UCzzUoP34qq_eLIBaII7Ee7w,1,Pisco,68.6,€61.99,15,0,0,68.6,11,68.6,0.0,0.0,0.0
 @noflamepls,UCvBbV10Sr2eYsejzdXxySAA,2,Pisco; The Soy Pill,68.0,,16,0,0,68.0,12,32.0,0.0,36.0,0.0
 @tinfoilfreak,UCBBS3TKHKCviQmywfeAbnYg,1,The Soy Pill,67.0,,14,0,0,67.0,10,0.0,0.0,67.0,0.0
-@NamelessHenchman4,UCYcm-NChuWCy1UriBb8Cy-A,1,Counterpoints,66.0,,12,0,0,66.0,9,0.0,66.0,0.0,0.0
 @Ace-withoutamustache,UCUdMPMNdtILNjrYf9AU61Gw,2,Pisco; The Soy Pill,65.0,,11,0,0,65.0,6,15.0,0.0,50.0,0.0
 @FromTheAshes0762,UC97ImITn0BeUvsW0ojwX6rA,1,Pisco,65.0,,7,0,0,65.0,2,65.0,0.0,0.0,0.0
 @odashara6575,UCd_LqmOsqAvlgvs3t25s0Ow,2,Pisco; Lib & Learn,65.0,,5,0,0,65.0,3,20.0,0.0,0.0,45.0
@@ -93,8 +93,8 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @enjaede,UCc7TKuzHmCqQmeo8w2jxtYg,1,Pisco,13.61,A$20.00,3,10,49.9,63.51,4,13.61,0.0,0.0,0.0
 @mirror_of_faith3134,UCEyw9JBwUN6hu_L9oyKiQjw,1,The Soy Pill,61.92,,8,0,0,61.92,6,0.0,0.0,61.92,0.0
 @creamedcrop5076,UC1tJ7XnANpPKFGIGjYTMxag,1,The Soy Pill,61.0,,12,0,0,61.0,6,0.0,0.0,61.0,0.0
-@Skillwalker_GG,UCWJYV6v0oowdPHdzbDCiZHA,1,Counterpoints,60.0,,2,0,0,60.0,2,0.0,60.0,0.0,0.0
 @robert5865,UCi9C17_FEndCetpoxcdbIVA,1,Pisco,60.0,,2,0,0,60.0,2,60.0,0.0,0.0,0.0
+@Skillwalker_GG,UCWJYV6v0oowdPHdzbDCiZHA,1,Counterpoints,60.0,,2,0,0,60.0,2,0.0,60.0,0.0,0.0
 @the_raging_tomato,UC5G8sJXAuWjcOc56saGNteQ,1,Pisco,59.97,,3,0,0,59.97,1,59.97,0.0,0.0,0.0
 @JetX85,UC6BOxg_KFGxLGg6mKpI-sWw,1,Pisco,59.91,,9,0,0,59.91,5,59.91,0.0,0.0,0.0
 @sreedotcom,UCh8KSeHdduu4H5XPpe8uSJw,2,Pisco; The Soy Pill,7.0,,2,13,52.87,59.87,6,0.0,0.0,7.0,0.0
@@ -114,8 +114,8 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @YELIRnet,UCIymN3DdUE9fW7BDVic7rXg,1,Lib & Learn,42.0,,4,5,9.95,51.95,2,0.0,0.0,0.0,42.0
 @BulbSweetBulb,UCdc1fPv2GAvQsTkwZ_IUj1g,3,Pisco; Counterpoints; The Soy Pill,50.0,,10,0,0,50.0,9,30.0,15.0,5.0,0.0
 @andi-8667,UC_ILeCeYXDvcye8IyJwiNBg,1,Pisco,50.0,,6,0,0,50.0,6,50.0,0.0,0.0,0.0
-@thomaswhite3149,UCLdgGDLDFBEULRUZOos74iw,1,Counterpoints,50.0,,1,0,0,50.0,1,0.0,50.0,0.0,0.0
 @CHIKMBERKAW,UCWyB_edkRbF5Savu686Ot-w,1,Pisco,50.0,,1,0,0,50.0,1,50.0,0.0,0.0,0.0
+@thomaswhite3149,UCLdgGDLDFBEULRUZOos74iw,1,Counterpoints,50.0,,1,0,0,50.0,1,0.0,50.0,0.0,0.0
 @campbell6270,UCX8Vai2Me8IqBFO6om_T8FA,1,Pisco,0.0,,0,10,49.9,49.9,1,0.0,0.0,0.0,0.0
 @unidentifiedcryptid,UCNr1de3RW0jRVGmFajyFcbw,1,Pisco,0.0,,0,10,49.9,49.9,1,0.0,0.0,0.0,0.0
 @ali_kat01,UCx21_SE5swhhddOVEjAdbCQ,1,The Soy Pill,49.87,,13,0,0,49.87,6,0.0,0.0,49.87,0.0
@@ -146,6 +146,7 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Quarmacy,UCdiiWfLkSE8mlqXTezc1cng,1,The Soy Pill,25.0,,8,5,14.95,39.95,4,0.0,0.0,25.0,0.0
 @keepyourbilsteins,UClRnZsaqUoq4rQH_2kmBGOg,3,Pisco; Counterpoints; The Soy Pill,25.0,,7,5,14.95,39.95,7,10.0,5.0,10.0,0.0
 @LZRD_Man,UCA39wb9su8PgNaCRzF_CMQg,2,The Soy Pill; Lib & Learn,39.95,,5,0,0,39.95,2,0.0,0.0,4.99,34.96
+@john_hendy2349,UCoDUJo-z2untUBD7wnScfZg,1,Counterpoints,39.93,,7,0,0,39.93,3,0.0,39.93,0.0,0.0
 @jenn_wink,UCNEwln67eYcZaSLjiWSMUBQ,1,Counterpoints,24.97,,3,5,14.95,39.92,4,0.0,24.97,0.0,0.0
 @oldscotty1,UCgkfGvfT6TIOt4gaw0qj8Ug,3,Pisco; The Soy Pill; Lib & Learn,38.92,,8,0,0,38.92,6,13.96,0.0,4.99,19.97
 @bibliolyfe7166,UCwzUaDNC3t0qQy5MYlhaUag,1,Counterpoints,37.0,,6,0,0,37.0,5,0.0,37.0,0.0,0.0
@@ -172,19 +173,21 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @The-Pleb,UCu_FRDsz5uCwFcSa8YWZuhw,1,The Soy Pill,32.0,,4,0,0,32.0,3,0.0,0.0,32.0,0.0
 @MegaWeirdo777,UC8N9U1PxNTUCx7ldDwc3rcw,1,The Soy Pill,32.0,,3,0,0,32.0,3,0.0,0.0,32.0,0.0
 @TheQuentinExperiment,UCPbTic6PfIB4vCzRc9fa_gA,1,Counterpoints,31.0,,8,0,0,31.0,2,0.0,31.0,0.0,0.0
+@Paul_LV,UCGenvktOQFXE1FCPpT2iW2g,1,Counterpoints,30.98,€28.00,4,0,0,30.98,4,0.0,30.98,0.0,0.0
 @nowere-man5581,UCzoUHPpsJCFoiSkoPvSVqlw,1,Pisco,30.94,,6,0,0,30.94,5,30.94,0.0,0.0,0.0
 @rizeus8331,UCXNpZxjGOw9u_-lvaoXyPPQ,2,Pisco; The Soy Pill,30.08,HK$236.00,7,0,0,30.08,6,23.71,0.0,6.37,0.0
 @robf8349,UCDbLdVbdeImSBySjov68pow,1,The Soy Pill,30.0,,5,0,0,30.0,3,0.0,0.0,30.0,0.0
 @mgmas,UCgUbwBr4cxWegmnUZIeZ3Jg,1,The Soy Pill,30.0,,4,0,0,30.0,4,0.0,0.0,30.0,0.0
 @MahlonMiller,UClvrQkBPd3-NZi1ryl_SSrw,1,The Soy Pill,30.0,,4,0,0,30.0,1,0.0,0.0,30.0,0.0
-@tentrain5549,UC_rVZ5lihSInFIFja4W_m9A,1,Counterpoints,30.0,,2,0,0,30.0,2,0.0,30.0,0.0,0.0
 @hanazubby1829,UCnPInXBq-7rep_3Y0NNyyXg,1,Pisco,30.0,,2,0,0,30.0,2,30.0,0.0,0.0,0.0
 @Iloveidiots1,UCNmDDjr98wNGxlTyFGATlPA,1,Pisco,30.0,,2,0,0,30.0,2,30.0,0.0,0.0,0.0
+@tentrain5549,UC_rVZ5lihSInFIFja4W_m9A,1,Counterpoints,30.0,,2,0,0,30.0,2,0.0,30.0,0.0,0.0
 @NickR0,UC2LxMj6ci0uTXOgwGfx-_sw,1,Pisco,29.99,,5,0,0,29.99,4,29.99,0.0,0.0,0.0
 @McClain3000,UCG0dcN8QjaxB76CbZdDl5qQ,1,Pisco,29.99,,3,0,0,29.99,3,29.99,0.0,0.0,0.0
 @AlexanderWryn,UCw1aEau_ur0SX1jT8Et28MQ,1,Pisco,29.99,,2,0,0,29.99,1,29.99,0.0,0.0,0.0
 @TannerMaxwell-y7y,UCVwo6_ZWr6KxewUMR_lTydg,1,Lib & Learn,29.98,,2,0,0,29.98,1,0.0,0.0,0.0,29.98
 @crabnavy,UClvnGmI8T4zhj-4y53fmLJw,1,Pisco,29.95,,5,0,0,29.95,3,29.95,0.0,0.0,0.0
+@Officernasty70,UCEbIoWBtLb6S6Elk9lZEOug,1,Counterpoints,29.91,,9,0,0,29.91,6,0.0,29.91,0.0,0.0
 @Not_Me4,UCc-Ruz0AHEs3zxMw84t11jw,1,Lib & Learn,10.0,,1,10,19.9,29.9,1,0.0,0.0,0.0,10.0
 @pharmacat,UCyUb-1xXYAsQ-OEbBlVBzKw,1,The Soy Pill,0.0,,0,10,29.9,29.9,1,0.0,0.0,0.0,0.0
 @sirrock5558,UCabxDrxg1QCNWlMMNrJK47g,1,The Soy Pill,14.8,DKK100.00,1,5,14.95,29.75,1,0.0,0.0,14.8,0.0
@@ -194,8 +197,8 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @cosimothebard,UC3LEO64z3JzGte9n6LIxTLQ,1,The Soy Pill,27.93,,8,0,0,27.93,2,0.0,0.0,27.93,0.0
 @GingermusPrime,UCt_lmcVTr0Nua6hsuUhWnYw,1,Counterpoints,27.91,A$41.00,10,0,0,27.91,7,0.0,27.91,0.0,0.0
 @EL_DIA8L089,UCebENUe5HJTIyr5e6eFp6uw,1,Pisco,27.0,,6,0,0,27.0,6,27.0,0.0,0.0,0.0
-@21st_FireSideChat,UC0UID38zNfwp8LwHC2OmO1w,1,Lib & Learn,27.0,,5,0,0,27.0,1,0.0,0.0,0.0,27.0
 @TRENKROM,UCEnavmJ02Qk2BvPJ8taR3Pw,1,The Soy Pill,27.0,,5,0,0,27.0,3,0.0,0.0,27.0,0.0
+@21st_FireSideChat,UC0UID38zNfwp8LwHC2OmO1w,1,Lib & Learn,27.0,,5,0,0,27.0,1,0.0,0.0,0.0,27.0
 @NicMadd,UCWyo-yvWY8z8phtIR8GrTMA,1,Pisco,27.0,,3,0,0,27.0,1,27.0,0.0,0.0,0.0
 @ZayneMason-j9x,UCPRjY2xjIhdqQs9_KAg1YNg,1,The Soy Pill,27.0,,3,0,0,27.0,2,0.0,0.0,27.0,0.0
 @AsheMcElrath,UCEv99r3f8_X7SEu1d7o-FwQ,1,The Soy Pill,12.0,,3,5,14.95,26.95,4,0.0,0.0,12.0,0.0
@@ -203,7 +206,6 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Redsoldiar_tf2,UCUAHxn7okCxVnq5mIqmN_ow,1,The Soy Pill,26.43,£19.96,4,0,0,26.43,4,0.0,0.0,26.43,0.0
 @Hell_Puppy,UCZnZT7IUC_IgWM9snLoSA5w,1,Pisco,26.12,NOK250.00,2,0,0,26.12,2,26.12,0.0,0.0,0.0
 @ReExaminationShow,UCVXHuD7YNVfDOZydiPzpAIQ,1,Counterpoints,26.0,,5,0,0,26.0,3,0.0,26.0,0.0,0.0
-@Paul_LV,UCGenvktOQFXE1FCPpT2iW2g,1,Counterpoints,25.45,€23.00,3,0,0,25.45,3,0.0,25.45,0.0,0.0
 @Tyler-oc6ce,UCISNIesOPITPA6UsVhmaFiw,1,Pisco,25.0,,5,0,0,25.0,4,25.0,0.0,0.0,0.0
 @Shen1455,UCSX9JeHrviX_cGe37DJXNmw,1,Pisco,25.0,,5,0,0,25.0,2,25.0,0.0,0.0,0.0
 @gnifemaul,UCtmnZ1NrQhjWrC9WDyhi_nA,2,Pisco; Counterpoints,25.0,,3,0,0,25.0,3,20.0,5.0,0.0,0.0
@@ -214,8 +216,8 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @oldf3armonger,UCcWf1cTdKpL4Fh65yDfzrCQ,1,Counterpoints,25.0,,1,0,0,25.0,1,0.0,25.0,0.0,0.0
 @Rsalazar6482,UCmSjMk54_UyR7D5UOQJHI2Q,1,Pisco,20.0,,1,1,4.99,24.99,2,20.0,0.0,0.0,0.0
 @jungian-shadow,UClPIJ-vibdrklxznY7Spslg,1,Pisco,24.98,,3,0,0,24.98,3,24.98,0.0,0.0,0.0
-@john_hendy2349,UCoDUJo-z2untUBD7wnScfZg,1,Counterpoints,24.96,,4,0,0,24.96,2,0.0,24.96,0.0,0.0
 @eelmail,UCCbz5JOkusQ_TOTJjWDLUvw,1,The Soy Pill,24.96,,4,0,0,24.96,2,0.0,0.0,24.96,0.0
+@YourLocalCryptid99,UC8s5C5ViBt5sicZ6u11P6Sg,1,Counterpoints,10.0,,1,5,14.95,24.95,2,0.0,10.0,0.0,0.0
 @goldminer8732,UCD7_ir-8Jqe0l7MWuSkMwBg,1,Pisco,0.0,,0,5,24.95,24.95,1,0.0,0.0,0.0,0.0
 @andym8682,UCR9czbGHdc0bpbAN5PoeyhQ,1,Pisco,0.0,,0,5,24.95,24.95,1,0.0,0.0,0.0,0.0
 @duatchol7710,UCxnTKn22gahF_AGpgQAp9WA,1,Pisco,24.52,CA$34.98,2,0,0,24.52,1,24.52,0.0,0.0,0.0
@@ -235,25 +237,25 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @DeusHalcyon,UCswO09cbthVO70jM22MLX1g,1,Counterpoints,7.01,CA$10.00,1,5,14.95,21.96,2,0.0,7.01,0.0,0.0
 @hutchlarry2010,UCNHG1v0BMBGZpU76WvFfMOw,1,Counterpoints,7.0,,2,5,14.95,21.95,2,0.0,7.0,0.0,0.0
 @GrantRantsUnited,UCsOQhHEjkQf6oEv59XeALvQ,1,The Soy Pill,21.92,,8,0,0,21.92,6,0.0,0.0,21.92,0.0
-@festereugene,UCPuHnOtrGrSRTcmK58ZC68w,2,Pisco; Lib & Learn,21.0,,6,0,0,21.0,3,16.0,0.0,0.0,5.0
 @MrFarfromjordan,UCerwOzXkqVzdL72pOdvdL6w,2,Pisco; The Soy Pill,21.0,,6,0,0,21.0,6,16.0,0.0,5.0,0.0
+@festereugene,UCPuHnOtrGrSRTcmK58ZC68w,2,Pisco; Lib & Learn,21.0,,6,0,0,21.0,3,16.0,0.0,0.0,5.0
 @DirefulPot,UCgpAlYvOhfxBB0QedlYGGkg,1,Pisco,20.0,,7,0,0,20.0,6,20.0,0.0,0.0,0.0
 @kpd618,UCMURa45EPqrYpN0_IAj63Kg,1,The Soy Pill,20.0,,7,0,0,20.0,1,0.0,0.0,20.0,0.0
 @Lazer0231,UCYo2wc4ezby71nuF4FlDQMQ,2,Pisco; Counterpoints,20.0,,4,0,0,20.0,4,10.0,10.0,0.0,0.0
-@MrJerkelm,UCwCpl_4Q_y8cAPuIyT0ynxw,1,Counterpoints,20.0,,3,0,0,20.0,3,0.0,20.0,0.0,0.0
-@RangerNationDubs,UCykE-NO6YT7-l5zo3GM9FmQ,1,Counterpoints,20.0,,3,0,0,20.0,2,0.0,20.0,0.0,0.0
 @infalliblefowl9809,UCE-th30Atybm36XdU7AWwdQ,2,Pisco; Counterpoints,20.0,,3,0,0,20.0,3,15.0,5.0,0.0,0.0
 @johhjj,UCyNQEA_rh8AVfjcNnuytCew,2,Pisco; Counterpoints,20.0,,3,0,0,20.0,3,15.0,5.0,0.0,0.0
+@MrJerkelm,UCwCpl_4Q_y8cAPuIyT0ynxw,1,Counterpoints,20.0,,3,0,0,20.0,3,0.0,20.0,0.0,0.0
+@RangerNationDubs,UCykE-NO6YT7-l5zo3GM9FmQ,1,Counterpoints,20.0,,3,0,0,20.0,2,0.0,20.0,0.0,0.0
 @no101,UCFgXGlG8kvQ_WaMq8r7qKHw,1,The Soy Pill,20.0,,3,0,0,20.0,2,0.0,0.0,20.0,0.0
-@jenywlfersn,UCAypASa4M1awTvIOCqa7Qeg,2,The Soy Pill; Lib & Learn,20.0,,2,0,0,20.0,2,0.0,0.0,10.0,10.0
-@Roughneckjarhead,UCEoOz8iBEGBHUjZJfFPhy_A,1,Counterpoints,20.0,,2,0,0,20.0,1,0.0,20.0,0.0,0.0
-@DoobyDoo23152,UCdI1-W__j3aj21IwQ8_eL3g,1,Counterpoints,20.0,,2,0,0,20.0,1,0.0,20.0,0.0,0.0
-@airborneanimal9170,UCXPJso-_p1pGTkfTapJZ_kw,1,Counterpoints,20.0,,2,0,0,20.0,1,0.0,20.0,0.0,0.0
-@TheSilverJacketMan,UCtjCOednWfSq15CaqBWGjOg,1,Counterpoints,20.0,,2,0,0,20.0,2,0.0,20.0,0.0,0.0
 @nofugginway,UC7qfP-veunZBMYThR2Ck-Hw,2,Pisco; The Soy Pill,20.0,,2,0,0,20.0,2,10.0,0.0,10.0,0.0
 @mike2trees,UCMPyJP64TFT9BgAeLWf2vJg,1,Pisco,20.0,,2,0,0,20.0,2,20.0,0.0,0.0,0.0
 @YokoSwagman,UCt1cWDvYyAB_wZfkZoNG7rw,1,Pisco,20.0,,2,0,0,20.0,2,20.0,0.0,0.0,0.0
 @PoliticalSarah,UCFjAT5OdXyar0EhRwFDBPlg,1,Pisco,20.0,,2,0,0,20.0,1,20.0,0.0,0.0,0.0
+@TheSilverJacketMan,UCtjCOednWfSq15CaqBWGjOg,1,Counterpoints,20.0,,2,0,0,20.0,2,0.0,20.0,0.0,0.0
+@Roughneckjarhead,UCEoOz8iBEGBHUjZJfFPhy_A,1,Counterpoints,20.0,,2,0,0,20.0,1,0.0,20.0,0.0,0.0
+@DoobyDoo23152,UCdI1-W__j3aj21IwQ8_eL3g,1,Counterpoints,20.0,,2,0,0,20.0,1,0.0,20.0,0.0,0.0
+@airborneanimal9170,UCXPJso-_p1pGTkfTapJZ_kw,1,Counterpoints,20.0,,2,0,0,20.0,1,0.0,20.0,0.0,0.0
+@jenywlfersn,UCAypASa4M1awTvIOCqa7Qeg,2,The Soy Pill; Lib & Learn,20.0,,2,0,0,20.0,2,0.0,0.0,10.0,10.0
 @Mrwrinkle73,UCGhNPRmhcEPbCJzl2MRC_vw,1,The Soy Pill,20.0,,2,0,0,20.0,2,0.0,0.0,20.0,0.0
 @NikkolasKing,UCP-LDRKFvPIJNN5KyW_Gq_Q,1,The Soy Pill,20.0,,2,0,0,20.0,2,0.0,0.0,20.0,0.0
 @professornebula6545,UCzXhrYAWyWsuVj4qCrGenyg,1,The Soy Pill,20.0,,2,0,0,20.0,1,0.0,0.0,20.0,0.0
@@ -267,20 +269,22 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @FDSignifire,UCgi2u-lGY-2i2ubLsUr6FbQ,1,The Soy Pill,20.0,,1,0,0,20.0,1,0.0,0.0,20.0,0.0
 @pretentiousjazz,UCLvcPuYvQZoQ3mJDhwL6eZg,1,The Soy Pill,20.0,,1,0,0,20.0,1,0.0,0.0,20.0,0.0
 @Sybexhon,UCSTyNVK4UyjzqScOxfF76ww,2,Pisco; Lib & Learn,19.99,,2,0,0,19.99,2,10.0,0.0,0.0,9.99
-@mattc2653,UCcRqh4jSmsOS_5MHMcmRsoA,1,Counterpoints,19.99,,1,0,0,19.99,1,0.0,19.99,0.0,0.0
-@astronautfarmer2358,UCZ0h-JC0zSazFBTGz7sGBTw,1,Counterpoints,19.99,,1,0,0,19.99,1,0.0,19.99,0.0,0.0
 @MegaEdproductions,UCKqt1PSi7mt1zvEW41Er9HA,1,Pisco,19.99,,1,0,0,19.99,1,19.99,0.0,0.0,0.0
 @jag3459,UCc7alqXIcrJZxx2CYMwwFZA,1,Pisco,19.99,,1,0,0,19.99,1,19.99,0.0,0.0,0.0
+@astronautfarmer2358,UCZ0h-JC0zSazFBTGz7sGBTw,1,Counterpoints,19.99,,1,0,0,19.99,1,0.0,19.99,0.0,0.0
+@mattc2653,UCcRqh4jSmsOS_5MHMcmRsoA,1,Counterpoints,19.99,,1,0,0,19.99,1,0.0,19.99,0.0,0.0
 @RockHardslab,UC0rweXyUlz55PT5JAaR02vQ,1,The Soy Pill,19.99,,1,0,0,19.99,1,0.0,0.0,19.99,0.0
 @Picryptoguy,UCisEWQMQClKQ3E2XuothXWw,1,Pisco,19.98,,2,0,0,19.98,1,19.98,0.0,0.0,0.0
+@Xtophre,UC8n-znF0EydzpPKr-4tvvOw,1,Counterpoints,19.98,,2,0,0,19.98,2,0.0,19.98,0.0,0.0
 @1c4ru5_paints,UCXkkVT5ogQ_eqUAbIq2-n9w,1,The Soy Pill,19.98,,2,0,0,19.98,1,0.0,0.0,19.98,0.0
-@ivansancen4252,UCTRQGf24pAUCCzUVqErjJTw,1,Lib & Learn,19.97,,3,0,0,19.97,2,0.0,0.0,0.0,19.97
 @StraitShot,UCr86bm5uwncN5XsIdcLc0qg,1,Pisco,19.97,,3,0,0,19.97,2,19.97,0.0,0.0,0.0
 @Bridgesii,UC63C2xiv3DpnYoeUYbGypOA,1,Pisco,19.97,,3,0,0,19.97,3,19.97,0.0,0.0,0.0
 @scottlott3794,UCyyMFvAnzp1Dm6Wusu7VmEQ,1,The Soy Pill,19.97,,3,0,0,19.97,3,0.0,0.0,19.97,0.0
+@ivansancen4252,UCTRQGf24pAUCCzUVqErjJTw,1,Lib & Learn,19.97,,3,0,0,19.97,2,0.0,0.0,0.0,19.97
 @BeefSupreme4330,UCKYRW0qY5m3u7h4OY1_DyXQ,2,Counterpoints; The Soy Pill,5.0,,2,5,14.95,19.95,3,0.0,3.0,2.0,0.0
 @acex222,UCotQT9qmc3nzS7VdUOXG5Hw,1,The Soy Pill,19.86,£15.00,3,0,0,19.86,2,0.0,0.0,19.86,0.0
 @JoshKosh_YT,UC_x_Cb_g1uelNaSwT58JXSQ,1,Pisco,19.58,CA$27.93,7,0,0,19.58,6,19.58,0.0,0.0,0.0
+@DaveBucky11,UCWJqUYFmlK5xbdkJoGhibUg,2,Pisco; Counterpoints,19.0,,5,0,0,19.0,4,12.0,7.0,0.0,0.0
 @Metalworks41190,UChP-vgwv_PJH65EMPAMOD5Q,2,Counterpoints; The Soy Pill,19.0,,5,0,0,19.0,2,0.0,14.0,5.0,0.0
 @MacchiaAlt,UC1qxnpKASUh30oLlYSBqJtQ,1,The Soy Pill,19.0,,5,0,0,19.0,3,0.0,0.0,19.0,0.0
 @iinhalecrackers7376,UCpDge3Y9YLCCVGOpJ_y5jaA,1,The Soy Pill,19.0,,5,0,0,19.0,2,0.0,0.0,19.0,0.0
@@ -290,6 +294,7 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @JamesFinch-y2p,UC9z4tMQG5IEBSEEOYxxf_9w,1,Pisco,18.76,"¥3,000.00",3,0,0,18.76,1,18.76,0.0,0.0,0.0
 @kamil3969,UCL-4yGF2B9Z4Lf4vaFpdrwQ,1,Pisco,18.54,£14.00,4,0,0,18.54,2,18.54,0.0,0.0,0.0
 @rabidwombat7357,UC07pqSIrkc6UmiuY0uiG0aw,2,Pisco; Counterpoints,17.53,CA$25.00,4,0,0,17.53,4,14.02,3.51,0.0,0.0
+@L0rd0fTh3N3rdz,UCJIg0Y2H93OdmJDtd6RNKYA,2,Pisco; Counterpoints,17.0,,7,0,0,17.0,5,2.0,15.0,0.0,0.0
 @tagop2,UCBTNpxMzT22SDE_NQRo5gsw,2,Counterpoints; The Soy Pill,17.0,,4,0,0,17.0,4,0.0,12.0,5.0,0.0
 @kylebecker7095,UCJnDS92uF0_uUwSOoIkgddw,1,The Soy Pill,17.0,,4,0,0,17.0,2,0.0,0.0,17.0,0.0
 @DavidMonroePhotos,UC5TuLaxYiO9S9Yf_3RgVQsQ,2,Pisco; Lib & Learn,17.0,,3,0,0,17.0,3,5.0,0.0,0.0,12.0
@@ -303,31 +308,31 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @YewNork,UC1tkrf4P9e6XKMKL4xbvnhA,1,Counterpoints,16.0,,8,0,0,16.0,6,0.0,16.0,0.0,0.0
 @fancymonkeyman4139,UCpsqt3Rg_nkPWKM2FivtiGw,1,The Soy Pill,16.0,,4,0,0,16.0,1,0.0,0.0,16.0,0.0
 @TheAirborneKite,UCQvkQhibI2hQQ2giGHB6iXw,1,Counterpoints,15.42,CA$22.00,5,0,0,15.42,4,0.0,15.42,0.0,0.0
-@gelatinousrube,UClI1SCzG24UI2IzPNNWOgCw,1,Counterpoints,15.0,,3,0,0,15.0,3,0.0,15.0,0.0,0.0
-@mrowlive,UCCNiWEe6Wsp1xL_MglGSZ1Q,2,Pisco; Counterpoints,15.0,,3,0,0,15.0,3,5.0,10.0,0.0,0.0
-@commoncure3335,UCBVgyAWUYua4l0_3IzSOxAQ,2,Pisco; Counterpoints,15.0,,3,0,0,15.0,3,5.0,10.0,0.0,0.0
 @nrconleynrc,UCO0biupOBqGtVSWCkZ1VR8g,1,Pisco,15.0,,3,0,0,15.0,2,15.0,0.0,0.0,0.0
+@mrowlive,UCCNiWEe6Wsp1xL_MglGSZ1Q,2,Pisco; Counterpoints,15.0,,3,0,0,15.0,3,5.0,10.0,0.0,0.0
 @CeilingFanwitch,UCAfpXlKSndLSJiABKoLyz5w,1,Pisco,15.0,,3,0,0,15.0,1,15.0,0.0,0.0,0.0
+@commoncure3335,UCBVgyAWUYua4l0_3IzSOxAQ,2,Pisco; Counterpoints,15.0,,3,0,0,15.0,3,5.0,10.0,0.0,0.0
+@gelatinousrube,UClI1SCzG24UI2IzPNNWOgCw,1,Counterpoints,15.0,,3,0,0,15.0,3,0.0,15.0,0.0,0.0
 @Moments-Captured,UCx7Jvkr_4p908baqs-HXIqA,1,The Soy Pill,15.0,,3,0,0,15.0,1,0.0,0.0,15.0,0.0
 @Legionary117,UCdzq5v3Vit5wN37D0DbGo4w,1,The Soy Pill,15.0,,3,0,0,15.0,3,0.0,0.0,15.0,0.0
-@vSilvrbac,UCx11CJFEDNT-sVXe7PKPKCw,1,Lib & Learn,15.0,,2,0,0,15.0,1,0.0,0.0,0.0,15.0
-@RobGoSlow,UCv0mayyYnxCNU84WD8s2UOA,1,Counterpoints,15.0,,2,0,0,15.0,2,0.0,15.0,0.0,0.0
-@Phe0niz,UCtuPbMoRea50quQ1-quffNw,1,Counterpoints,15.0,,2,0,0,15.0,2,0.0,15.0,0.0,0.0
 @oklol7799,UCDg6ERfivSRotMHnJOdVGMQ,1,Pisco,15.0,,2,0,0,15.0,2,15.0,0.0,0.0,0.0
 @CaseyLeeIRL,UCFYm6xNg8AISClSyy5NCg7Q,1,Pisco,15.0,,2,0,0,15.0,2,15.0,0.0,0.0,0.0
 @chickenstrangler0,UCQIuw0lOFGeNKznYzyZwOew,1,Pisco,15.0,,2,0,0,15.0,1,15.0,0.0,0.0,0.0
 @dansdives4595,UCSZWL5ATwGU9Fcq9GWey6Ew,1,Pisco,15.0,,2,0,0,15.0,1,15.0,0.0,0.0,0.0
 @adeptgopnik,UC7V8aBHswXCmObOJRP1d8Cg,1,Pisco,15.0,,2,0,0,15.0,1,15.0,0.0,0.0,0.0
 @paradoxfreq,UCaXCZphlh8VHG4eB20Uo5cw,1,Pisco,15.0,,2,0,0,15.0,2,15.0,0.0,0.0,0.0
+@RobGoSlow,UCv0mayyYnxCNU84WD8s2UOA,1,Counterpoints,15.0,,2,0,0,15.0,2,0.0,15.0,0.0,0.0
+@Phe0niz,UCtuPbMoRea50quQ1-quffNw,1,Counterpoints,15.0,,2,0,0,15.0,2,0.0,15.0,0.0,0.0
 @the_big_cheese1227,UCa_PuoaP19181ge2oBIn6Tg,1,The Soy Pill,15.0,,2,0,0,15.0,2,0.0,0.0,15.0,0.0
 @Ogre_jpg,UCv4-qb3ZMHly5vESdWE0Xgw,1,The Soy Pill,15.0,,2,0,0,15.0,1,0.0,0.0,15.0,0.0
 @Bahaga04,UCXRYF5gPriz35gRuC8i7NHA,1,The Soy Pill,15.0,,2,0,0,15.0,1,0.0,0.0,15.0,0.0
 @JonTig321,UCUSnjP2LDei48UEazi-hpIA,1,The Soy Pill,15.0,,2,0,0,15.0,2,0.0,0.0,15.0,0.0
 @Tanntow,UCjkhX4bXj7Kugc1xLplJo8A,1,The Soy Pill,15.0,,2,0,0,15.0,1,0.0,0.0,15.0,0.0
 @kokaboba,UCAVuXcTaYimR18V-1KPbNkQ,1,The Soy Pill,15.0,,2,0,0,15.0,2,0.0,0.0,15.0,0.0
+@vSilvrbac,UCx11CJFEDNT-sVXe7PKPKCw,1,Lib & Learn,15.0,,2,0,0,15.0,1,0.0,0.0,0.0,15.0
 @MylisteninglibraryYT,UCJYMhxuIDCAfJdRt7T9dnew,1,Pisco,14.99,,3,0,0,14.99,3,14.99,0.0,0.0,0.0
-@Mr.Middleman,UCiTByC2QyS_21rH2RRMrl1A,1,Counterpoints,14.99,,2,0,0,14.99,1,0.0,14.99,0.0,0.0
 @Shwueen,UCBtybrc0MzfvjiJRK88Q6sg,1,Pisco,10.0,,2,1,4.99,14.99,3,10.0,0.0,0.0,0.0
+@Mr.Middleman,UCiTByC2QyS_21rH2RRMrl1A,1,Counterpoints,14.99,,2,0,0,14.99,1,0.0,14.99,0.0,0.0
 @Travakia,UCW85AceXzMhvdsm-fQnMC1A,2,Pisco; Lib & Learn,14.98,,3,0,0,14.98,2,5.0,0.0,0.0,9.98
 @anothername2730,UCrLR-uHWKrJEjm2qjcLKdqw,1,Pisco,14.98,,2,0,0,14.98,2,14.98,0.0,0.0,0.0
 @CollinRathbun2,UCXKhHlG0mAvttLLA6QiX-lg,1,The Soy Pill,14.98,,2,0,0,14.98,1,0.0,0.0,14.98,0.0
@@ -338,20 +343,18 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @ReformedHova6181,UCC11T-ffsswJHmIOUyZ50Bw,1,The Soy Pill,14.97,,3,0,0,14.97,2,0.0,0.0,14.97,0.0
 @colinsavage9216,UC8VvvyY24e0FaGSG1S83BVQ,1,The Soy Pill,14.97,,3,0,0,14.97,1,0.0,0.0,14.97,0.0
 @turiguiliano9225,UC-Bux1PIOuF7VxtYDD3W5kg,1,Counterpoints,3.0,,1,4,11.96,14.96,5,0.0,3.0,0.0,0.0
-@YourLocalCryptid99,UC8s5C5ViBt5sicZ6u11P6Sg,1,Counterpoints,0.0,,0,5,14.95,14.95,1,0.0,0.0,0.0,0.0
 @DontStartleMe,UCAo8G68Mebna1Oie36R_qnQ,1,The Soy Pill,0.0,,0,5,14.95,14.95,1,0.0,0.0,0.0,0.0
 @mr.blonde8984,UCW4zWbWcI6zCTp4IqkX2v0A,1,The Soy Pill,0.0,,0,5,14.95,14.95,1,0.0,0.0,0.0,0.0
-@Officernasty70,UCEbIoWBtLb6S6Elk9lZEOug,1,Counterpoints,14.94,,6,0,0,14.94,5,0.0,14.94,0.0,0.0
 @DoctorOcho,UCGXvguYxSRojOm7sjj606tg,2,The Soy Pill; Lib & Learn,14.8,CA$13.98,3,0,0,14.8,2,0.0,0.0,9.8,5.0
 @RealMinorityretort,UCwnGKpOFTvOADaW231hcRLg,1,Pisco,14.7,CA$20.97,3,0,0,14.7,3,14.7,0.0,0.0,0.0
 @nowitchhunt,UCAA-xozRseWYGRJCX3mZ37w,1,Pisco,14.02,CA$20.00,2,0,0,14.02,2,14.02,0.0,0.0,0.0
 @speakeazyy,UC2bT-Bse06c6zI6md-e58xw,1,Counterpoints,14.02,CA$20.00,1,0,0,14.02,1,0.0,14.02,0.0,0.0
-@DaveBucky11,UCWJqUYFmlK5xbdkJoGhibUg,2,Pisco; Counterpoints,14.0,,4,0,0,14.0,3,12.0,2.0,0.0,0.0
 @swagfuture,UCn5cvoGedqTrOVE0u4-X3OQ,1,Pisco,14.0,,4,0,0,14.0,4,14.0,0.0,0.0,0.0
 @Nonfon,UCynU5dKx9-_Flbn4Oo5Da4g,2,Pisco; The Soy Pill,14.0,,4,0,0,14.0,4,5.0,0.0,9.0,0.0
 @jjoohhhnn,UCzhNZhwJuVjh1Rw-jZwcAcw,1,Pisco,14.0,,4,0,0,14.0,3,14.0,0.0,0.0,0.0
 @databroker2253,UCiYknS6Z31Va16p6ZsElang,1,The Soy Pill,14.0,,4,0,0,14.0,1,0.0,0.0,14.0,0.0
 @bradley2814,UC0qJPfXbkiZ2CVotb1CSx-A,1,The Soy Pill,13.98,,4,0,0,13.98,4,0.0,0.0,13.98,0.0
+@TheMartialist,UCgOiPjuDaseJoIKm__eDICw,1,Counterpoints,13.96,,7,0,0,13.96,6,0.0,13.96,0.0,0.0
 @yaboimegu,UCEpz6NvhQnSMbFAC_4qlcaA,2,The Soy Pill; Lib & Learn,13.61,A$20.00,2,0,0,13.61,2,0.0,0.0,6.81,6.81
 @SniperNakkas229,UCIzgl2vRsa1Xn4waMRc7Z2g,1,The Soy Pill,13.61,A$20.00,1,0,0,13.61,1,0.0,0.0,13.61,0.0
 @RedactedUsername,UC1XrgqyreygDZ4ZXbTRZCAw,1,Pisco,13.27,€11.99,1,0,0,13.27,1,13.27,0.0,0.0,0.0
@@ -361,22 +364,21 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Mitostasis,UCoVoqgbX0SxcGPgfAu9qxhA,1,The Soy Pill,12.93,A$19.00,4,0,0,12.93,3,0.0,0.0,12.93,0.0
 @Dylanschillin,UCtLBX8zTTZa_bCcDDxCM4CQ,1,The Soy Pill,12.62,CA$18.00,6,0,0,12.62,3,0.0,0.0,12.62,0.0
 @Magni87,UCz-zB31omQzB5z_BM9cxY6g,1,Counterpoints,12.15,"ISK1,500.00",1,0,0,12.15,1,0.0,12.15,0.0,0.0
-@Basegitar,UCOdIAL6AhyGy-nMkXx_0XNg,1,Counterpoints,12.0,,3,0,0,12.0,3,0.0,12.0,0.0,0.0
-@MichaelMartiJk4RL,UCn780dmNBoWgnbDY6KUTOPw,1,Counterpoints,12.0,,3,0,0,12.0,1,0.0,12.0,0.0,0.0
 @talibotz,UCwn9q8s82tWtsf4YsmdSm_g,1,Pisco,12.0,,3,0,0,12.0,3,12.0,0.0,0.0,0.0
 @mrgene9790,UCuypq_j-ryWoSxqR3tnALXg,1,Pisco,12.0,,3,0,0,12.0,3,12.0,0.0,0.0,0.0
+@Basegitar,UCOdIAL6AhyGy-nMkXx_0XNg,1,Counterpoints,12.0,,3,0,0,12.0,3,0.0,12.0,0.0,0.0
+@MichaelMartiJk4RL,UCn780dmNBoWgnbDY6KUTOPw,1,Counterpoints,12.0,,3,0,0,12.0,1,0.0,12.0,0.0,0.0
 @rehcardo,UCHtNK6eS6G_dpuBYtCtMfKg,1,The Soy Pill,12.0,,3,0,0,12.0,2,0.0,0.0,12.0,0.0
 @demsterclippy4252,UCwrmRr1yam6IE5WrE0CdKpQ,1,The Soy Pill,12.0,,3,0,0,12.0,2,0.0,0.0,12.0,0.0
 @BroadenRetro,UCWgi1w-zw51F-bI9aWKEWWA,1,The Soy Pill,12.0,,3,0,0,12.0,2,0.0,0.0,12.0,0.0
 @rubberlizzie,UCRzqvOHvUM_DnWpHhwME8aQ,1,The Soy Pill,12.0,,3,0,0,12.0,2,0.0,0.0,12.0,0.0
 @vasilduka1017,UC3_XwKOBvKeeqInP7M1tnMw,1,The Soy Pill,12.0,,3,0,0,12.0,2,0.0,0.0,12.0,0.0
 @virgovirtuoso,UC49_YLgrUx87WgsrSJwXpmg,1,The Soy Pill,12.0,,3,0,0,12.0,1,0.0,0.0,12.0,0.0
-@DeRocco21,UCJz19aQrke_BeaWRcyKI0Zw,1,Counterpoints,12.0,,2,0,0,12.0,2,0.0,12.0,0.0,0.0
 @hoganegg793,UCaa-UQz6xrKI7vJwi6kxxfQ,2,Pisco; The Soy Pill,12.0,,2,0,0,12.0,2,2.0,0.0,10.0,0.0
+@DeRocco21,UCJz19aQrke_BeaWRcyKI0Zw,1,Counterpoints,12.0,,2,0,0,12.0,2,0.0,12.0,0.0,0.0
 @TheMithridates,UCwnTcrX1R1c3sZvbH6Y4WSw,1,Counterpoints,11.99,SEK120.00,3,0,0,11.99,2,0.0,11.99,0.0,0.0
 @Macheako,UCcmhcnhSigIDlSOl4khazvw,1,Counterpoints,11.98,,3,0,0,11.98,3,0.0,11.98,0.0,0.0
 @anthraxcrab2222,UCOeu9_zMbHa4qdpYx-5otFQ,1,Pisco,11.98,,2,0,0,11.98,1,11.98,0.0,0.0,0.0
-@TheMartialist,UCgOiPjuDaseJoIKm__eDICw,1,Counterpoints,11.97,,6,0,0,11.97,5,0.0,11.97,0.0,0.0
 @McDevin77,UCgbig2XTKynEB_mS3t9ICVw,1,Pisco,11.97,,3,0,0,11.97,2,11.97,0.0,0.0,0.0
 @nickcammz,UCeBkPazdDje0A0Ur62w3JgQ,1,The Soy Pill,11.97,,3,0,0,11.97,1,0.0,0.0,11.97,0.0
 @robp5469,UCG-HdSQqXN9vyhB_EfkvUDA,1,The Soy Pill,11.97,,3,0,0,11.97,2,0.0,0.0,11.97,0.0
@@ -387,14 +389,13 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Bighoth98,UCwTVBgKxNKc15HQWjeqfv9Q,1,Counterpoints,11.07,€10.00,1,0,0,11.07,1,0.0,11.07,0.0,0.0
 @aiomusic101,UCDfOf6MKMXWtYLwSQFySYMA,1,The Soy Pill,11.07,€10.00,1,0,0,11.07,1,0.0,0.0,11.07,0.0
 @ThePolacanthus,UCVYAEn41OHNLrGUAXNALr8A,1,The Soy Pill,11.07,€10.00,1,0,0,11.07,1,0.0,0.0,11.07,0.0
-@L0rd0fTh3N3rdz,UCJIg0Y2H93OdmJDtd6RNKYA,2,Pisco; Counterpoints,11.0,,4,0,0,11.0,4,2.0,9.0,0.0,0.0
 @therealezrashowell,UC9wYMKeHA22taLdEauKyzJQ,1,The Soy Pill,11.0,,4,0,0,11.0,2,0.0,0.0,11.0,0.0
 @itsvishyy,UCJCVUbog-31X-u0_8yh8eXg,2,The Soy Pill; Lib & Learn,10.96,,4,0,0,10.96,2,0.0,0.0,8.97,1.99
-@ChadW24,UCwK4gv8-ETh1q_HRX6HmNZQ,1,Lib & Learn,10.96,,4,0,0,10.96,1,0.0,0.0,0.0,10.96
 @cornman3266,UCZyp6Qh9h9mFyrUMN9-QN2w,1,The Soy Pill,10.96,,4,0,0,10.96,4,0.0,0.0,10.96,0.0
+@ChadW24,UCwK4gv8-ETh1q_HRX6HmNZQ,1,Lib & Learn,10.96,,4,0,0,10.96,1,0.0,0.0,0.0,10.96
 @jordray5823,UC9Z0XpPKO3NqdjJkf7dRMfg,1,The Soy Pill,10.59,£8.00,1,0,0,10.59,1,0.0,0.0,10.59,0.0
-@TesticleJohnson,UCdwinjy3mhU1sGrID_-hNZA,1,Counterpoints,10.52,CA$15.00,3,0,0,10.52,3,0.0,10.52,0.0,0.0
 @fancyteef,UCDAzWcm9OwOmklRneFQbbtg,1,Pisco,10.52,CA$15.00,3,0,0,10.52,2,10.52,0.0,0.0,0.0
+@TesticleJohnson,UCdwinjy3mhU1sGrID_-hNZA,1,Counterpoints,10.52,CA$15.00,3,0,0,10.52,3,0.0,10.52,0.0,0.0
 @moldyman1620,UCyI-n1Yh0NAOI68M7xtZMtg,1,The Soy Pill,10.52,CA$15.00,3,0,0,10.52,2,0.0,0.0,10.52,0.0
 @DJazium,UCW5zUQ8sHOHGv-zRmo8ROfA,1,Pisco,10.52,CA$15.00,2,0,0,10.52,1,10.52,0.0,0.0,0.0
 @kaytea-jpg,UCaaEhusH5TqPpwTa1pgupNQ,1,The Soy Pill,10.36,DKK70.00,2,0,0,10.36,1,0.0,0.0,10.36,0.0
@@ -403,22 +404,23 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @unclecletus7816,UCBoymoWRtkMOUoIODREFBpw,1,The Soy Pill,10.21,A$15.00,2,0,0,10.21,1,0.0,0.0,10.21,0.0
 @crypticscriber276,UCi0w3hWjV-NsVoTezwnDw6w,1,The Soy Pill,10.2,A$14.99,1,0,0,10.2,1,0.0,0.0,10.2,0.0
 @trumpfailedhaha816,UCMF2rPo_uVQRbg2uUTk_YqA,1,Pisco,10.0,,5,0,0,10.0,5,10.0,0.0,0.0,0.0
-@SoapBox-g7y,UC3mPBG1IQpCS5oGkJSA3c7A,1,Counterpoints,10.0,,2,0,0,10.0,2,0.0,10.0,0.0,0.0
-@xUABBx,UCx9baP4zFGTijXddV5PumUw,2,Pisco; Counterpoints,10.0,,2,0,0,10.0,2,5.0,5.0,0.0,0.0
-@trillkvlt2973,UCTDrDe7zqMUrFzsvqqJwcVQ,1,Counterpoints,10.0,,2,0,0,10.0,2,0.0,10.0,0.0,0.0
-@Evil-Elrond,UCgC1PKcC17mx1Ts3Deovx5A,2,Pisco; Counterpoints,10.0,,2,0,0,10.0,2,5.0,5.0,0.0,0.0
-@Firefire199,UC7pDl-Q9ippTNDYfe41dP3Q,1,Counterpoints,10.0,,2,0,0,10.0,1,0.0,10.0,0.0,0.0
-@AFL98H,UC9uCPlAVFNKwplpAYFE7kRQ,1,Counterpoints,10.0,,2,0,0,10.0,1,0.0,10.0,0.0,0.0
 @stormwolf2435,UCD0x1VdEJNkk53V7TcYz-Bg,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
 @imreallyimportant,UC12kz9piIU_xdyNCh_Xg5nQ,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
 @CinnabonbonbonPup,UCrQEeVdI3HBUqS34RY7mnBA,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
+@xUABBx,UCx9baP4zFGTijXddV5PumUw,2,Pisco; Counterpoints,10.0,,2,0,0,10.0,2,5.0,5.0,0.0,0.0
 @RedAlert.x,UCM0IDartr3kRyGA1QaJ4qaA,1,Pisco,10.0,,2,0,0,10.0,1,10.0,0.0,0.0,0.0
 @spudz9000,UCckUTppcGg-MgIrLKYGbwOg,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
 @disbest,UCRfoWynnqTGOLcPORIz-Mow,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
 @Hellspacifist,UCt9Ux5KA6WOV-HUcnR1Ad6g,1,Pisco,10.0,,2,0,0,10.0,1,10.0,0.0,0.0,0.0
 @CutTheCamel,UCLf6jKtBkCH0rvmFimK1kWg,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
 @TheMagma101,UCbb_BrAf6BUc8eGsPwckZpg,1,Pisco,10.0,,2,0,0,10.0,2,10.0,0.0,0.0,0.0
+@Evil-Elrond,UCgC1PKcC17mx1Ts3Deovx5A,2,Pisco; Counterpoints,10.0,,2,0,0,10.0,2,5.0,5.0,0.0,0.0
 @KrispyKPL,UC0dMtqzkifSYjgZz8Ju4w3g,1,Pisco,10.0,,2,0,0,10.0,1,10.0,0.0,0.0,0.0
+@SoapBox-g7y,UC3mPBG1IQpCS5oGkJSA3c7A,1,Counterpoints,10.0,,2,0,0,10.0,2,0.0,10.0,0.0,0.0
+@trillkvlt2973,UCTDrDe7zqMUrFzsvqqJwcVQ,1,Counterpoints,10.0,,2,0,0,10.0,2,0.0,10.0,0.0,0.0
+@Firefire199,UC7pDl-Q9ippTNDYfe41dP3Q,1,Counterpoints,10.0,,2,0,0,10.0,1,0.0,10.0,0.0,0.0
+@Audacity_69,UClnBYoW2U3869XmZbq4iX4g,1,Counterpoints,10.0,,2,0,0,10.0,2,0.0,10.0,0.0,0.0
+@AFL98H,UC9uCPlAVFNKwplpAYFE7kRQ,1,Counterpoints,10.0,,2,0,0,10.0,1,0.0,10.0,0.0,0.0
 @Tom_The_Cat,UCZQUcCklDTaTuVFWNvHQr4g,1,The Soy Pill,10.0,,2,0,0,10.0,1,0.0,0.0,10.0,0.0
 @traceless1x,UCG_Y1CxCrW--TXfm-rSMnSQ,1,The Soy Pill,10.0,,2,0,0,10.0,2,0.0,0.0,10.0,0.0
 @princeofenceladus,UCuKaZS1McUk7Z-OKiuDD1pQ,1,The Soy Pill,10.0,,2,0,0,10.0,2,0.0,0.0,10.0,0.0
@@ -434,19 +436,6 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @ricochet1732,UCRdY5Kf6GLbuekp7LYzssWQ,1,The Soy Pill,10.0,,2,0,0,10.0,2,0.0,0.0,10.0,0.0
 @knighter1209,UCrKMJIOo8PVn_DmNlJodvLA,1,The Soy Pill,10.0,,2,0,0,10.0,2,0.0,0.0,10.0,0.0
 @gavinrector,UCgC8cNrX1alBAbM5UJfxuWQ,1,The Soy Pill,10.0,,2,0,0,10.0,1,0.0,0.0,10.0,0.0
-@xIcynova,UCuf3klxlnW-jh6HtWZz81Lw,1,Lib & Learn,10.0,,1,0,0,10.0,1,0.0,0.0,0.0,10.0
-@derekr3085,UCPWsE6sUcsIoW6yhFXfoz4g,1,Lib & Learn,10.0,,1,0,0,10.0,1,0.0,0.0,0.0,10.0
-@SmallFry900,UCHKwonXdy6_0NUkFmUfplYA,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@Uncle_Fatty,UCicJSViviiyifEOV4zvmjqA,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@olornusNA,UC-6YinSxAsNunIdltAncZow,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@grantking4032,UCWJs_vOIdcqcXSJlXQ6vs-Q,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@Cmdre_Chrix,UCamSxJejuw5lOhkePjR4nHw,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@taez_,UCKRjaAS-xzxtOiENq6XNsuQ,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@lv1_stan,UCN7c1xS5td5duCfjgcCySWw,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@STVPhilly,UCcfiW7Ncl0g2mPOR76PfIWQ,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@joshmiller4698,UCqrCiWHNxtogX4DYsexzVjg,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@tenhauser,UCTRpIOjQOmWmw9flCnsYBPw,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
-@ragingpatriot1776er,UCthCoe0zcQL1KpWWTmuWLGA,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
 @MiRootsie,UCOE6JeYsIPrWwSVoq9bbp2Q,1,Pisco,10.0,,1,0,0,10.0,1,10.0,0.0,0.0,0.0
 @mrcooldude203,UCRdKL13FEaQrOGNgI1C-uWA,1,Pisco,10.0,,1,0,0,10.0,1,10.0,0.0,0.0,0.0
 @lorenrubinstein4353,UCAt_kBx6AmsDlEau8XrEJMw,1,Pisco,10.0,,1,0,0,10.0,1,10.0,0.0,0.0,0.0
@@ -464,6 +453,17 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @G1rth_worm,UCvQ59ezNRvfZppueTODypdg,1,Pisco,10.0,,1,0,0,10.0,1,10.0,0.0,0.0,0.0
 @Certifiedhaterade,UCGQE4EFzyushxqGVnuf8dTA,1,Pisco,10.0,,1,0,0,10.0,1,10.0,0.0,0.0,0.0
 @Silveking,UCWzS6gE-tRkw365PNkTNm3Q,1,Pisco,10.0,,1,0,0,10.0,1,10.0,0.0,0.0,0.0
+@SmallFry900,UCHKwonXdy6_0NUkFmUfplYA,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@Uncle_Fatty,UCicJSViviiyifEOV4zvmjqA,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@lv1_stan,UCN7c1xS5td5duCfjgcCySWw,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@STVPhilly,UCcfiW7Ncl0g2mPOR76PfIWQ,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@joshmiller4698,UCqrCiWHNxtogX4DYsexzVjg,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@olornusNA,UC-6YinSxAsNunIdltAncZow,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@grantking4032,UCWJs_vOIdcqcXSJlXQ6vs-Q,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@Cmdre_Chrix,UCamSxJejuw5lOhkePjR4nHw,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@taez_,UCKRjaAS-xzxtOiENq6XNsuQ,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@tenhauser,UCTRpIOjQOmWmw9flCnsYBPw,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
+@ragingpatriot1776er,UCthCoe0zcQL1KpWWTmuWLGA,1,Counterpoints,10.0,,1,0,0,10.0,1,0.0,10.0,0.0,0.0
 @casandra3813,UCoh60hD23-r5UdaMWOfB-gA,1,The Soy Pill,10.0,,1,0,0,10.0,1,0.0,0.0,10.0,0.0
 @bored_board_x,UCD-i_aTUNKoQhe-KDNirYmg,1,The Soy Pill,10.0,,1,0,0,10.0,1,0.0,0.0,10.0,0.0
 @richardparker1012,UC_wbfLK9EfgIxWCUfMy3xsA,1,The Soy Pill,10.0,,1,0,0,10.0,1,0.0,0.0,10.0,0.0
@@ -489,30 +489,31 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Smigsmacker,UCAu2VUVHKI7iq7B_pQ_jvUQ,1,The Soy Pill,10.0,,1,0,0,10.0,1,0.0,0.0,10.0,0.0
 @Obidiah_Bumbly,UCvD_oRiat1XMPgK-hc6OuOQ,1,The Soy Pill,10.0,,1,0,0,10.0,1,0.0,0.0,10.0,0.0
 @tophatgaming1873,UCxpxnco8WF2wwlQ-xEGOSxQ,1,The Soy Pill,10.0,,1,0,0,10.0,1,0.0,0.0,10.0,0.0
-@BigJon6156,UCAWkDr4286G5EiNqc7CTFDQ,1,Counterpoints,7.0,,2,1,2.99,9.99,3,0.0,7.0,0.0,0.0
+@xIcynova,UCuf3klxlnW-jh6HtWZz81Lw,1,Lib & Learn,10.0,,1,0,0,10.0,1,0.0,0.0,0.0,10.0
+@derekr3085,UCPWsE6sUcsIoW6yhFXfoz4g,1,Lib & Learn,10.0,,1,0,0,10.0,1,0.0,0.0,0.0,10.0
 @brianwalters9290,UC9WERwz2DL6KLgIoylm0ddA,1,Pisco,9.99,,2,0,0,9.99,2,9.99,0.0,0.0,0.0
+@BigJon6156,UCAWkDr4286G5EiNqc7CTFDQ,1,Counterpoints,7.0,,2,1,2.99,9.99,3,0.0,7.0,0.0,0.0
 @commentingwolf8613,UC2UCYeCt_3zxReD3gUfzdHQ,1,The Soy Pill,9.99,,2,0,0,9.99,2,0.0,0.0,9.99,0.0
-@MustardAndFries,UCWLFlECixsN66cGgk_FAmIQ,1,Lib & Learn,9.99,,1,0,0,9.99,1,0.0,0.0,0.0,9.99
-@Silver-m3b,UCUKW6K7vT4CLYx5r4TNlgpQ,1,Lib & Learn,9.99,,1,0,0,9.99,1,0.0,0.0,0.0,9.99
-@Samson484,UC41cmCXsunCeIOIK-QtgcTQ,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
-@Xtophre,UC8n-znF0EydzpPKr-4tvvOw,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
-@jamess6656,UChsClB8iZrzMdS0Lht3y_9Q,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
-@jakes9662,UC4ftCDaOeuR44b8NZu2xXPg,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
-@AmericaFirstIndy,UC98mT0VduL02AbKN9Opb4LA,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
-@lenarose13,UCe806Q3RUi3a_VT21kiEibg,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
-@TezzieBoy,UCqfMBgp2wO-lbLhiC6WXbew,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
 @jeremy9149,UC99GRjlUNlYaPyRTu7AV1Gg,1,Pisco,5.0,,1,1,4.99,9.99,2,5.0,0.0,0.0,0.0
 @The_Imaginnarium,UC5rkHovLdW88Sx20odA_Bgw,1,Pisco,9.99,,1,0,0,9.99,1,9.99,0.0,0.0,0.0
 @Edward-k8i,UCj_ls3mN_NSb4S3ILRcd8rw,1,Pisco,9.99,,1,0,0,9.99,1,9.99,0.0,0.0,0.0
 @Counterpoints,UC9bnvsu0ZYzNFijp6mWLUjQ,1,Pisco,9.99,,1,0,0,9.99,1,9.99,0.0,0.0,0.0
 @JackDaniels-ru2xy,UCnx8-3ZBRMOsk4RW3ba8eJg,1,Pisco,9.99,,1,0,0,9.99,1,9.99,0.0,0.0,0.0
+@Samson484,UC41cmCXsunCeIOIK-QtgcTQ,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
+@lenarose13,UCe806Q3RUi3a_VT21kiEibg,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
+@jamess6656,UChsClB8iZrzMdS0Lht3y_9Q,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
+@jakes9662,UC4ftCDaOeuR44b8NZu2xXPg,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
+@AmericaFirstIndy,UC98mT0VduL02AbKN9Opb4LA,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
+@TezzieBoy,UCqfMBgp2wO-lbLhiC6WXbew,1,Counterpoints,9.99,,1,0,0,9.99,1,0.0,9.99,0.0,0.0
 @icymike6560,UCYYBr8GKL3X64BxLoB5C8VA,1,The Soy Pill,9.99,,1,0,0,9.99,1,0.0,0.0,9.99,0.0
 @chronks6494,UCgvD0NODMUJMu29bZuE9GAw,1,The Soy Pill,9.99,,1,0,0,9.99,1,0.0,0.0,9.99,0.0
-@kida197,UCTugHCF5KuLfiUCuv3X65xw,1,Counterpoints,9.98,,2,0,0,9.98,1,0.0,9.98,0.0,0.0
+@MustardAndFries,UCWLFlECixsN66cGgk_FAmIQ,1,Lib & Learn,9.99,,1,0,0,9.99,1,0.0,0.0,0.0,9.99
+@Silver-m3b,UCUKW6K7vT4CLYx5r4TNlgpQ,1,Lib & Learn,9.99,,1,0,0,9.99,1,0.0,0.0,0.0,9.99
 @chrisguercio8180,UC_gz6Iw0O6UE8Qy2rluRbDg,1,Pisco,9.98,,2,0,0,9.98,2,9.98,0.0,0.0,0.0
 @ZheZhou9000,UC7mObDXEyIA4EFw-4_HYboA,1,Pisco,9.98,,2,0,0,9.98,2,9.98,0.0,0.0,0.0
 @Dwillows551,UCWpKA_Fhhxe33mXGc4liIRw,1,Pisco,9.98,,2,0,0,9.98,2,9.98,0.0,0.0,0.0
 @Will-of-the-State,UCQFqLSPuASNoHA7TTEVW_kQ,1,Pisco,9.98,,2,0,0,9.98,1,9.98,0.0,0.0,0.0
+@kida197,UCTugHCF5KuLfiUCuv3X65xw,1,Counterpoints,9.98,,2,0,0,9.98,1,0.0,9.98,0.0,0.0
 @coolboi9435,UCzS4smjJncN5ZC9gvFlv4VQ,1,The Soy Pill,9.98,,2,0,0,9.98,1,0.0,0.0,9.98,0.0
 @speedster1012,UCyTzrv0vxsjZFPdwv0JJ7ow,1,The Soy Pill,9.98,,2,0,0,9.98,1,0.0,0.0,9.98,0.0
 @axelcats,UCMvj38hKvYXDzgl_z5mV6Hw,1,The Soy Pill,9.98,,2,0,0,9.98,1,0.0,0.0,9.98,0.0
@@ -549,14 +550,14 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @jeddysteve8330,UC-KpHXf4ne1611mutDov24A,1,The Soy Pill,7.01,CA$10.00,1,0,0,7.01,1,0.0,0.0,7.01,0.0
 @Killerbee4712,UCvrIoe1HEphuORSapD3CalQ,1,The Soy Pill,7.01,CA$10.00,1,0,0,7.01,1,0.0,0.0,7.01,0.0
 @natheyshiro4119,UCs3MBBiAUp93Er3p5tctvtw,1,The Soy Pill,7.01,CA$10.00,1,0,0,7.01,1,0.0,0.0,7.01,0.0
-@Solidus_Snakey,UCkTECTfuxH05oPmycbuzjQw,1,Counterpoints,7.0,,2,0,0,7.0,2,0.0,7.0,0.0,0.0
+@lildickydeegs,UC-p1wg2igeIZnKqUx-PTRLA,1,Pisco,7.0,,2,0,0,7.0,2,7.0,0.0,0.0,0.0
 @tityboi7295,UC_DIqK9dFiJ112R6tjVhAbQ,2,Pisco; Counterpoints,7.0,,2,0,0,7.0,2,5.0,2.0,0.0,0.0
+@Gabriel14366,UChenbG8VLyQ5gRR-wUItSIw,1,Pisco,7.0,,2,0,0,7.0,2,7.0,0.0,0.0,0.0
+@BumblingBioengineer,UCXtC0lOUB63OzFoY-OFQb_A,1,Pisco,7.0,,2,0,0,7.0,2,7.0,0.0,0.0,0.0
+@Solidus_Snakey,UCkTECTfuxH05oPmycbuzjQw,1,Counterpoints,7.0,,2,0,0,7.0,2,0.0,7.0,0.0,0.0
 @PotentiallyCriminal,UCaFaDEbKPCtPLhFk44LkKhQ,1,Counterpoints,7.0,,2,0,0,7.0,1,0.0,7.0,0.0,0.0
 @KinoTechUSA69,UC2w-gcXOpxsWOTILoa7PqEA,1,Counterpoints,7.0,,2,0,0,7.0,1,0.0,7.0,0.0,0.0
 @nsort3009,UC3fCGChy8TcAnzfOd2rXCiQ,1,Counterpoints,7.0,,2,0,0,7.0,2,0.0,7.0,0.0,0.0
-@lildickydeegs,UC-p1wg2igeIZnKqUx-PTRLA,1,Pisco,7.0,,2,0,0,7.0,2,7.0,0.0,0.0,0.0
-@Gabriel14366,UChenbG8VLyQ5gRR-wUItSIw,1,Pisco,7.0,,2,0,0,7.0,2,7.0,0.0,0.0,0.0
-@BumblingBioengineer,UCXtC0lOUB63OzFoY-OFQb_A,1,Pisco,7.0,,2,0,0,7.0,2,7.0,0.0,0.0,0.0
 @stormshock3560,UCgIyRJdLwdqrfsuPWYjQCFA,1,The Soy Pill,7.0,,2,0,0,7.0,1,0.0,0.0,7.0,0.0
 @gonaedeath2,UC80UPlet7YhOhdSDhXXZhqA,1,The Soy Pill,7.0,,2,0,0,7.0,1,0.0,0.0,7.0,0.0
 @Totally-Real-Catgirl,UCFH25e3ONfx66RVVl73ktkQ,1,The Soy Pill,7.0,,2,0,0,7.0,1,0.0,0.0,7.0,0.0
@@ -572,15 +573,15 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @vacuumblink2300,UCeeIaMMrVmz-Xk_C5CEu7Sw,1,The Soy Pill,7.0,,1,0,0,7.0,1,0.0,0.0,7.0,0.0
 @jordan-kb9wt,UCaZZQWOsPdIE3QgXs4Upx-A,2,Pisco; Lib & Learn,6.99,,2,0,0,6.99,2,5.0,0.0,0.0,1.99
 @CraigA315,UCWEjiM5Zqid3BAYFvD4TUJA,1,Counterpoints,6.99,,2,0,0,6.99,2,0.0,6.99,0.0,0.0
-@Mctippers45,UCic3kYt5WVjYVRWexYO4EZA,2,The Soy Pill; Lib & Learn,6.98,,2,0,0,6.98,2,0.0,0.0,4.99,1.99
-@the_oceanist8434,UCi-2N7_j5w7-VVxIUVEve1A,1,Counterpoints,6.98,,2,0,0,6.98,1,0.0,6.98,0.0,0.0
 @Snuckum,UCJQdUpXLvj0s3LqYVONbQOA,1,Pisco,6.98,,2,0,0,6.98,1,6.98,0.0,0.0,0.0
 @franjkav,UCWSxESXPWkYuYL2JqEA9CFQ,1,Pisco,6.98,,2,0,0,6.98,2,6.98,0.0,0.0,0.0
 @radicallymoderateamerican,UCCp3chv-DfZ5C0xjK2gb5RA,1,Pisco,6.98,,2,0,0,6.98,2,6.98,0.0,0.0,0.0
 @BW056,UCdbPlYEN_HLx9Pi77JrbEeg,1,Pisco,6.98,,2,0,0,6.98,2,6.98,0.0,0.0,0.0
 @Bluemagic1-x9i,UC2KXlKyvUiSdTo8ZofR1RPw,1,Pisco,6.98,,2,0,0,6.98,1,6.98,0.0,0.0,0.0
 @Itsdubwah,UCBXLbQmxTHm7EbLKNvAAdtQ,1,Pisco,6.98,,2,0,0,6.98,2,6.98,0.0,0.0,0.0
+@the_oceanist8434,UCi-2N7_j5w7-VVxIUVEve1A,1,Counterpoints,6.98,,2,0,0,6.98,1,0.0,6.98,0.0,0.0
 @BaloneyBryce,UCjlcEapkkpfUv8xQv9qih7A,1,The Soy Pill,6.98,,2,0,0,6.98,2,0.0,0.0,6.98,0.0
+@Mctippers45,UCic3kYt5WVjYVRWexYO4EZA,2,The Soy Pill; Lib & Learn,6.98,,2,0,0,6.98,2,0.0,0.0,4.99,1.99
 @theycallmeobama1491,UCHv6sncyHcev5zf_zWWzjow,1,The Soy Pill,6.98,,2,0,0,6.98,1,0.0,0.0,6.98,0.0
 @Ray-xq3cx,UCV4uZILzxZoWS8o0oo7kxgg,1,The Soy Pill,6.98,,2,0,0,6.98,1,0.0,0.0,6.98,0.0
 @gmlighthorror,UCb_7EA34ayn829m3DrXj5OQ,1,The Soy Pill,6.98,,2,0,0,6.98,2,0.0,0.0,6.98,0.0
@@ -589,11 +590,11 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @jetstreamsam4003,UCNxfmrl4AcTKVz9Vn2p5aVA,1,The Soy Pill,6.81,A$10.00,2,0,0,6.81,1,0.0,0.0,6.81,0.0
 @Framalam,UCnzFU5Zmegp3zJFmAydaZMg,1,The Soy Pill,6.81,A$10.00,1,0,0,6.81,1,0.0,0.0,6.81,0.0
 @sawthroat6623,UCkDhyTyjDNVto9KqdLOdMcw,1,Counterpoints,6.64,€6.00,1,0,0,6.64,1,0.0,6.64,0.0,0.0
-@TiwsiT213,UCdPl6yBI8Fu3xVyjSz2tyTg,1,Counterpoints,6.62,£5.00,1,0,0,6.62,1,0.0,6.62,0.0,0.0
-@harstar12345,UCgcd_hOEsmV76xKuyzLzXTw,1,Counterpoints,6.62,£5.00,1,0,0,6.62,1,0.0,6.62,0.0,0.0
 @KyronGale109,UCEz0e_-AXLFYwIJ-EPyYbgw,1,Pisco,6.62,£5.00,1,0,0,6.62,1,6.62,0.0,0.0,0.0
 @rhyswtf,UCZ2NCKD_WhwCNq_5AMVe-HQ,1,Pisco,6.62,£5.00,1,0,0,6.62,1,6.62,0.0,0.0,0.0
 @PillowSteam,UCQN46z0WLSytpZzV0c1_-pg,1,Pisco,6.62,£5.00,1,0,0,6.62,1,6.62,0.0,0.0,0.0
+@TiwsiT213,UCdPl6yBI8Fu3xVyjSz2tyTg,1,Counterpoints,6.62,£5.00,1,0,0,6.62,1,0.0,6.62,0.0,0.0
+@harstar12345,UCgcd_hOEsmV76xKuyzLzXTw,1,Counterpoints,6.62,£5.00,1,0,0,6.62,1,0.0,6.62,0.0,0.0
 @USBCCable33,UCBWjqvefwYsJG5ZoIuhMFOw,1,The Soy Pill,6.62,£5.00,1,0,0,6.62,1,0.0,0.0,6.62,0.0
 @rosh597,UCF6bW2sxpqqftMNlMyqfoEA,1,The Soy Pill,6.62,£5.00,1,0,0,6.62,1,0.0,0.0,6.62,0.0
 @LJ-by7fk,UCG3ihzHac0MsULbydQZutVg,1,Pisco,6.61,£4.99,1,0,0,6.61,1,6.61,0.0,0.0,0.0
@@ -607,8 +608,8 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Front2Knux,UC-iprUIKe_ueDjCIumCko5A,1,The Soy Pill,5.97,,3,0,0,5.97,2,0.0,0.0,5.97,0.0
 @ripfluffyman9972,UCZsOT87aF0USxy8F-pkx7IQ,1,The Soy Pill,5.97,,3,0,0,5.97,2,0.0,0.0,5.97,0.0
 @Jacob.Eckman,UCrfMnarqJBuYOq1o788iiFg,1,The Soy Pill,5.97,,3,0,0,5.97,1,0.0,0.0,5.97,0.0
-@revolution5987,UCGo8Wt8I4_hFZJM4aH5ynUw,1,Counterpoints,5.53,€5.00,1,0,0,5.53,1,0.0,5.53,0.0,0.0
 @robert.donnelly,UCdF_KjI3lASaVKnybe3of0g,1,Pisco,5.53,€5.00,1,0,0,5.53,1,5.53,0.0,0.0,0.0
+@revolution5987,UCGo8Wt8I4_hFZJM4aH5ynUw,1,Counterpoints,5.53,€5.00,1,0,0,5.53,1,0.0,5.53,0.0,0.0
 @lithuanianinbound589,UCpCVArAOiUWYla470LPr6-g,1,The Soy Pill,5.53,€5.00,1,0,0,5.53,1,0.0,0.0,5.53,0.0
 @Shane-xj4wt,UCHKYxu-2y5YlfF_PBA9qzHw,1,The Soy Pill,5.53,€5.00,1,0,0,5.53,1,0.0,0.0,5.53,0.0
 @esquabioesquabio9569,UCwtkfuzS9xDcYxK5qKK_3_A,1,Pisco,5.44,A$7.99,1,0,0,5.44,1,5.44,0.0,0.0,0.0
@@ -619,42 +620,6 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @zaynkhan9147,UCfuQK44Q2BdIAVb1pd_T4EA,1,The Soy Pill,5.27,£3.98,2,0,0,5.27,1,0.0,0.0,5.27,0.0
 @monroesmusic,UC8Irf5DZx4JJPron5rdI8Lw,1,Pisco,5.22,NOK50.00,1,0,0,5.22,1,5.22,0.0,0.0,0.0
 @TehLionz,UCgKxlPMLQQ08q_xuXs8SCPw,1,The Soy Pill,5.0,,3,0,0,5.0,1,0.0,0.0,5.0,0.0
-@eloytob,UCPCb-xInZ6JIFH_ErJieBSw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@scubasteve4355,UC1-ZXpthVHZrF-_4Lcf19zw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@PhoebusApollo14,UCJumpuW6MRC5inZWpwJTyjw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@Joe-hd2pk,UCQQyKO0rJr1wGfssNfPDCgQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@TheMikej345,UC9uhta_P8MyH0dUVbEcIPgw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@obsoleteXeo,UCfOoHI9pGEMENpTgFgqhOnQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@seanjohnston4146,UCPtdLwinjIBi3hvVvnGb_DA,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@Upstat3Trash,UCAIdvHENlIhlNsFCeNtmakQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@dwobwinkle7077,UCoZw05I9DkF1C8XzhoMQ_cw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@jsielsch,UCyT25q0_nBCuMZ8EsN6zNAw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@HexBeeWonder,UCkDsUaUkioDWitobskM2Fsg,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@Erintonsus,UCl3ZUnK7FIX6K2BQurDKyew,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@GrantasticGranny,UCxAReVoz1pqD4z3NXHwRwUQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
-@Creamerb1,UCqYPCn5R36v2WokhfxUn8fQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@The_Vigilante_TV,UCkKzGXKODtFo_1cTiDBwfiQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@originoflogos,UC97KaocrhGkqvzrdP1LY8Aw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@XKXKXKXKKXK,UCo8fA5_YbMevDD10coXDsog,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@HEDONICsamuel,UCWscUtuLOzguAZ8x1G0Q0Xw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@michaelstark831,UCRAOGuAPfzyVQCvDW-oLDxw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@thealexkirschproject,UCNUuwt9NiVKBiJ8HOLuo1sw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@DumpsterBuzzard,UCCxj_w61bNWtMVmLAIvCiSw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@puddle_sucker,UC3BjsRiG9_xlC0jUX3EYIvg,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@gayben6409,UCWNSoe3qWQrf0NIXi0Pm8yA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@jace664,UCsId3cRO1n9OJRIgI69o8rw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@MrFantuv,UCyerBXH5BlJjwqezNMH3gqQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@dice5226,UC6AXZzJDYOLGiuKajEqeYOw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@skillfuldunce3578,UC872iyL28bPWBUUAbHqMM2g,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@theonlybrian,UCfyabmngiXGsGRbT7exJK_A,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@raptor5743,UCckOWGMHiDPnX9kfNQyVYqA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@abovezeon5620,UCfwlYIXcfiQQh6ge1IxnlHA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@MrJax79,UCjAR97duR1OMfJLByco40iA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@Audacity_69,UClnBYoW2U3869XmZbq4iX4g,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@Kelesto7,UCgmA3L9Lm6Kpq5vdCWzY1JA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@NizyX-i6h,UCjR95jm_PjVTl5JKRY1SA_g,1,Counterpoints,5.0,SEK50.00,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@jacobk5451,UCgGgJaZBvDzq_ak-QZfP9dQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
-@thebirdofstrangefire,UCXcjvdI7oF5Ey4HIpfkZjNg,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
 @fierypatriot,UCqpc25R0lHrdaatL1Bc1IPQ,1,Pisco,5.0,,1,0,0,5.0,1,5.0,0.0,0.0,0.0
 @melancholicmonkey713,UCjkjLHUXXtI479yw_8SkwNw,1,Pisco,5.0,,1,0,0,5.0,1,5.0,0.0,0.0,0.0
 @TrueStriiker,UCuNZxREphrdlOy0eci27VKQ,1,Pisco,5.0,,1,0,0,5.0,1,5.0,0.0,0.0,0.0
@@ -697,6 +662,29 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @tonynieves7206,UC5FHZ50vlgvsVex2PeajPlw,1,Pisco,5.0,,1,0,0,5.0,1,5.0,0.0,0.0,0.0
 @knight_steve,UCVaFEejR6C_a5-9m0AJ26yw,1,Pisco,5.0,,1,0,0,5.0,1,5.0,0.0,0.0,0.0
 @alexkirigiya6765,UCEgbl0uCbLE7ySzgswHtorQ,1,Pisco,5.0,,1,0,0,5.0,1,5.0,0.0,0.0,0.0
+@Creamerb1,UCqYPCn5R36v2WokhfxUn8fQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@The_Vigilante_TV,UCkKzGXKODtFo_1cTiDBwfiQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@originoflogos,UC97KaocrhGkqvzrdP1LY8Aw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@XKXKXKXKKXK,UCo8fA5_YbMevDD10coXDsog,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@HEDONICsamuel,UCWscUtuLOzguAZ8x1G0Q0Xw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@michaelstark831,UCRAOGuAPfzyVQCvDW-oLDxw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@raptor5743,UCckOWGMHiDPnX9kfNQyVYqA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@abovezeon5620,UCfwlYIXcfiQQh6ge1IxnlHA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@MrJax79,UCjAR97duR1OMfJLByco40iA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@Kelesto7,UCgmA3L9Lm6Kpq5vdCWzY1JA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@NizyX-i6h,UCjR95jm_PjVTl5JKRY1SA_g,1,Counterpoints,5.0,SEK50.00,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@Fozzimo,UCb1nFuNArx65N49zAIJfirg,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@thealexkirschproject,UCNUuwt9NiVKBiJ8HOLuo1sw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@DumpsterBuzzard,UCCxj_w61bNWtMVmLAIvCiSw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@puddle_sucker,UC3BjsRiG9_xlC0jUX3EYIvg,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@gayben6409,UCWNSoe3qWQrf0NIXi0Pm8yA,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@jace664,UCsId3cRO1n9OJRIgI69o8rw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@MrFantuv,UCyerBXH5BlJjwqezNMH3gqQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@dice5226,UC6AXZzJDYOLGiuKajEqeYOw,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@skillfuldunce3578,UC872iyL28bPWBUUAbHqMM2g,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@theonlybrian,UCfyabmngiXGsGRbT7exJK_A,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@jacobk5451,UCgGgJaZBvDzq_ak-QZfP9dQ,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
+@thebirdofstrangefire,UCXcjvdI7oF5Ey4HIpfkZjNg,1,Counterpoints,5.0,,1,0,0,5.0,1,0.0,5.0,0.0,0.0
 @AnotherAmerican91,UCv2VThJebQarEki-Zdufwug,1,The Soy Pill,5.0,,1,0,0,5.0,1,0.0,0.0,5.0,0.0
 @xxEchoDecayxx,UCNG-NWjxNlHFrBQhDRrMKLw,1,The Soy Pill,5.0,,1,0,0,5.0,1,0.0,0.0,5.0,0.0
 @strengthmonk,UCFIO8JYa_wDTY7hxoNM17rg,1,The Soy Pill,5.0,,1,0,0,5.0,1,0.0,0.0,5.0,0.0
@@ -762,24 +750,19 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @zane_rosler_mcmxcv,UC9dWqUey2FuXN22LiysoCAw,1,The Soy Pill,5.0,,1,0,0,5.0,1,0.0,0.0,5.0,0.0
 @andrewg9223,UCcxyTvMmgfgvta7rZYoSj3w,1,The Soy Pill,5.0,,1,0,0,5.0,1,0.0,0.0,5.0,0.0
 @shenmue3809,UCDlBZop7J5I80vaUvZv4_og,1,The Soy Pill,5.0,,1,0,0,5.0,1,0.0,0.0,5.0,0.0
-@logo2462,UCzwcR1i5C7akuvWEcD3LXjw,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
-@jsoo1,UC1oq712_IUukUkQL3ye_RKg,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
-@SunRatatoskr,UC_7kKQsELd9oCgkqQ4OQW0A,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
-@justsomeinternetchick,UCiux5Hadr5CZDuM3yk2jxGA,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
-@SumMatter,UC9d2EGBF_9UDjd4JM51qSFQ,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
-@mississippiAF,UCMoRAWvX13-nv-8_rbi2UBw,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@intrapersonaI,UCCYNtCwmNuuhsTD6yJo-2lg,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@Handerpantz,UCM0uN-JAr9-2zvuCP8lxUTw,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@Glockasaurus_Rex,UC9B_2xkUR4n6otx3rtCHdew,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@NikoPluto,UCVIi4CUk-t3RaLJAuuqzX2g,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@Jonah0826,UC7bT1YOrqfRa8C6j7fF8Gug,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@ProjectSocio,UCIRUecJx2YoN53quWMzeExQ,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@FalseEarthMateriaL72,UC8HPvUl9yv5soyM87i-x8lw,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@DongusMcBongus,UCH4Qq3uINzxm9AM5ZtXGKmA,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@Red473-FUrmom,UCcck-zgX9LDK-og18vlb_qg,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@dhruvsampat7091,UCpPDEGO8UXxcPm490KNDb2w,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@realdeterminatus,UCdy5z5qjTOMnGJWxCgQawvA,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
-@Sacredsnow2,UCaWcCm9tqagyX6B-jAjOjJA,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@eloytob,UCPCb-xInZ6JIFH_ErJieBSw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@scubasteve4355,UC1-ZXpthVHZrF-_4Lcf19zw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@PhoebusApollo14,UCJumpuW6MRC5inZWpwJTyjw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@Joe-hd2pk,UCQQyKO0rJr1wGfssNfPDCgQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@TheMikej345,UC9uhta_P8MyH0dUVbEcIPgw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@obsoleteXeo,UCfOoHI9pGEMENpTgFgqhOnQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@seanjohnston4146,UCPtdLwinjIBi3hvVvnGb_DA,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@Upstat3Trash,UCAIdvHENlIhlNsFCeNtmakQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@dwobwinkle7077,UCoZw05I9DkF1C8XzhoMQ_cw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@jsielsch,UCyT25q0_nBCuMZ8EsN6zNAw,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@HexBeeWonder,UCkDsUaUkioDWitobskM2Fsg,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@Erintonsus,UCl3ZUnK7FIX6K2BQurDKyew,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
+@GrantasticGranny,UCxAReVoz1pqD4z3NXHwRwUQ,1,Lib & Learn,5.0,,1,0,0,5.0,1,0.0,0.0,0.0,5.0
 @Calmlyfret,UCnHGOmCeV9InnAnB8IIWF_Q,1,Pisco,4.99,,1,0,0,4.99,1,4.99,0.0,0.0,0.0
 @losthighway4840,UCRkSKhlpWBxfo-kUwcXATOA,1,Pisco,4.99,,1,0,0,4.99,1,4.99,0.0,0.0,0.0
 @Beneta9,UCXQjnOrq-Ef9UPasNneKStA,1,Pisco,4.99,,1,0,0,4.99,1,4.99,0.0,0.0,0.0
@@ -797,6 +780,19 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @IvanGonzalez-kf4lp,UCTsGrecJAjBnSJhRiQ5OhEQ,1,Pisco,4.99,,1,0,0,4.99,1,4.99,0.0,0.0,0.0
 @SeshVibesMike,UCxSCsFkizWfb-_bp2UjtgqQ,1,Pisco,4.99,,1,0,0,4.99,1,4.99,0.0,0.0,0.0
 @NateTheLawyer,UCD5_QIM67BZJdh9AwZv3soA,1,Pisco,4.99,,1,0,0,4.99,1,4.99,0.0,0.0,0.0
+@mississippiAF,UCMoRAWvX13-nv-8_rbi2UBw,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@intrapersonaI,UCCYNtCwmNuuhsTD6yJo-2lg,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@Handerpantz,UCM0uN-JAr9-2zvuCP8lxUTw,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@Glockasaurus_Rex,UC9B_2xkUR4n6otx3rtCHdew,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@NikoPluto,UCVIi4CUk-t3RaLJAuuqzX2g,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@Jonah0826,UC7bT1YOrqfRa8C6j7fF8Gug,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@Red473-FUrmom,UCcck-zgX9LDK-og18vlb_qg,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@dhruvsampat7091,UCpPDEGO8UXxcPm490KNDb2w,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@realdeterminatus,UCdy5z5qjTOMnGJWxCgQawvA,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@ProjectSocio,UCIRUecJx2YoN53quWMzeExQ,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@FalseEarthMateriaL72,UC8HPvUl9yv5soyM87i-x8lw,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@DongusMcBongus,UCH4Qq3uINzxm9AM5ZtXGKmA,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
+@Sacredsnow2,UCaWcCm9tqagyX6B-jAjOjJA,1,Counterpoints,4.99,,1,0,0,4.99,1,0.0,4.99,0.0,0.0
 @TheOriginalProngles,UCzHuI1YNrmBogbspDEPS70g,1,The Soy Pill,4.99,,1,0,0,4.99,1,0.0,0.0,4.99,0.0
 @tonyshenanigans2534,UCfc1oGilKjYbsDCt99lYw4w,1,The Soy Pill,4.99,,1,0,0,4.99,1,0.0,0.0,4.99,0.0
 @gavingavingavingavingavingavin,UCpUcbDdrV4DjhOwTShTMiXw,1,The Soy Pill,4.99,,1,0,0,4.99,1,0.0,0.0,4.99,0.0
@@ -823,17 +819,22 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @wetsausage4593,UCrjuviq9p4FyyBZdADlrZ8w,1,The Soy Pill,4.99,,1,0,0,4.99,1,0.0,0.0,4.99,0.0
 @nogahydebenjee9455,UCeXUTXRMVL2MKUA3nMHe6uw,1,The Soy Pill,4.99,,1,0,0,4.99,1,0.0,0.0,4.99,0.0
 @CorduroyTapez,UCSYRbihdYZSYIksC-FA5QnA,1,The Soy Pill,4.99,,1,0,0,4.99,1,0.0,0.0,4.99,0.0
+@logo2462,UCzwcR1i5C7akuvWEcD3LXjw,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
+@jsoo1,UC1oq712_IUukUkQL3ye_RKg,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
+@SunRatatoskr,UC_7kKQsELd9oCgkqQ4OQW0A,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
+@justsomeinternetchick,UCiux5Hadr5CZDuM3yk2jxGA,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
+@SumMatter,UC9d2EGBF_9UDjd4JM51qSFQ,1,Lib & Learn,4.99,,1,0,0,4.99,1,0.0,0.0,0.0,4.99
 @charlienovember321,UCo5Cq_OAp6ZTRliiqlRVTkg,1,Pisco,0.0,,0,1,4.99,4.99,1,0.0,0.0,0.0,0.0
-@MiloNexus,UCpOm5kYySNZl5GJPxFFN8Cw,1,Lib & Learn,4.9,CA$6.99,1,0,0,4.9,1,0.0,0.0,0.0,4.9
 @matthewjinks8298,UCJgXc7-p0Bs9pljkqX-_6xQ,1,Pisco,4.9,CA$6.99,1,0,0,4.9,1,4.9,0.0,0.0,0.0
 @nothingtoseeherebruvna,UCn1Qwq_KGrY-AK8gzY4F81w,1,The Soy Pill,4.9,CA$6.99,1,0,0,4.9,1,0.0,0.0,4.9,0.0
-@Condemnhummus,UCKdI90jZoSg7_Z3wOLFUMoA,1,Lib & Learn,4.77,A$7.00,2,0,0,4.77,1,0.0,0.0,0.0,4.77
-@Itsjustavy,UC1_ST97UBLzQdYiJb6wkvAQ,1,Counterpoints,4.77,A$7.00,2,0,0,4.77,2,0.0,4.77,0.0,0.0
-@jebusmilk,UCpGwjORO7NwuUOMQoSKbjdw,1,Counterpoints,4.77,A$7.00,2,0,0,4.77,1,0.0,4.77,0.0,0.0
+@MiloNexus,UCpOm5kYySNZl5GJPxFFN8Cw,1,Lib & Learn,4.9,CA$6.99,1,0,0,4.9,1,0.0,0.0,0.0,4.9
 @spencerhho,UCIGIMSw5OflYirpL1AIsZag,1,Pisco,4.77,A$7.00,2,0,0,4.77,1,4.77,0.0,0.0,0.0
+@jebusmilk,UCpGwjORO7NwuUOMQoSKbjdw,1,Counterpoints,4.77,A$7.00,2,0,0,4.77,1,0.0,4.77,0.0,0.0
+@Itsjustavy,UC1_ST97UBLzQdYiJb6wkvAQ,1,Counterpoints,4.77,A$7.00,2,0,0,4.77,2,0.0,4.77,0.0,0.0
 @griteom4538,UCnp-vcA7GSO4h5pH1501MQA,1,The Soy Pill,4.77,A$7.00,2,0,0,4.77,1,0.0,0.0,4.77,0.0
 @thehiddenscotty,UCTHJv6EdVdM7ZjLUQSAAYVQ,1,The Soy Pill,4.77,A$7.00,2,0,0,4.77,1,0.0,0.0,4.77,0.0
 @Charlescantcodelol,UCbup1wqwRwmzQfXZl2ti_OQ,1,The Soy Pill,4.77,A$7.00,2,0,0,4.77,1,0.0,0.0,4.77,0.0
+@Condemnhummus,UCKdI90jZoSg7_Z3wOLFUMoA,1,Lib & Learn,4.77,A$7.00,2,0,0,4.77,1,0.0,0.0,0.0,4.77
 @sillysepia,UCPvIQhTXc2XYiYJZcw0OrAA,1,The Soy Pill,4.69,₪15.00,1,0,0,4.69,1,0.0,0.0,4.69,0.0
 @Tominka22,UCf22IyORg9oIfWqoxx44qiA,1,The Soy Pill,4.54,CZK100.00,1,0,0,4.54,1,0.0,0.0,4.54,0.0
 @chbert1373,UCna1Pdgv60VCX3Xgxc2ojfg,1,The Soy Pill,4.43,€4.00,2,0,0,4.43,2,0.0,0.0,4.43,0.0
@@ -841,11 +842,10 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @perron403,UCBmdAl9Vdh4qijqtJDiSP1g,1,The Soy Pill,4.43,€4.00,2,0,0,4.43,1,0.0,0.0,4.43,0.0
 @DeceptiJon_YT,UC25S0yvbFgqO_DRPD2Es62w,1,The Soy Pill,1.4,CA$2.00,1,1,2.99,4.39,2,0.0,0.0,1.4,0.0
 @thomasevans3153,UCze1uUJAEAzIVrVSgyNV7Vg,1,Pisco,4.38,¥700.00,2,0,0,4.38,1,4.38,0.0,0.0,0.0
-@RobotFreak141,UCbUJM9-SnckPC03ZhMP1igg,1,Lib & Learn,4.0,,2,0,0,4.0,1,0.0,0.0,0.0,4.0
-@sgmwon,UClL9b0w3hbEo1B6k0CTXpeQ,1,Counterpoints,4.0,,2,0,0,4.0,2,0.0,4.0,0.0,0.0
 @janielvargas5369,UCQiNfTuHFMYMTO8JULof31Q,1,Pisco,4.0,,2,0,0,4.0,2,4.0,0.0,0.0,0.0
 @bobbobino6859,UC8psSDYxeo-E1MPKrBLZykw,1,Pisco,4.0,,2,0,0,4.0,1,4.0,0.0,0.0,0.0
 @Rai73n,UCU3XVuAtK4EPr3WGxRWqcHg,1,Pisco,4.0,,2,0,0,4.0,1,4.0,0.0,0.0,0.0
+@sgmwon,UClL9b0w3hbEo1B6k0CTXpeQ,1,Counterpoints,4.0,,2,0,0,4.0,2,0.0,4.0,0.0,0.0
 @tigertrainerxd9190,UCn3lhFz06FtZJnmL8pX2Dzg,1,The Soy Pill,4.0,,2,0,0,4.0,2,0.0,0.0,4.0,0.0
 @DRCx_,UC6bTACY5QM44s6YvcjoiP_g,1,The Soy Pill,4.0,,2,0,0,4.0,1,0.0,0.0,4.0,0.0
 @Led_Icarus,UCvpRy3req50OejX-3DCwP4Q,1,The Soy Pill,4.0,,2,0,0,4.0,2,0.0,0.0,4.0,0.0
@@ -853,27 +853,28 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @GiveMeYourFACE9089,UCsItGs0Qax0hCqB-goDp99w,1,The Soy Pill,4.0,,2,0,0,4.0,1,0.0,0.0,4.0,0.0
 @crazedunionboy3383,UCZV4DmLtNV6OFsl_lzY56ow,1,The Soy Pill,4.0,,2,0,0,4.0,1,0.0,0.0,4.0,0.0
 @pilaralmazan01,UCBUU3JGrGvmIE72oG6f1Lfw,1,The Soy Pill,4.0,,2,0,0,4.0,1,0.0,0.0,4.0,0.0
+@RobotFreak141,UCbUJM9-SnckPC03ZhMP1igg,1,Lib & Learn,4.0,,2,0,0,4.0,1,0.0,0.0,0.0,4.0
 @kylenoyes6390,UCQgQQy-asRPjsdyX5JQ0kgw,1,The Soy Pill,4.0,,1,0,0,4.0,1,0.0,0.0,4.0,0.0
 @arcgpu,UCtwN9r80itAHdMo1a10xMiA,1,The Soy Pill,4.0,,1,0,0,4.0,1,0.0,0.0,4.0,0.0
 @BigPapaBuckaroo,UChm63AEC76M-VoyeW1wvnMw,1,The Soy Pill,3.99,,2,0,0,3.99,2,0.0,0.0,3.99,0.0
-@Harrisonhimself,UCjPCywd6o7qBdg6AxGHXI8A,1,Counterpoints,3.98,,2,0,0,3.98,2,0.0,3.98,0.0,0.0
-@CorbinJoseph777,UCZR_FE9l8HW7GUzlnn_C1dA,1,Counterpoints,3.98,,2,0,0,3.98,2,0.0,3.98,0.0,0.0
-@Nazyr,UCh3-Hqb2Wi_cC7uh4SzEcMA,1,Counterpoints,3.98,,2,0,0,3.98,1,0.0,3.98,0.0,0.0
 @rinyald,UCNuFQb9lW8_YkEQ_wkxJOWg,1,Pisco,3.98,,2,0,0,3.98,1,3.98,0.0,0.0,0.0
 @pepefrog2278,UCxwbWuNmVuPWKfnI8dbpxoQ,1,Pisco,3.98,,2,0,0,3.98,2,3.98,0.0,0.0,0.0
 @jjimssssssss,UCF30nDNWF2gKFyD8eov9UYQ,1,Pisco,3.98,,2,0,0,3.98,1,3.98,0.0,0.0,0.0
 @coltdawg7299,UCr836UYySRapBTwxrP3Lseg,1,Pisco,3.98,,2,0,0,3.98,1,3.98,0.0,0.0,0.0
+@Harrisonhimself,UCjPCywd6o7qBdg6AxGHXI8A,1,Counterpoints,3.98,,2,0,0,3.98,2,0.0,3.98,0.0,0.0
+@CorbinJoseph777,UCZR_FE9l8HW7GUzlnn_C1dA,1,Counterpoints,3.98,,2,0,0,3.98,2,0.0,3.98,0.0,0.0
+@Nazyr,UCh3-Hqb2Wi_cC7uh4SzEcMA,1,Counterpoints,3.98,,2,0,0,3.98,1,0.0,3.98,0.0,0.0
 @cables7897,UC1MhrDsRt21SZSzKWOwWAfA,1,The Soy Pill,3.98,,2,0,0,3.98,1,0.0,0.0,3.98,0.0
 @calawendy,UCIai3ub3kAqFBNNXzEqDx3g,1,The Soy Pill,3.98,,2,0,0,3.98,1,0.0,0.0,3.98,0.0
 @sheepherder911,UCTqHFJcvp0FSliMuSZ_CBWg,1,The Soy Pill,3.98,,2,0,0,3.98,1,0.0,0.0,3.98,0.0
-@rodgyv9790,UCLIOIWXpXOimYzlWjnBUwwQ,1,Lib & Learn,3.51,CA$5.00,1,0,0,3.51,1,0.0,0.0,0.0,3.51
-@PatrickOMulligan,UCEEt9l8brrnp_5B25t9LSzQ,1,Counterpoints,3.51,CA$5.00,1,0,0,3.51,1,0.0,3.51,0.0,0.0
 @CovertSkeleton,UCiQGF93SGkBDi2sDdC3zQwQ,1,Pisco,3.51,CA$5.00,1,0,0,3.51,1,3.51,0.0,0.0,0.0
 @johnnyp9521,UCoUSG47oRkwqfomph3dQvjw,1,Pisco,3.51,CA$5.00,1,0,0,3.51,1,3.51,0.0,0.0,0.0
 @danielvanwinden9672,UCXvoPdVNEEMWNi4l5wxs30g,1,Pisco,3.51,CA$5.00,1,0,0,3.51,1,3.51,0.0,0.0,0.0
+@PatrickOMulligan,UCEEt9l8brrnp_5B25t9LSzQ,1,Counterpoints,3.51,CA$5.00,1,0,0,3.51,1,0.0,3.51,0.0,0.0
 @EckhartsLadder,UCp6F1mQGuaXiDj5otWBmIjg,1,The Soy Pill,3.51,CA$5.00,1,0,0,3.51,1,0.0,0.0,3.51,0.0
 @cyrus2395,UCxyC0TPpuiYjbjtlxeGL8Qw,1,The Soy Pill,3.51,CA$5.00,1,0,0,3.51,1,0.0,0.0,3.51,0.0
 @diegogonzalezvazq,UCcWbeBGjVfOBpe-OkBiIcCg,1,The Soy Pill,3.51,CA$5.00,1,0,0,3.51,1,0.0,0.0,3.51,0.0
+@rodgyv9790,UCLIOIWXpXOimYzlWjnBUwwQ,1,Lib & Learn,3.51,CA$5.00,1,0,0,3.51,1,0.0,0.0,0.0,3.51
 @knight-_-meh,UCrJT7ZhftV0wGpUsWCFZB-Q,1,The Soy Pill,3.4,A$5.00,1,0,0,3.4,1,0.0,0.0,3.4,0.0
 @RoachDarrington,UCB1muBMArYenHsgOMTs5WJw,1,The Soy Pill,3.4,A$5.00,1,0,0,3.4,1,0.0,0.0,3.4,0.0
 @ALDEANzz,UCR4pE2RDEZl5449t-8X8q8g,1,The Soy Pill,3.4,A$5.00,1,0,0,3.4,1,0.0,0.0,3.4,0.0
@@ -897,18 +898,6 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @definitivelylostcause,UCuNq6IgxgPPZTyQw9yqjMDw,1,The Soy Pill,2.21,€2.00,1,0,0,2.21,1,0.0,0.0,2.21,0.0
 @DrewRibs,UCGJcCOJq5s1cWIBVsrsW4kQ,1,The Soy Pill,2.21,€2.00,1,0,0,2.21,1,0.0,0.0,2.21,0.0
 @gooddaysir8273,UC6Ren_uRpj-mC4I7bE0Sk_A,1,The Soy Pill,2.04,A$2.99,1,0,0,2.04,1,0.0,0.0,2.04,0.0
-@DarkApe117,UC3rWxPx2y5hqCfV_fyC-Uiw,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
-@Chemtrailshmemtrail,UCVhCHppwWgTp5iC2Cb3nCoQ,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
-@MindWavesTV,UC7zrB8jpKudWeSw84daR5RA,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
-@Jswift77-z7n,UCSWbYUAWh34GoUa42HVFf2Q,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
-@TruZealot,UCjVrAFYUgN8Qgyu4Vatrp5w,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@moon0-0-0,UCzbvqdLQzo8mU60eqD1LfSA,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@OftenTopicalPersonal,UCtNkDChINAET7ZRBlaF9vAw,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@Sayjo3,UC6hJ7jPs7HOTtYmrOZUX33w,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@ninjaofphysics2953,UCyKhSCA_AmwLyn6Zgx3VCWw,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@Confirmatarian,UCGKMO-XJhW2SY3tH9JCpyTQ,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@hawksmash86,UCt06sQ5nkcTJj-ZitNuW_sQ,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
-@Exho_the_Vesse1,UCa58AkIJ3b5ro8RE4GwfTmg,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
 @gismo_snoopy,UCxVeX52HHbmumxYCH-QZvnw,1,Pisco,2.0,,1,0,0,2.0,1,2.0,0.0,0.0,0.0
 @oNemesis94o,UCVeFdpE0oEsCm9DVWrJnnkw,1,Pisco,2.0,,1,0,0,2.0,1,2.0,0.0,0.0,0.0
 @lokiofmidgard,UC2nLCr_0yucEiaSrKAxvY3g,1,Pisco,2.0,,1,0,0,2.0,1,2.0,0.0,0.0,0.0
@@ -924,6 +913,14 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Eldermillenial86,UCdsY674O6y44J6T6qIJZsZg,1,Pisco,2.0,,1,0,0,2.0,1,2.0,0.0,0.0,0.0
 @pusherme5329,UC3HQPCpHm1W-v6PTnfcyGHA,1,Pisco,2.0,,1,0,0,2.0,1,2.0,0.0,0.0,0.0
 @_W1lh3lm,UC-g6QgQQzP6jbg1GAePozFQ,1,Pisco,2.0,,1,0,0,2.0,1,2.0,0.0,0.0,0.0
+@TruZealot,UCjVrAFYUgN8Qgyu4Vatrp5w,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@moon0-0-0,UCzbvqdLQzo8mU60eqD1LfSA,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@Confirmatarian,UCGKMO-XJhW2SY3tH9JCpyTQ,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@hawksmash86,UCt06sQ5nkcTJj-ZitNuW_sQ,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@OftenTopicalPersonal,UCtNkDChINAET7ZRBlaF9vAw,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@Sayjo3,UC6hJ7jPs7HOTtYmrOZUX33w,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@ninjaofphysics2953,UCyKhSCA_AmwLyn6Zgx3VCWw,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
+@Exho_the_Vesse1,UCa58AkIJ3b5ro8RE4GwfTmg,1,Counterpoints,2.0,,1,0,0,2.0,1,0.0,2.0,0.0,0.0
 @RockstarRacc00n,UCIYAbz0mIJG22KwTb3HPIUA,1,The Soy Pill,2.0,,1,0,0,2.0,1,0.0,0.0,2.0,0.0
 @username73736,UCyJ8m7qs4EbaFSJp0d-I6JA,1,The Soy Pill,2.0,,1,0,0,2.0,1,0.0,0.0,2.0,0.0
 @Friskypoo1,UCAq0yva67ENbYD8d6-yz0mA,1,The Soy Pill,2.0,,1,0,0,2.0,1,0.0,0.0,2.0,0.0
@@ -963,9 +960,10 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @Divergent-05,UCRIw31oxD-lqJeiYNx0QQww,1,The Soy Pill,2.0,,1,0,0,2.0,1,0.0,0.0,2.0,0.0
 @jonathanm51,UCAy33LjPSyyqoOy8pX1e3WA,1,The Soy Pill,2.0,,1,0,0,2.0,1,0.0,0.0,2.0,0.0
 @juggle_g7579,UChtyrzWCGUFEbO3WYNNufRw,1,The Soy Pill,2.0,,1,0,0,2.0,1,0.0,0.0,2.0,0.0
-@MollyCragin,UCi4U9L2dyULhLoJxQFnf7Kw,1,Counterpoints,1.99,,1,0,0,1.99,1,0.0,1.99,0.0,0.0
-@bisd836,UC5SFdltkShahn5FJ22HItJg,1,Counterpoints,1.99,,1,0,0,1.99,1,0.0,1.99,0.0,0.0
-@Hannahmorrell-j5,UC88NLoPZxElANdLG2qy_cjg,1,Counterpoints,1.99,,1,0,0,1.99,1,0.0,1.99,0.0,0.0
+@DarkApe117,UC3rWxPx2y5hqCfV_fyC-Uiw,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
+@Chemtrailshmemtrail,UCVhCHppwWgTp5iC2Cb3nCoQ,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
+@MindWavesTV,UC7zrB8jpKudWeSw84daR5RA,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
+@Jswift77-z7n,UCSWbYUAWh34GoUa42HVFf2Q,1,Lib & Learn,2.0,,1,0,0,2.0,1,0.0,0.0,0.0,2.0
 @Nick943098,UCKY-D7UH37RkQKOc8Y8tz5w,1,Pisco,1.99,,1,0,0,1.99,1,1.99,0.0,0.0,0.0
 @fishdadd,UCFmUbrj0s-BR2ad472yPOgA,1,Pisco,1.99,,1,0,0,1.99,1,1.99,0.0,0.0,0.0
 @occasional_doomer,UCzp3vNQlnG4aukl9Vt-o6xA,1,Pisco,1.99,,1,0,0,1.99,1,1.99,0.0,0.0,0.0
@@ -980,6 +978,9 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @diet-pepsi-p1c,UC6CEpmCRPybNKZ3WQjB7HKQ,1,Pisco,1.99,,1,0,0,1.99,1,1.99,0.0,0.0,0.0
 @thenotoriousbfg4960,UCG0Mm5XXG3z6XRbLAOyhfEA,1,Pisco,1.99,,1,0,0,1.99,1,1.99,0.0,0.0,0.0
 @rudoza22,UCR2A27YjlqP25OuUqGO5uYg,1,Pisco,1.99,,1,0,0,1.99,1,1.99,0.0,0.0,0.0
+@bisd836,UC5SFdltkShahn5FJ22HItJg,1,Counterpoints,1.99,,1,0,0,1.99,1,0.0,1.99,0.0,0.0
+@MollyCragin,UCi4U9L2dyULhLoJxQFnf7Kw,1,Counterpoints,1.99,,1,0,0,1.99,1,0.0,1.99,0.0,0.0
+@Hannahmorrell-j5,UC88NLoPZxElANdLG2qy_cjg,1,Counterpoints,1.99,,1,0,0,1.99,1,0.0,1.99,0.0,0.0
 @Wilsooo1234,UCbOaqPFKkeEAKIW9e5Mw6pg,1,The Soy Pill,1.99,,1,0,0,1.99,1,0.0,0.0,1.99,0.0
 @Shcxir,UCzj4-j8N4TKpdxI9NiAE-qw,1,The Soy Pill,1.99,,1,0,0,1.99,1,0.0,0.0,1.99,0.0
 @Regal-Fruitocracy-Council,UCwxvQL4gypSswBFNK99cLQg,1,The Soy Pill,1.99,,1,0,0,1.99,1,0.0,0.0,1.99,0.0
@@ -1000,13 +1001,13 @@ name,channel_id,n_channels,channels,usd,other_currencies,paid,gifted,gift_usd_es
 @KingustheDingus,UCBlo14T7XglKs8LGggOwpSQ,1,The Soy Pill,1.99,,1,0,0,1.99,1,0.0,0.0,1.99,0.0
 @morallyneutral,UCQ49IGHNKEk4SxRAPm90sPA,1,Counterpoints,1.96,CA$2.79,1,0,0,1.96,1,0.0,1.96,0.0,0.0
 @sunnyta1990,UCse8bu-e4uK8CxfB-MBCS0Q,1,The Soy Pill,1.96,CA$2.79,1,0,0,1.96,1,0.0,0.0,1.96,0.0
-@TheMapleKnight7811,UCmxGXJft-s-1oEZOIvrJQSA,1,Lib & Learn,1.4,CA$2.00,1,0,0,1.4,1,0.0,0.0,0.0,1.4
-@benradford3703,UCzYlomThlFudxzPHUwfp-mA,1,Lib & Learn,1.4,CA$2.00,1,0,0,1.4,1,0.0,0.0,0.0,1.4
-@Todbringer-x1l,UC79d5WfJL6DlBH-xKkuwiLA,1,Counterpoints,1.4,CA$2.00,1,0,0,1.4,1,0.0,1.4,0.0,0.0
-@cmoerike01,UCa8MoELN_GgIFarleKpHbsg,1,Counterpoints,1.4,CA$2.00,1,0,0,1.4,1,0.0,1.4,0.0,0.0
 @Biek91,UCViP2Pk6vfsOv3vJW8hMTjw,1,Pisco,1.4,CA$2.00,1,0,0,1.4,1,1.4,0.0,0.0,0.0
 @butterfliesxox,UCJhqk2wE7vo3NvhaGkKl8_Q,1,Pisco,1.4,CA$2.00,1,0,0,1.4,1,1.4,0.0,0.0,0.0
+@cmoerike01,UCa8MoELN_GgIFarleKpHbsg,1,Counterpoints,1.4,CA$2.00,1,0,0,1.4,1,0.0,1.4,0.0,0.0
+@Todbringer-x1l,UC79d5WfJL6DlBH-xKkuwiLA,1,Counterpoints,1.4,CA$2.00,1,0,0,1.4,1,0.0,1.4,0.0,0.0
 @connormason9266,UC2wye4-uEVnVG8nbv0ASCZw,1,The Soy Pill,1.4,CA$2.00,1,0,0,1.4,1,0.0,0.0,1.4,0.0
+@TheMapleKnight7811,UCmxGXJft-s-1oEZOIvrJQSA,1,Lib & Learn,1.4,CA$2.00,1,0,0,1.4,1,0.0,0.0,0.0,1.4
+@benradford3703,UCzYlomThlFudxzPHUwfp-mA,1,Lib & Learn,1.4,CA$2.00,1,0,0,1.4,1,0.0,0.0,0.0,1.4
 @BlackKisa,UCXGQ9d-wprgBInKg9rqVpFA,1,The Soy Pill,1.36,A$2.00,1,0,0,1.36,1,0.0,0.0,1.36,0.0
 @T3SSing,UCsZNzKflHlvVLskH5j_fG6A,1,The Soy Pill,1.26,PLN5.00,1,0,0,1.26,1,0.0,0.0,1.26,0.0
 @asantegreen3498,UC5QNDyUblWBQX2ibA0XzmBw,1,The Soy Pill,0.99,,1,0,0,0.99,1,0.0,0.0,0.99,0.0
