@@ -29,7 +29,7 @@ const ch = payload.channels[i];
   <div class="share" id="also"></div>
   <Regulars where={` on ${ch.name}`} />
   <Combos intro={`Each row is one combination of channels that includes ${ch.name}: how many people gave on exactly those channels, and what they sent on ${ch.name}.`} />
-  <DonorTable />
+  <DonorTable everyone />
   <h2>Every superchat</h2>
   <p class="dim">Every superchat on {ch.name} in this filter, from everyone. Colored squares after a name mark people who also give on other channels here; their names link to their own page. Amounts in other currencies show their US$ value.</p>
   <div class="tools"><button id="sccross" type="button" class="toggle" aria-pressed="false">Cross-channel donors only</button><span id="sccount" class="small"></span></div>

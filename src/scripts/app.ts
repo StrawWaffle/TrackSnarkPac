@@ -81,7 +81,7 @@ async function main() {
 
   let A: Aggregate, AD: Aggregate, AX: Aggregate;
   const comboSel = new Set<string>(), chanSel = new Set<number>();
-  let onlySel = false, scShown = 200, scCrossOnly = false;
+  let onlySel = false, scShown = 200, scCrossOnly = false, dCrossOnly = false;
   const dState = { k: 'total', dir: -1 }, cState = { k: 'n', dir: -1 }, chState = { k: 'usd', dir: -1 }, sState = { k: 'date', dir: -1 }, scState = { k: 'date', dir: -1 };
 
   // ---- generic sortable table ----
@@ -362,9 +362,11 @@ async function main() {
   function renderDonors() {
     if (!has('donors')) return;
     const q = $('q').value.toLowerCase().trim();
-    const rows = AD.cross.filter((p) => (!onlySel || who().has(p.a)) && (!q || D.authors[p.a][0].toLowerCase().includes(q))
+    // channel pages list everyone who paid there; the overview lists cross-channel donors
+    const pool = SCOPE === 'channel' && !dCrossOnly ? AD.all : AD.cross;
+    const rows = pool.filter((p) => (!onlySel || who().has(p.a)) && (!q || D.authors[p.a][0].toLowerCase().includes(q))
       && [...chanSel].every((c) => p.chs.includes(c)) && (!comboSel.size || comboSel.has(p.chs.join(','))));
-    const mx = Math.max(1, ...AD.cross.map((p) => p.usd.reduce((x, y) => x + y, 0) + p.giftEst));
+    const mx = Math.max(1, ...pool.map((p) => p.usd.reduce((x, y) => x + y, 0) + p.giftEst));
     const cols = DCOLS.map((c) => ({ ...c, hidden: hiddenCols.has(c.id!) && !c.fixed }));
     const cell: Record<string, (p: Person, i: number) => string> = {
       pick: (p) => `<td class="pickc"><input type="checkbox" class="pick" aria-label="Select ${esc(D.authors[p.a][0])}"${who().has(p.a) ? ' checked' : ''}></td>`,
@@ -383,10 +385,11 @@ async function main() {
     };
     sortable($('donors'), cols, rows, dState, (p, vis, i) => `<tr class="donor" data-a="${p.a}">${vis.map((c) => cell[c.id!](p, i)).join('')}</tr>`, renderDonors);
     $('donors').dataset.ncol = cols.filter((c) => !c.hidden).length;
-    $('count').textContent = rows.length === AD.cross.length ? '' : `Showing ${rows.length} of ${AD.cross.length}`;
+    $('count').textContent = rows.length === pool.length ? '' : `Showing ${rows.length} of ${pool.length}`;
+    if (has('dcross')) $('dcross').setAttribute('aria-pressed', dCrossOnly);
     if (has('onlysel')) { $('onlysel').hidden = !who().size && !onlySel; $('onlysel').setAttribute('aria-pressed', onlySel); }
     if (has('dtitle')) $('dtitle').textContent = SCOPE === 'channel'
-      ? `${AD.cross.length} cross-channel donors on ${CH[SCOPE_CH!].name}${F.from === MONTHS[0] && F.to === LAST ? '' : ', in this filter'}`
+      ? `${dCrossOnly ? `${AD.cross.length} cross-channel donors` : `All ${AD.all.length.toLocaleString()} donors`} on ${CH[SCOPE_CH!].name}${F.from === MONTHS[0] && F.to === LAST ? '' : ', in this filter'}`
       : AD.cross.length === NCROSS ? `All ${NCROSS} cross-channel donors` : `${AD.cross.length} of the ${NCROSS} cross-channel donors, in this filter`;
     const cb = $('clearcombo');
     if (cb) { cb.hidden = !comboSel.size; if (comboSel.size) cb.textContent = (comboSel.size === 1 ? 'Only ' + [...comboSel][0].split(',').map((c) => CH[+c].name).join(' + ') : `${comboSel.size} combinations`) + ' ✕'; }
@@ -510,6 +513,7 @@ async function main() {
   });
   if (has('clearcombo')) $('clearcombo').onclick = () => { comboSel.clear(); renderCombos(); renderDonors(); };
   if (has('q')) $('q').addEventListener('input', renderDonors);
+  if (has('dcross')) $('dcross').onclick = () => { dCrossOnly = !dCrossOnly; renderDonors(); };
   if (has('scT')) {
     $('scmore').onclick = () => { scShown += 200; renderSuperchats(); };
     $('sccross').onclick = () => { scCrossOnly = !scCrossOnly; scShown = 200; renderSuperchats(); };
