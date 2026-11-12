@@ -1,0 +1,10 @@
+---
+import { base } from '../lib/site';
+---
+<h2>How this was made</h2>
+<p>Every livestream the channels still list was taken from each channel's streams tab and stream playlists (including unlisted VODs). Their chat replays were downloaded and every superchat, super sticker and gifted membership read out. Some streams have no chat data: YouTube keeps no chat replay for them (usually because the VOD was edited after the stream, or chat was off), or they are members-only or age-restricted.</p>
+<p>People are matched by YouTube channel ID, so someone who renamed their account still counts once. A cross-channel donor is someone who paid on two or more of the channels at any point in the period; the filters only change which of their superchats are counted. Superchats sent in other currencies were converted to US dollars at the exchange rates of <span id="fxdate"></span>, not the rate on the day they were sent.</p>
+<p>Gifted memberships have no price in the chat. A gift is always the channel's cheapest membership level, so they are valued at that level's US price (<span id="prices"></span>). That makes them an estimate, so they are kept out of the dollar totals unless you tick "Count gifted memberships". They have no message, so a message filter leaves them out. Memberships a channel gifted from its own account are not counted, and regular memberships aren't counted at all.</p>
+<p>The figures are what viewers paid; YouTube keeps about 30%. Only public chat is used. Dates are the day the stream started.</p>
+<p>Data: <a href={`${base}data/cross-channel-donors.csv`}>cross-channel donors</a>, <a href={`${base}data/donors.csv`}>all donors</a>, <a href={`${base}data/superchats.csv`}>every superchat</a>, <a href={`${base}data/gifts.csv`}>gifted memberships</a>, <a href={`${base}data/streams.csv`}>streams</a>. These are unfiltered.</p>
+<footer id="foot"></footer>

@@ -1,0 +1,64 @@
+---
+import '../styles/site.css';
+import { paletteCss } from '../lib/palette';
+import { base, payload } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  scope: 'all' | 'channel' | 'donor';
+  channel?: string;
+  donor?: string;
+}
+const { title, description, scope, channel, donor } = Astro.props;
+const channels = payload.channels;
+---
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<meta name="description" content={description}>
+<link rel="icon" href={`${base}favicon.ico`} sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href={`${base}icons/icon-32.png`}>
+<link rel="icon" type="image/png" sizes="192x192" href={`${base}icons/icon-192.png`}>
+<link rel="apple-touch-icon" href={`${base}icons/apple-touch-icon.png`}>
+<meta name="theme-color" content="#f2efe9" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a1a19" media="(prefers-color-scheme: dark)">
+<script is:inline>try { const t = localStorage.getItem("ts-theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style is:inline set:html={paletteCss(channels.length)}></style>
+</head>
+<body data-scope={scope} data-base={base} data-channel={channel} data-donor={donor}>
+<main>
+<div class="topbar">
+  <nav class="nav" aria-label="Pages">
+    <a href={base} aria-current={scope === 'all' ? 'page' : undefined}>Overview</a>
+    {channels.map((c, i) => (
+      <a href={`${base}channel/${c.slug}/`} aria-current={channel === c.slug ? 'page' : undefined}><span class={`mark c${i}`}></span>{c.name}</a>
+    ))}
+  </nav>
+  <div class="theme" role="group" aria-label="Color theme"><button type="button" data-t="system">System</button><button type="button" data-t="light">Light</button><button type="button" data-t="dark">Dark</button></div>
+</div>
+<slot />
+</main>
+<div id="tip" role="tooltip"></div>
+<script is:inline>
+(function () {
+  function setTheme(t) {
+    if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; else delete document.documentElement.dataset.theme;
+    try { localStorage.setItem('ts-theme', t); } catch (e) {}
+    document.querySelectorAll('.theme button').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.t === t); });
+  }
+  document.querySelector('.theme').onclick = function (ev) { var b = ev.target.closest('button[data-t]'); if (b) setTheme(b.dataset.t); };
+  setTheme(document.documentElement.dataset.theme || 'system');
+})();
+</script>
+<script>
+import '../scripts/app.ts';
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+---
+interface Props { selection?: boolean }
+const { selection = true } = Astro.props;
+---
+<div class="filters" role="search">
+  <div class="frow">
+    <div class="field"><label for="fmsg">Message contains</label><input id="fmsg" type="search" placeholder="destiny, dgg"></div>
+    <div class="field"><label for="ftitle">Stream title contains</label><input id="ftitle" type="search" placeholder="debate"></div>
+    <div class="field"><label for="ffrom">From</label><select id="ffrom"></select></div>
+    <div class="field"><label for="fto">To</label><select id="fto"></select></div>
+    <label class="small giftt"><input type="checkbox" id="fgifts"> Count gifted memberships (estimate)</label>
+    <button id="fyear" type="button" title="The 12 months up to the last stream">Past year</button>
+    <button id="fall" type="button">All time</button>
+    <button id="freset" type="button">Reset</button>
+    {selection && (
+      <span id="whobox" class="whobox" hidden><span class="seg" id="whomode" role="group" aria-label="Selected people"><button type="button" data-m="only">Only selected</button><button type="button" data-m="hide">Hide selected</button></span><button id="clearwho" type="button"></button></span>
+    )}
+  </div>
+  <div id="fsummary" aria-live="polite"><span class="loading">Loading the data…</span></div>
+</div>

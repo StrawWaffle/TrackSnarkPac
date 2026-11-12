@@ -1,0 +1,37 @@
+---
+// One page per channel in the registry (site.json "channels"); a new channel gets a page on the next build.
+import Base from '../../layouts/Base.astro';
+import Filters from '../../components/Filters.astro';
+import Monthly from '../../components/Monthly.astro';
+import Regulars from '../../components/Regulars.astro';
+import Combos from '../../components/Combos.astro';
+import DonorTable from '../../components/DonorTable.astro';
+import Method from '../../components/Method.astro';
+import { base, payload } from '../../lib/site';
+import { possessive } from '../../lib/format';
+
+export function getStaticPaths() {
+  return payload.channels.map((c, i) => ({ params: { slug: c.slug }, props: { i } }));
+}
+const { i } = Astro.props as { i: number };
+const ch = payload.channels[i];
+---
+<Base title={`${ch.name} · TrackSnarkPac`} description={`Superchats on ${ch.name}'s livestreams, and how many come from people who also donate on other channels.`} scope="channel" channel={ch.slug}>
+  <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt=""><span class={`mark c${i}`} style="width:14px;height:14px"></span>{ch.name}</h1>
+  <p class="lede" id="lede"><span class="loading">Loading…</span></p>
+  <p id="context"></p>
+  <p class="dim"><a href={ch.url} target="_blank" rel="noopener">{ch.name} on YouTube</a> · gifted memberships valued at ${ch.price.toFixed(2)} each · {ch.missing} listed streams without readable chat</p>
+  <div class="arrays" id="arrays"></div>
+  <Filters />
+  <Monthly intro={`Superchat dollars per month on ${ch.name}. The colored part came from people who also donate on another of these channels; grey is everyone else. Hover a month for the numbers.`} several={false} />
+  <h2>Where {possessive(ch.name)} shared donors also give</h2>
+  <p class="dim" id="alsonote"></p>
+  <div class="share" id="also"></div>
+  <Regulars where={` on ${ch.name}`} />
+  <Combos intro={`Each row is one combination of channels that includes ${ch.name}: how many people gave on exactly those channels, and what they sent on ${ch.name}.`} />
+  <DonorTable />
+  <h2>Streams</h2>
+  <p class="dim" id="streamsnote"></p>
+  <div class="scroll"><table id="streamsT"><thead></thead><tbody></tbody></table></div>
+  <Method />
+</Base>

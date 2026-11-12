@@ -1,0 +1,11 @@
+---
+interface Props { intro: string; several?: boolean }
+const { intro, several = true } = Astro.props;
+---
+<h2>Month by month</h2>
+<p class="dim">{intro} Hatching marks streams whose chat can't be read (members-only, no chat replay or age-restricted): a full column when none of that month's streams are readable, a thin band at the top when only some are. Hover a month to see why.</p>
+<div class="mtools">
+  {several && <label class="small"><input type="checkbox" id="indep"> Give each channel its own scale</label>}
+  <span class="small" id="mnote"></span>
+</div>
+<div class="multiples" id="multiples"></div>
