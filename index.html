@@ -14,7 +14,7 @@
   color-scheme: light;
   --bg: #fcfcfb; --surface: #f3f2ef; --border: #dddcd7; --grid: #e8e7e3;
   --text: #0b0b0b; --text-2: #52514e; --text-3: #75746f; --link: #1c5cab;
-  --neutral: #b9b8b2; --focus: #1c5cab;
+  --neutral: #b9b8b2; --focus: #1c5cab; --zebra: #f4f3f0; --hover: #ebeae6;
   --s0: #2a78d6; --s1: #eb6834; --s2: #1baf7a; --s3: #eda100;
 }
 @media (prefers-color-scheme: dark) {
@@ -22,7 +22,7 @@
     color-scheme: dark;
     --bg: #1a1a19; --surface: #232322; --border: #3a3a37; --grid: #2e2e2c;
     --text: #f0efec; --text-2: #c3c2b7; --text-3: #9a9991; --link: #86b6ef;
-    --neutral: #55544f; --focus: #86b6ef;
+    --neutral: #55544f; --focus: #86b6ef; --zebra: #232322; --hover: #2c2c2a;
     --s0: #3987e5; --s1: #d95926; --s2: #199e70; --s3: #c98500;
   }
 }
@@ -30,7 +30,7 @@
   color-scheme: dark;
   --bg: #1a1a19; --surface: #232322; --border: #3a3a37; --grid: #2e2e2c;
   --text: #f0efec; --text-2: #c3c2b7; --text-3: #9a9991; --link: #86b6ef;
-  --neutral: #55544f; --focus: #86b6ef;
+  --neutral: #55544f; --focus: #86b6ef; --zebra: #232322; --hover: #2c2c2a;
   --s0: #3987e5; --s1: #d95926; --s2: #199e70; --s3: #c98500;
 }
 * { box-sizing: border-box; }
@@ -94,7 +94,9 @@ th[data-k] { cursor: pointer; user-select: none; }
 th[data-k]:hover { color: var(--text); }
 th[aria-sort=descending]::after { content: " \2193"; }
 th[aria-sort=ascending]::after { content: " \2191"; }
-tbody tr:hover { background: var(--surface); }
+tbody tr:nth-child(even of :not(.msgs)) { background: var(--zebra); }
+tbody tr:hover { background: var(--hover); }
+tr.msgs, tr.msgs:hover { background: var(--bg); }
 .scroll { overflow-x: auto; }
 .dotcol { text-align: center; width: 1%; font-size: 12px; }
 .dothead { display: block; width: 10px; height: 10px; border-radius: 2px; margin: 0 auto 4px; }
@@ -129,7 +131,6 @@ details.cols summary::-webkit-details-marker { display: none; }
 .when { font-size: 12px; color: var(--text-2); white-space: nowrap; font-family: "IBM Plex Mono", monospace; }
 tr.open td { border-bottom-color: transparent; }
 tr.msgs td { padding: 0 8px 12px 40px; }
-tr.msgs:hover { background: none; }
 .msglist { max-height: 360px; overflow-y: auto; border-left: 2px solid var(--border); padding-left: 12px; }
 .msg { display: grid; grid-template-columns: 12px 88px 130px 1fr; gap: 8px; padding: 4px 0; font-size: 13px; }
 .msg .mark { margin-top: 5px; }
