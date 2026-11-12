@@ -81,8 +81,8 @@ async function main() {
 
   let A: Aggregate, AD: Aggregate, AX: Aggregate;
   const comboSel = new Set<string>(), chanSel = new Set<number>();
-  let onlySel = false;
-  const dState = { k: 'total', dir: -1 }, cState = { k: 'n', dir: -1 }, chState = { k: 'usd', dir: -1 }, sState = { k: 'date', dir: -1 };
+  let onlySel = false, scShown = 200, scCrossOnly = false;
+  const dState = { k: 'total', dir: -1 }, cState = { k: 'n', dir: -1 }, chState = { k: 'usd', dir: -1 }, sState = { k: 'date', dir: -1 }, scState = { k: 'date', dir: -1 };
 
   // ---- generic sortable table ----
   interface Col<T> { id?: string; label: string; k?: string; num?: number; v?: (r: T) => number | string; title?: string; fixed?: number; off?: number; hidden?: boolean }
@@ -431,6 +431,36 @@ async function main() {
   }
 
   // ---- donor page: every message ----
+  // ---- channel page: every superchat, from everyone ----
+  function renderSuperchats() {
+    if (!has('scT')) return;
+    type R = { r: (typeof D.sc)[number]; date: string; cross: boolean };
+    let rows: R[] = A.all.flatMap((p) => p.msgs.map((r) => ({ r, date: D.streams[r[0]][2], cross: p.chs.length > 1 })));
+    if (scCrossOnly) rows = rows.filter((x) => x.cross);
+    const total = rows.length;
+    const cols: Col<R>[] = [
+      { label: 'Date', k: 'date', v: (x) => x.date + String(x.r[4]).padStart(6, '0') },
+      { label: 'Amount', k: 'usd', num: 1, v: (x) => x.r[2], title: 'Sorted by US$ value' },
+      { label: 'Who', k: 'who', v: (x) => D.authors[x.r[1]][0].toLowerCase() },
+      { label: 'Message' },
+      { label: 'In the stream', k: 'at', v: (x) => D.streams[x.r[0]][3].toLowerCase() },
+    ];
+    sortable($('scT'), cols, rows, scState, (x) => {
+      const r = x.r, s = D.streams[r[0]];
+      const usdNote = /^\$\d/.test(r[3]) ? '' : ` <span class="dim">≈${usd(r[2], true)}</span>`;
+      const chips = x.cross ? ' ' + (GCH.get(r[1]) ? [...GCH.get(r[1])!].sort((a, b) => a - b).map((c) => `<span class="mark c${c}" title="Also gives on ${esc(CH[c].name)}"></span>`).join('') : '') : '';
+      return `<tr><td class="when">${s[2]}</td><td class="num">${esc(r[3])}${usdNote}</td><td class="who">${nameLink(r[1])}<span class="chips">${chips}</span></td>`
+        + `<td>${esc(r[5]) || '<span class="dim">no message</span>'}</td>`
+        + `<td><a class="t" href="https://youtu.be/${s[0]}?t=${r[4]}" target="_blank" rel="noopener" title="${esc(s[3])}">${hms(r[4])}</a> <span class="dim">${esc(s[3].length > 46 ? s[3].slice(0, 45) + '…' : s[3])}</span></td></tr>`;
+    }, () => { scShown = 200; renderSuperchats(); });
+    const tb = $('scT').tBodies[0];
+    [...tb.rows].slice(scShown).forEach((tr: any) => tr.remove());
+    $('scmore').hidden = total <= scShown;
+    $('scmore').textContent = `Show ${Math.min(200, total - scShown)} more`;
+    $('sccount').textContent = `${Math.min(scShown, total).toLocaleString()} of ${total.toLocaleString()} superchats${scCrossOnly ? ' from cross-channel donors' : ''}, in this filter`;
+    $('sccross').setAttribute('aria-pressed', scCrossOnly);
+  }
+
   function renderMessages() {
     if (!has('msglist')) return;
     const list = A.all.flatMap((p) => p.msgs).sort(byNewest);
@@ -464,7 +494,7 @@ async function main() {
     AD = SCOPE === 'donor' || who().size ? aggregate(ctx, { ...F, who: null }) : A;
     AX = SCOPE === 'channel' ? aggregate(ctx, { ...F, ch: undefined }) : A;
     for (const k of [...comboSel]) if (!AD.cross.some((p) => p.chs.join(',') === k)) comboSel.delete(k);
-    renderSummary(); renderMonthly(); renderShare(); renderAlso(); renderRegulars(); renderCombos(); renderDonors(); renderStreams(); renderMessages(); renderChans();
+    renderSummary(); renderMonthly(); renderShare(); renderAlso(); renderRegulars(); renderCombos(); renderDonors(); renderStreams(); renderSuperchats(); renderMessages(); renderChans();
   }
 
   // ---- wire up ----
@@ -480,6 +510,10 @@ async function main() {
   });
   if (has('clearcombo')) $('clearcombo').onclick = () => { comboSel.clear(); renderCombos(); renderDonors(); };
   if (has('q')) $('q').addEventListener('input', renderDonors);
+  if (has('scT')) {
+    $('scmore').onclick = () => { scShown += 200; renderSuperchats(); };
+    $('sccross').onclick = () => { scCrossOnly = !scCrossOnly; scShown = 200; renderSuperchats(); };
+  }
   if (has('indep')) $('indep').addEventListener('change', renderMonthly);
   if (has('donors')) {
     let lastPick: number | null = null;
