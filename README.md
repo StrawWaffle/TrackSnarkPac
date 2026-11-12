@@ -2,7 +2,9 @@
 
 Superchats on four political YouTube channels (Pisco, Counterpoints, The Soy Pill, Lib & Learn) from 2025-11-12 to 2026-11-11, and the people who donate on more than one of them.
 
-The page is `index.html`, served by GitHub Pages. The data behind it is in `data/`:
+The page is `index.html`, served by GitHub Pages. It carries the raw rows and computes every number in the browser, so the filters at the top (message text, stream title, months) change all totals, charts and tables. A filtered view can be shared by its link.
+
+The data behind it is in `data/` (unfiltered):
 
 | file | rows |
 |---|---|
