@@ -60,12 +60,12 @@ input[type=search] { padding: 6px 8px; border: 1px solid var(--border); border-r
 #fsummary strong { font-weight: 600; }
 
 /* share bars */
-.share { margin: 16px 0 8px; max-width: 840px; }
-.srow { display: grid; grid-template-columns: 130px 1fr 130px; align-items: center; gap: 12px; padding: 5px 0; }
+.share { margin: 16px 0 8px; max-width: 920px; }
+.srow { display: grid; grid-template-columns: 130px 1fr 200px; align-items: center; gap: 12px; padding: 5px 0; }
 .strack { height: 18px; border-left: 1px solid var(--text-3);
   background: repeating-linear-gradient(90deg, transparent 0 calc(25% - 1px), var(--grid) calc(25% - 1px) 25%); }
 .sbar { height: 100%; border-radius: 0 4px 4px 0; }
-.axis { display: grid; grid-template-columns: 130px 1fr 130px; gap: 12px; max-width: 840px; }
+.axis { display: grid; grid-template-columns: 130px 1fr 200px; gap: 12px; max-width: 920px; }
 .axis div:nth-child(2) { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-3); font-family: "IBM Plex Mono", monospace; }
 
 /* monthly small multiples */
@@ -135,7 +135,7 @@ tr.msgs:hover { background: none; }
 footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); font-size: 13px; color: var(--text-2); }
 @media (max-width: 700px) {
   .multiples { grid-template-columns: 1fr; }
-  .srow, .axis { grid-template-columns: 96px 1fr 96px; gap: 8px; }
+  .srow, .axis { grid-template-columns: 90px 1fr 150px; gap: 8px; } .srow .num { font-size: 12px; }
   .field input { width: 100%; }
   .field { flex: 1 1 100%; }
   .msg { grid-template-columns: 12px 1fr; }
@@ -322,13 +322,19 @@ function sortable(table, cols, rows, state, rowHtml, after) {
 let A, comboSel = null, chanSel = new Set();
 const dState = { k: 'total', dir: -1 }, cState = { k: 'n', dir: -1 }, chState = { k: 'usd', dir: -1 };
 
+function perChannel() {
+  const parts = CH.map((ch, c) => { const t = A.chan[c].usd; if (!t) return null;
+    const cr = A.cross.reduce((x, p) => x + p.usd[c], 0);
+    return `<strong>${pct(cr / t)}</strong> of ${esc(ch.name)}${ch.name.endsWith('s') ? "'" : "'s"} (${usd(cr)} of ${usd(t)})`; }).filter(Boolean);
+  return parts.length ? ` By channel, that is ${parts.slice(0, -1).join(', ')}${parts.length > 1 ? ' and ' : ''}${parts[parts.length - 1]}.` : '';
+}
 function renderHead() {
   const n = A.all.length, nc = A.cross.length;
   const filt = F.msg || F.title || F.from !== MONTHS[0] || F.to !== MONTHS[MONTHS.length - 1];
   $('lede').innerHTML = filt
-    ? `<strong>${usd(A.total)}</strong> in superchats matches this filter. <strong>${pct(A.total ? A.crossUsd / A.total : 0)}</strong> of it (${usd(A.crossUsd)}) came from ${nc} of the ${NCROSS} people who donate on more than one of the four channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn.`
+    ? `<strong>${usd(A.total)}</strong> in superchats matches this filter. <strong>${pct(A.total ? A.crossUsd / A.total : 0)}</strong> of it (${usd(A.crossUsd)}) came from ${nc} of the ${NCROSS} people who donate on more than one of the four channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn.${perChannel()}`
     : nc
-    ? `Since ${mlabel(MONTHS[0])}, <strong>${nc} people</strong> paid on more than one of four political YouTube channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn. They are ${pct(nc / n)} of everyone who paid, but they sent <strong>${pct(A.total ? A.crossUsd / A.total : 0)} of the money</strong>: ${usd(A.crossUsd)} of ${usd(A.total)}.`
+    ? `Since ${mlabel(MONTHS[0])}, <strong>${nc} people</strong> paid on more than one of four political YouTube channels: Pisco, Counterpoints, The Soy Pill and Lib &amp; Learn. They are ${pct(nc / n)} of everyone who paid, but they sent <strong>${pct(A.total ? A.crossUsd / A.total : 0)} of the money</strong>: ${usd(A.crossUsd)} of ${usd(A.total)}.${perChannel()}`
     : `No one in this filter paid on more than one channel. ${n} people sent ${usd(A.total)}.`;
   $('scope').textContent = `Livestreams from ${D.since} to ${D.until}, read from each stream's public chat replay. Amounts are what viewers paid in US dollars, before YouTube's cut.`;
   const parts = [];
@@ -369,8 +375,8 @@ function renderMonthly() {
       const t = tot(b);
       g += `<rect class="hit" x="${L + i * bw}" y="${T}" width="${bw}" height="${ih}" data-tip="${esc(ch.name)}, ${mlabel(m)}${partial(m) ? ' (part of the month)' : ''}\n${usd(t)} in ${b.n} superchats\n${usd(b.cross)} from cross-channel donors${t ? ' (' + pct(b.cross / t) + ')' : ''}\n${usd(b.other)} from everyone else"/>`;
     });
-    const sum = rows.reduce((x, b) => x + tot(b), 0);
-    return `<div class="panel"><h3><span class="mark c${c}"></span>${esc(ch.name)} <span class="small">${usd(sum)}</span></h3><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(ch.name)} superchat dollars per month">${g}</svg></div>`;
+    const sum = rows.reduce((x, b) => x + tot(b), 0), cs = rows.reduce((x, b) => x + b.cross, 0);
+    return `<div class="panel"><h3><span class="mark c${c}"></span>${esc(ch.name)} <span class="small">${usd(sum)} · ${sum ? pct(cs / sum) : '–'} (${usd(cs)}) from cross-channel donors</span></h3><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(ch.name)} superchat dollars per month">${g}</svg></div>`;
   }).join('');
   $('mnote').textContent = (indep ? 'Each panel has its own scale, so compare shapes, not heights.' : 'All panels share one scale.') + ` ${mlabel(MONTHS[0])} and ${mlabel(MONTHS[MONTHS.length - 1])} are part months.`;
 }
@@ -378,7 +384,7 @@ function renderMonthly() {
 function renderShare() {
   $('share').innerHTML = CH.map((ch, c) => {
     const tot = A.chan[c].usd, cr = A.cross.reduce((x, p) => x + p.usd[c], 0), n = A.cross.filter(p => p.chs.includes(c)).length, s = tot ? cr / tot : 0;
-    return `<div class="srow" data-tip="${esc(ch.name)}: ${usd(cr)} of ${usd(tot)} came from ${n} people who also give on another of these channels"><div>${esc(ch.name)}</div><div class="strack"><div class="sbar c${c}" style="width:${(s * 100).toFixed(1)}%"></div></div><div class="num">${tot ? pct(s) : '–'} <span class="dim">of ${usd(tot)}</span></div></div>`;
+    return `<div class="srow" data-tip="${esc(ch.name)}: ${usd(cr)} of ${usd(tot)} came from ${n} people who also give on another of these channels"><div>${esc(ch.name)}</div><div class="strack"><div class="sbar c${c}" style="width:${(s * 100).toFixed(1)}%"></div></div><div class="num">${tot ? pct(s) : '–'} <span class="dim">· ${usd(cr)} of ${usd(tot)}</span></div></div>`;
   }).join('');
 }
 
@@ -468,17 +474,17 @@ $('donors').tBodies[0].addEventListener('click', ev => {
 function renderChans() {
   const rows = CH.map((ch, c) => { const x = A.chan[c]; const cr = A.cross.reduce((s, p) => s + p.usd[c], 0);
     return { c, name: ch.name, url: ch.url, streams: x.streams, missing: ch.missing, hours: x.hours, usd: x.usd, paid: x.paid, payers: x.payers.size,
-      shared: A.cross.filter(p => p.chs.includes(c)).length, share: x.usd ? cr / x.usd : 0, gifts: x.gifts, giftEst: x.gifts * ch.price, per: x.streams ? x.usd / x.streams : 0 }; });
+      shared: A.cross.filter(p => p.chs.includes(c)).length, crossUsd: cr, share: x.usd ? cr / x.usd : 0, gifts: x.gifts, giftEst: x.gifts * ch.price, per: x.streams ? x.usd / x.streams : 0 }; });
   const cols = [
     { label: 'Channel', k: 'name', v: r => r.name }, { label: 'Streams', k: 'streams', num: 1, v: r => r.streams },
     { label: 'No chat data', k: 'missing', num: 1, v: r => r.missing, title: 'Streams without a usable chat replay (not filtered)' },
     { label: 'Hours', k: 'hours', num: 1, v: r => r.hours }, { label: 'Superchats', k: 'usd', num: 1, v: r => r.usd },
     { label: 'Per stream', k: 'per', num: 1, v: r => r.per }, { label: 'Msgs', k: 'paid', num: 1, v: r => r.paid },
     { label: 'Payers', k: 'payers', num: 1, v: r => r.payers }, { label: 'Shared payers', k: 'shared', num: 1, v: r => r.shared },
-    { label: 'Share of $', k: 'share', num: 1, v: r => r.share }, { label: 'Gifts', k: 'gifts', num: 1, v: r => r.gifts },
+    { label: 'From cross-channel', k: 'crossUsd', num: 1, v: r => r.crossUsd, title: 'Superchat dollars from people who also donate on another of these channels' }, { label: 'Cross-channel share', k: 'share', num: 1, v: r => r.share }, { label: 'Gifts', k: 'gifts', num: 1, v: r => r.gifts },
     { label: 'Gifts (est.)', k: 'giftEst', num: 1, v: r => r.giftEst },
   ];
-  sortable($('chans'), cols, rows, chState, r => `<tr><td><span class="mark c${r.c}"></span> <a href="${r.url}" target="_blank" rel="noopener">${esc(r.name)}</a></td><td class="num">${r.streams}</td><td class="num">${r.missing}</td><td class="num">${Math.round(r.hours).toLocaleString()}</td><td class="num">${usd(r.usd)}</td><td class="num">${usd(r.per)}</td><td class="num">${r.paid.toLocaleString()}</td><td class="num">${r.payers.toLocaleString()}</td><td class="num">${r.shared}</td><td class="num">${pct(r.share)}</td><td class="num">${r.gifts}</td><td class="num">${usd(r.giftEst)}</td></tr>`, renderChans);
+  sortable($('chans'), cols, rows, chState, r => `<tr><td><span class="mark c${r.c}"></span> <a href="${r.url}" target="_blank" rel="noopener">${esc(r.name)}</a></td><td class="num">${r.streams}</td><td class="num">${r.missing}</td><td class="num">${Math.round(r.hours).toLocaleString()}</td><td class="num">${usd(r.usd)}</td><td class="num">${usd(r.per)}</td><td class="num">${r.paid.toLocaleString()}</td><td class="num">${r.payers.toLocaleString()}</td><td class="num">${r.shared}</td><td class="num">${usd(r.crossUsd)}</td><td class="num">${pct(r.share)}</td><td class="num">${r.gifts}</td><td class="num">${usd(r.giftEst)}</td></tr>`, renderChans);
 }
 
 function renderAll() {
