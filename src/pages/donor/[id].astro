@@ -4,7 +4,7 @@ import Base from '../../layouts/Base.astro';
 import Filters from '../../components/Filters.astro';
 import Monthly from '../../components/Monthly.astro';
 import Method from '../../components/Method.astro';
-import { ALL, base, ctx } from '../../lib/site';
+import { ALL, base, ctx, payload } from '../../lib/site';
 import { ledeDonor } from '../../lib/text';
 import { crossDonors } from '../../lib/core';
 
@@ -14,10 +14,11 @@ export function getStaticPaths() {
 const { id } = Astro.params;
 const { name, a } = Astro.props as { name: string; a: number };
 const L = ledeDonor(ctx, base, a, ALL);
+const pic = (payload.av ?? []).includes(a);
 ---
 <Base title={`${name} · TrackSnarkPac`} description={`Superchats ${name} sent across channels.`} scope="donor" donor={id}>
   <p class="crumb"><a href={`${base}#dtitle`}>Cross-channel donors</a></p>
-  <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt="">{name}</h1>
+  <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt="">{pic && <img class="av big" src={`${base}avatars/${id}.jpg`} width="40" height="40" alt="" />}{name}</h1>
   <p class="lede" id="lede" set:html={L.lede}></p>
   <p id="context" set:html={L.context}></p>
   <p class="dim"><a href={`https://www.youtube.com/channel/${id}`} target="_blank" rel="noopener">Their YouTube channel</a></p>

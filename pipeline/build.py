@@ -84,11 +84,14 @@ def build():
         reasons[m["channel"]][m["reason"]] += 1
         missing_rows.append([idx[m["channel"]], m.get("date") or "", m["reason"], m.get("title") or ""])
 
+    pics = {p.stem for p in (DATA.parent / "avatars").glob("*.jpg")}
     payload = {
-        "channels": [{"name": c["name"], "slug": c["slug"], "url": c["url"], "price": c["gift_price"],
+        "channels": [{"name": c["name"], "slug": c["slug"], "url": c["url"], "price": c["gift_price"], "avatar": f"ch-{c['slug']}" in pics,
                       "missing": miss_count[c["slug"]], "reasons": dict(reasons[c["slug"]])} for c in registry],
         "since": rows_streams[0][2], "until": rows_streams[-1][2], "fx": rates["date"], "built": date.today().isoformat(),
         "streams": rows_streams, "authors": authors, "sc": sc, "gifts": gifts, "missing": missing_rows,
+        # authors with a profile picture in public/avatars/<channel id>.jpg
+        "av": [i for i, (_, cid) in enumerate(authors) if cid and cid in pics],
     }
     DATA.mkdir(parents=True, exist_ok=True)
     (DATA / "site.json").write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")

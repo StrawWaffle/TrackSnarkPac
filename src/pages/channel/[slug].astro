@@ -19,7 +19,7 @@ const ch = payload.channels[i];
 const L = ledeChannel(ctx, base, i, ALL);
 ---
 <Base title={`${ch.name} · TrackSnarkPac`} description={`Superchats on ${ch.name}'s livestreams, and how many come from people who also donate on other channels.`} scope="channel" channel={ch.slug}>
-  <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt=""><span class={`mark c${i}`} style="width:14px;height:14px"></span>{ch.name}</h1>
+  <h1><img class="logo" src={`${base}icons/logo.png`} width="56" height="56" alt="">{ch.avatar ? <img class="av big ring" style={`--ring:var(--s${i})`} src={`${base}avatars/ch-${ch.slug}.jpg`} width="40" height="40" alt="" /> : <span class={`mark c${i}`} style="width:14px;height:14px"></span>}{ch.name}</h1>
   <p class="lede" id="lede" set:html={L.lede}></p>
   <p id="context" set:html={L.context}></p>
   <p class="dim"><a href={ch.url} target="_blank" rel="noopener">{ch.name} on YouTube</a> · gifted memberships valued at ${ch.price.toFixed(2)} each · {ch.missing} listed streams without readable chat</p>

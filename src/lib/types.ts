@@ -10,6 +10,8 @@ export interface Channel {
   missing: number;
   /** Count of missing streams by reason ("members-only", "no chat replay", ...). */
   reasons: Record<string, number>;
+  /** Has a profile picture at avatars/ch-<slug>.jpg. */
+  avatar?: boolean;
 }
 
 /** [video id, channel index, date YYYY-MM-DD, title, duration s, views] */
@@ -34,6 +36,8 @@ export interface Payload {
   sc: Superchat[];
   gifts: Gift[];
   missing: Missing[];
+  /** Authors with a profile picture at avatars/<channel id>.jpg. */
+  av?: number[];
 }
 
 export interface Filter {

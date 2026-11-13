@@ -215,3 +215,9 @@ html, body { overflow-x: clip; }
   background: var(--surface); color: var(--text); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,.18); }
 .newver span { flex: 1 1 260px; }
 .newver button[data-a=reload] { border-color: var(--text-3); font-weight: 500; }
+
+/* profile pictures, served from avatars/ */
+.av { width: 20px; height: 20px; border-radius: 50%; object-fit: cover; vertical-align: -5px; margin-right: 6px; background: var(--grid); flex: none; }
+.av.ring { box-shadow: 0 0 0 2px var(--ring); }
+h1 .av.big { width: 40px; height: 40px; margin-right: 12px; vertical-align: -8px; }
+h1 .av.big.ring { box-shadow: 0 0 0 3px var(--ring); }

@@ -11,9 +11,12 @@ Steps:
     superchats and gifts in state/streams/<id>.json, or record in
     state/missing.json why it has no readable chat (with its date)
  3. refresh exchange rates once a day (state/rates.json)
- 4. rebuild public/data with build.py
- 5. if streams, superchats, gifts or missing streams changed, commit
-    pipeline/state and public/data and push; GitHub Actions publishes the site
+ 4. fetch up to 60 missing or stale profile pictures (avatars.py) into
+    public/avatars, for the channels and the cross-channel donors
+ 5. rebuild public/data with build.py
+ 6. if streams, superchats, gifts, missing streams or pictures changed, commit
+    pipeline/state, public/data and public/avatars and push; GitHub Actions
+    publishes the site
 
 Exit codes: 0 done (with or without new data), 75 YouTube blocked us
 (whatever was fetched is still saved and published; rerun later), 1 error.
@@ -25,6 +28,7 @@ import time
 from datetime import datetime
 from pathlib import Path
 
+import avatars
 import build
 import money
 import youtube
@@ -115,16 +119,25 @@ def main():
         except Exception as e:  # keep the previous rates
             log(f"could not refresh exchange rates, keeping {rates and rates['date']}: {e}")
 
-    # 4. build
+    # 4. profile pictures for the channels and cross-channel donors, a few at a time
+    if not blocked:
+        try:
+            avatars.refresh(registry, build.build(), log=log)
+        except youtube.Blocked as e:
+            log(f"YouTube blocked the profile pictures; trying again next run. {e}")
+            blocked = True
+
+    # 5. build
     payload = build.build()
     log(f"built: {len(payload['streams'])} streams, {len(payload['sc'])} superchats, {len(payload['missing'])} without chat")
 
-    # 5. publish only when the data itself changed (rates and build date move daily on their own)
+    # 6. publish only when the data itself changed (rates and build date move daily on their own)
     try:
         old = json.loads(git("show", "HEAD:public/data/site.json"))
         changed = data_key(old) != data_key(payload)
     except (RuntimeError, json.JSONDecodeError):
         changed = True
+    changed = changed or bool(git("status", "--porcelain", "public/avatars", "pipeline/state/avatars.json").strip())
     if not changed:
         git("checkout", "--", "public/data", "pipeline/state/rates.json", check=False)
         log("no new data; nothing to publish")
@@ -132,7 +145,7 @@ def main():
     if not push:
         log("new data; --no-push given, leaving it uncommitted")
         return 75 if blocked else 0
-    git("add", "pipeline/state", "public/data")
+    git("add", "pipeline/state", "public/data", "public/avatars")
     git("commit", "-q", "-m", f"Update data {datetime.now():%Y-%m-%d}")
     git("push", "-q")
     log("pushed; GitHub Actions will publish the site")

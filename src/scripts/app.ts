@@ -54,10 +54,13 @@ async function main() {
   const partial = (ym: string) => (ym === D.since.slice(0, 7) && D.since.slice(8) !== '01') || ym === D.until.slice(0, 7);
   const donorHref = (a: number) => ((GCH.get(a)?.size ?? 0) > 1 && D.authors[a][1] ? `${BASE}donor/${D.authors[a][1]}/` : '');
   const chanHref = (c: number) => `${BASE}channel/${CH[c].slug}/`;
+  const AV = new Set(D.av ?? []);
+  const face = (a: number) => (AV.has(a) ? `<img class="av" src="${BASE}avatars/${D.authors[a][1]}.jpg" width="20" height="20" alt="" loading="lazy">` : '');
+  const chanFace = (c: number) => (CH[c].avatar ? `<img class="av ring" style="--ring:var(--s${c})" src="${BASE}avatars/ch-${CH[c].slug}.jpg" width="20" height="20" alt="" loading="lazy">` : `<span class="mark c${c}"></span> `);
   const nameLink = (a: number) => {
     const [n, id] = D.authors[a], h = donorHref(a);
     const yt = id ? `<a class="yt" href="https://www.youtube.com/channel/${id}" target="_blank" rel="noopener" title="YouTube channel">↗</a>` : '';
-    return (h ? `<a class="inlink" href="${h}">${esc(n)}</a>` : esc(n)) + yt;
+    return face(a) + (h ? `<a class="inlink" href="${h}">${esc(n)}</a>` : esc(n)) + yt;
   };
 
   // ---- filter state, kept in the URL hash ----
@@ -497,7 +500,7 @@ async function main() {
       { label: 'Cross-channel share', k: 'share', num: 1, v: (r) => r.share }, { label: 'Gifts', k: 'gifts', num: 1, v: (r) => r.gifts },
       { label: 'Gifts (est.)', k: 'giftEst', num: 1, v: (r) => r.giftEst },
     ];
-    sortable($('chans'), cols, rows, chState, (r) => `<tr><td class="cname"><span class="mark c${r.c}"></span> <a href="${chanHref(r.c)}">${esc(r.name)}</a><a class="yt" href="${r.url}" target="_blank" rel="noopener" title="YouTube channel">↗</a></td><td class="num">${r.streams}</td><td class="num">${r.missing}</td><td class="num">${Math.round(r.hours).toLocaleString()}</td><td class="num">${usd(r.usd)}</td><td class="num">${usd(r.per)}</td><td class="num">${r.paid.toLocaleString()}</td><td class="num">${r.payers.toLocaleString()}</td><td class="num">${r.shared}</td><td class="num">${usd(r.crossUsd)}</td><td class="num">${pct(r.share)}</td><td class="num">${r.gifts}</td><td class="num">${usd(r.giftEst)}</td></tr>`, renderChans);
+    sortable($('chans'), cols, rows, chState, (r) => `<tr><td class="cname">${chanFace(r.c)}<a href="${chanHref(r.c)}">${esc(r.name)}</a><a class="yt" href="${r.url}" target="_blank" rel="noopener" title="YouTube channel">↗</a></td><td class="num">${r.streams}</td><td class="num">${r.missing}</td><td class="num">${Math.round(r.hours).toLocaleString()}</td><td class="num">${usd(r.usd)}</td><td class="num">${usd(r.per)}</td><td class="num">${r.paid.toLocaleString()}</td><td class="num">${r.payers.toLocaleString()}</td><td class="num">${r.shared}</td><td class="num">${usd(r.crossUsd)}</td><td class="num">${pct(r.share)}</td><td class="num">${r.gifts}</td><td class="num">${usd(r.giftEst)}</td></tr>`, renderChans);
   }
 
   function renderAll() {
