@@ -224,3 +224,5 @@ h1 .av.big.ring { box-shadow: 0 0 0 3px var(--ring); }
 /* the donor table has up to 13 columns: let headers wrap and keep names narrower so the last column stays on screen */
 #donors th { white-space: normal; vertical-align: bottom; line-height: 1.3; }
 #donors .who { max-width: 190px; }
+/* tables come out a fraction of a pixel wider than their box; on scaled displays that rounds up to a 1px sideways scroll */
+.scroll > table { width: calc(100% - 1px); }
